@@ -10,16 +10,12 @@ const Navigation = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold">
-                BW
-              </div>
-              <div className="ml-3">
-                <h1 className="text-xl font-bold text-foreground">BOSS WALLAH</h1>
-                <p className="text-xs text-muted-foreground">BE THE BOSS</p>
-              </div>
-            </div>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" 
+              alt="Boss Wallah Logo"
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
