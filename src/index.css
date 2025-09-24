@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* Fonts will be loaded from HTML */
 
 @tailwind base;
 @tailwind components;
@@ -10,29 +10,29 @@
   :root {
     /* Boss Wallah Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 0 0% 0%;
     
-    /* Brand Orange - Primary */
-    --primary: 15 87% 56%;
+    /* Boss Wallah Purple - Primary */
+    --primary: 267 24% 40%;  /* #755292 */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 15 87% 65%;
-    --primary-dark: 15 87% 45%;
+    --primary-glow: 267 24% 55%;
+    --primary-dark: 267 24% 30%;
     
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(15 87% 56%), hsl(25 95% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(15 87% 56%) 0%, hsl(25 95% 60%) 50%, hsl(35 90% 65%) 100%);
+    /* Boss Wallah Orange - Accent */
+    --accent: 15 87% 56%;  /* #F05C25 */
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 15 87% 70%;
+    
+    /* Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(267 24% 40%), hsl(15 87% 56%));
+    --gradient-hero: linear-gradient(135deg, hsl(267 24% 40%) 0%, hsl(15 87% 56%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(215 25% 27%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(267 24% 40%) 0%, hsl(15 87% 56%) 100%);
     
     /* Secondary Colors */
     --secondary: 220 14% 96%;
     --secondary-foreground: 222 47% 11%;
     --secondary-dark: 215 25% 27%;
-    
-    /* Accent Colors */
-    --accent: 35 90% 65%;
-    --accent-foreground: 222 47% 11%;
-    --accent-light: 35 90% 85%;
     
     /* Success & Status */
     --success: 142 76% 36%;
@@ -45,7 +45,7 @@
     --muted-foreground: 220 9% 46%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 15 87% 56%;
+    --ring: 267 24% 40%;
     
     /* Cards & Surfaces */
     --card: 0 0% 100%;
@@ -91,17 +91,17 @@
     --foreground: 0 0% 98%;
     --card: 222 47% 11%;
     --card-foreground: 0 0% 98%;
-    --primary: 15 87% 65%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 267 24% 50%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 215 25% 27%;
     --secondary-foreground: 0 0% 98%;
     --muted: 215 25% 27%;
     --muted-foreground: 220 9% 65%;
-    --accent: 35 90% 65%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 15 87% 56%;
+    --accent-foreground: 0 0% 100%;
     --border: 215 25% 27%;
     --input: 215 25% 27%;
-    --ring: 15 87% 65%;
+    --ring: 267 24% 50%;
   }
 }
 
@@ -112,7 +112,7 @@
   
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   }
 }
 
