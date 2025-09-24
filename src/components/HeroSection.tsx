@@ -28,15 +28,6 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8 animate-slide-up">
             
-            {/* Boss Wallah Logo */}
-            <div className="mb-8">
-              <img 
-                src="/lovable-uploads/7a17d701-3f16-414f-ac52-2ab06da2f2ec.png" 
-                alt="Boss Wallah Logo"
-                className="h-16 w-auto"
-              />
-            </div>
-
             {/* Main Headline */}
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
