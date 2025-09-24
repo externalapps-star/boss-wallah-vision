@@ -93,20 +93,6 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* App Screenshot Indicators */}
-              <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-3">
-                {appImages.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentImage 
-                        ? 'bg-primary shadow-lg scale-125' 
-                        : 'bg-primary/30 hover:bg-primary/50'
-                    }`}
-                    onClick={() => setCurrentImage(index)}
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </div>
