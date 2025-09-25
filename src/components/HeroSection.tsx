@@ -37,7 +37,7 @@ const HeroSection = () => {
                 for Launching Your Business
               </h1>
               
-              <p className="text-xl lg:text-2xl text-foreground/80 max-w-2xl leading-relaxed">
+              <p className="text-xl lg:text-2xl text-foreground/80 max-w-2xl leading-relaxed text-left">
                 Transform your entrepreneurial vision into reality with the only platform you need to go from idea to launch. Boss Wallah empowers entrepreneurs worldwide with AI-powered tools, expert guidance, and comprehensive support every step of the way.
               </p>
             </div>
