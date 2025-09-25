@@ -195,7 +195,7 @@
   
   /* Mobile App Showcase */
   .phone-mockup {
-    @apply relative mx-auto w-72 h-[600px] bg-gray-900 rounded-[3rem] p-4 shadow-2xl;
+    @apply relative mx-auto w-72 h-[600px] bg-gray-900 dark:bg-white rounded-[3rem] p-4 shadow-2xl;
   }
   
   .phone-screen {
