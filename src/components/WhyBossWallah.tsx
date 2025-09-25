@@ -33,7 +33,7 @@ const WhyBossWallah = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-display font-bold text-foreground mb-6">
             Why <span className="text-gradient">Boss Wallah?</span>
           </h2>
@@ -43,7 +43,7 @@ const WhyBossWallah = () => {
         </div>
 
         {/* Main Features Grid */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-8 lg:mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="card-feature">
               <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground mb-6 group-hover:scale-110 transition-transform">
@@ -60,8 +60,8 @@ const WhyBossWallah = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-card rounded-3xl p-6 md:p-8 lg:p-10 border border-border shadow-medium">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+        <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-medium">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             
             {/* Left Content */}
             <div>
