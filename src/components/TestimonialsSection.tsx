@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-display font-bold text-foreground mb-6">
             Success <span className="text-gradient">Stories</span>
           </h2>
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Main Testimonials */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-10">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="card-testimonial group">
               
@@ -119,8 +119,8 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Success Statistics */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-medium mb-16">
-          <h3 className="text-3xl font-bold text-center text-foreground mb-12">
+        <div className="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-medium mb-10">
+          <h3 className="text-3xl font-bold text-center text-foreground mb-8">
             Proven <span className="text-gradient">Results</span>
           </h3>
           

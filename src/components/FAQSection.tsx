@@ -61,7 +61,7 @@ const FAQSection = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-display font-bold text-foreground mb-6">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
@@ -110,7 +110,7 @@ const FAQSection = () => {
         </div>
 
         {/* Support CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-10">
           <div className="bg-card rounded-2xl p-8 border border-border shadow-medium max-w-2xl mx-auto">
             <div className="w-16 h-16 bg-gradient-primary rounded-2xl mx-auto mb-6 flex items-center justify-center">
               <HelpCircle className="w-8 h-8 text-primary-foreground" />

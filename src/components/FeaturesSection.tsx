@@ -58,7 +58,7 @@ const FeaturesSection = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-12">
           <h2 className="text-display font-bold text-foreground mb-6">
             Platform <span className="text-gradient">Features</span>
           </h2>
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Main Features Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {mainFeatures.map((feature, index) => (
             <div key={index} className="card-feature bg-card/50 backdrop-blur-sm">
               <div className="flex items-start space-x-4 mb-6">
@@ -118,7 +118,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Global Business Solutions Teaser */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-2 bg-gradient-primary text-primary-foreground px-6 py-3 rounded-full font-medium shadow-brand">
             <Globe className="w-5 h-5" />
             <span>Global Business Launch Solutions</span>

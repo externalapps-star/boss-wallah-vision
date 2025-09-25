@@ -47,7 +47,7 @@ const Footer = () => {
       
       {/* Main Footer Content */}
       <div className="section-container">
-        <div className="py-16 border-b border-primary-foreground/10">
+        <div className="py-10 border-b border-primary-foreground/10">
           
           {/* Top Section */}
           <div className="grid lg:grid-cols-4 gap-12 mb-12">
@@ -201,7 +201,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="py-8">
+        <div className="py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             
             {/* Brand Tagline */}

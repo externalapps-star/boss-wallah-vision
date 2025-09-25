@@ -44,7 +44,7 @@ const BlogSection = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-display font-bold text-foreground mb-6">
             Latest <span className="text-gradient">Insights</span>
           </h2>
@@ -60,7 +60,7 @@ const BlogSection = () => {
           <div className="lg:col-span-2">
             
             {/* Featured Post */}
-            <div className="mb-12">
+            <div className="mb-8">
               <div className="bg-card rounded-3xl overflow-hidden border border-border shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
                 <div className="relative">
                   <img 
@@ -229,7 +229,7 @@ const BlogSection = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-10">
           <Button className="btn-outline-hero">
             View All Articles
             <ArrowRight className="w-5 h-5 ml-2" />

@@ -60,7 +60,7 @@ const PricingSection = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-display font-bold text-foreground mb-6">
             Simple, <span className="text-gradient">Transparent Pricing</span>
           </h2>
@@ -71,7 +71,7 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-10">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -184,7 +184,7 @@ const PricingSection = () => {
         </div>
 
         {/* FAQ Teaser */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-10">
           <p className="text-lg text-muted-foreground mb-4">
             Have questions about our plans?
           </p>
