@@ -10,8 +10,8 @@ const Navigation = () => {
           </div>
 
           {/* Center Show Stopper */}
-          <div className="flex-1 flex justify-center items-center">
-            <div className="flex items-center space-x-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-lg">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div className="flex items-center space-x-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-lg whitespace-nowrap">
               <Rocket className="w-5 h-5 text-primary animate-pulse" />
               <span>AI-Powered Business Launch Platform</span>
             </div>
