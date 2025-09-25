@@ -55,13 +55,13 @@ const Navigation = () => {
                         src={storeBadges} 
                         alt="Download from Google Play" 
                         className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
-                        onClick={() => window.open('https://play.google.com/store', '_blank')}
+                        onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
                       />
                       <img 
                         src={appStoreBadge} 
                         alt="Download from App Store" 
                         className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
-                        onClick={() => window.open('https://apps.apple.com', '_blank')}
+                        onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
                       />
                     </div>
                   </div>
