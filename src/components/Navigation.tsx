@@ -1,5 +1,6 @@
 import { Download, BookOpen, Rocket, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 const Navigation = () => {
@@ -33,10 +34,17 @@ const Navigation = () => {
           {/* Desktop CTA Buttons & Dark Mode Toggle - Extreme Right */}
           <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
             
-            <Button className="btn-hero">
-              <Download className="w-4 h-4 mr-2" />
-              Download Now
-            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button className="btn-hero">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Now
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Playstore and App Store</p>
+              </TooltipContent>
+            </Tooltip>
             <Button variant="outline" size="sm" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 hover:bg-accent" aria-label="Toggle dark mode">
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
