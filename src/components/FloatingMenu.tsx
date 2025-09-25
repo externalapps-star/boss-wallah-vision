@@ -94,7 +94,7 @@ const FloatingMenu = () => {
           {/* Close button in top right */}
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-200 hover:scale-110"
+            className="absolute top-2 right-4 p-1 hover:scale-110 transition-all duration-200"
             aria-label="Close menu"
           >
             <X className="w-6 h-6 text-primary" />
