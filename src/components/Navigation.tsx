@@ -4,6 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import storeBadges from '@/assets/store-badges.png';
+import appStoreBadge from '@/assets/app-store-badge.png';
 const Navigation = () => {
   const {
     theme,
@@ -49,12 +50,18 @@ const Navigation = () => {
                   
                   {/* Content */}
                   <div className="pt-4 pb-4 px-4">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center space-y-2">
                       <img 
                         src={storeBadges} 
-                        alt="Download from App Store or Google Play" 
-                        className="w-64 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+                        alt="Download from Google Play" 
+                        className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
                         onClick={() => window.open('https://play.google.com/store', '_blank')}
+                      />
+                      <img 
+                        src={appStoreBadge} 
+                        alt="Download from App Store" 
+                        className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+                        onClick={() => window.open('https://apps.apple.com', '_blank')}
                       />
                     </div>
                   </div>
