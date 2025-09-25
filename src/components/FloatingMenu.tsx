@@ -70,7 +70,7 @@ const FloatingMenu = () => {
         aria-label="Toggle navigation menu"
       >
         {isOpen ? (
-          <X className="w-6 h-6" />
+          <Menu className="w-6 h-6" />
         ) : (
           <Menu className="w-6 h-6" />
         )}
@@ -92,7 +92,16 @@ const FloatingMenu = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <div className="pt-32 px-6">
+        <div className="pt-20 px-6 relative">
+          {/* Close button in top right */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 p-2 rounded-full hover:bg-muted transition-colors"
+            aria-label="Close menu"
+          >
+            <X className="w-5 h-5 text-muted-foreground hover:text-primary" />
+          </button>
+          
           <nav className="space-y-2">
             {menuItems.map((item) => (
               <button
