@@ -16,9 +16,9 @@ const Navigation = () => {
 
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="section-container">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
+        <div className="flex items-center justify-between h-16 relative">
+          {/* Logo - Extreme Left */}
+          <div className="flex items-center flex-shrink-0">
             <img src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" alt="Boss Wallah Logo" className="h-12 w-auto" />
           </div>
 
@@ -30,8 +30,8 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Desktop CTA Buttons & Dark Mode Toggle */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Desktop CTA Buttons & Dark Mode Toggle - Extreme Right */}
+          <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
             <Button variant="outline" className="btn-outline-hero">
               <BookOpen className="w-4 h-4 mr-2" />
               Learn More
@@ -44,7 +44,8 @@ const Navigation = () => {
               variant="outline"
               size="sm"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="ml-2 p-2"
+              className="p-2 hover:bg-accent"
+              aria-label="Toggle dark mode"
             >
               {theme === 'dark' ? (
                 <Sun className="w-4 h-4" />
@@ -54,13 +55,14 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Dark Mode Toggle */}
-          <div className="md:hidden">
+          {/* Mobile Menu - Extreme Right */}
+          <div className="md:hidden flex items-center space-x-2 flex-shrink-0">
             <Button
               variant="outline"
               size="sm"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2"
+              aria-label="Toggle dark mode"
             >
               {theme === 'dark' ? (
                 <Sun className="w-4 h-4" />
