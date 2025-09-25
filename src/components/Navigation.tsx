@@ -43,24 +43,32 @@ const Navigation = () => {
                   Download Now
                 </Button>
               </TooltipTrigger>
-              <TooltipContent side="left">
-                <div className="flex items-center space-x-2">
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="p-1 hover:bg-accent"
-                    onClick={() => window.open('https://play.google.com/store', '_blank')}
-                  >
-                    <img src={googlePlayIcon} alt="Google Play" className="w-4 h-4" />
-                  </Button>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="p-1 hover:bg-accent"
-                    onClick={() => window.open('https://apps.apple.com', '_blank')}
-                  >
-                    <img src={appStoreIcon} alt="App Store" className="w-4 h-4" />
-                  </Button>
+              <TooltipContent side="bottom" className="bg-card border-2 border-primary/20 shadow-lg rounded-xl p-4 max-w-xs">
+                <div className="flex flex-col items-center space-y-3">
+                  <p className="text-sm font-medium text-center text-muted-foreground">
+                    Download our app from:
+                  </p>
+                  <div className="flex items-center space-x-4">
+                    <Button 
+                      variant="ghost" 
+                      size="lg" 
+                      className="p-3 hover:bg-accent hover:scale-105 transition-all duration-200 rounded-lg border border-border/50"
+                      onClick={() => window.open('https://play.google.com/store', '_blank')}
+                    >
+                      <img src={googlePlayIcon} alt="Google Play" className="w-8 h-8" />
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      size="lg" 
+                      className="p-3 hover:bg-accent hover:scale-105 transition-all duration-200 rounded-lg border border-border/50"
+                      onClick={() => window.open('https://apps.apple.com', '_blank')}
+                    >
+                      <img src={appStoreIcon} alt="App Store" className="w-8 h-8" />
+                    </Button>
+                  </div>
+                  <div className="text-xs text-muted-foreground text-center">
+                    Click to visit store
+                  </div>
                 </div>
               </TooltipContent>
             </Tooltip>
