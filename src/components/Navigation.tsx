@@ -12,7 +12,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" 
               alt="Boss Wallah Logo"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
