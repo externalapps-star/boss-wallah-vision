@@ -1,6 +1,5 @@
 import { Download, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoTransparent from '@/assets/boss-wallah-logo-transparent.png';
 
 const Navigation = () => {
 
@@ -11,7 +10,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src={logoTransparent}
+              src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" 
               alt="Boss Wallah Logo"
               className="h-10 w-auto"
             />
