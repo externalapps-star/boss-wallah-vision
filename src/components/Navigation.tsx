@@ -1,4 +1,4 @@
-import { Download, BookOpen } from 'lucide-react';
+import { Download, BookOpen, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
@@ -16,8 +16,13 @@ const Navigation = () => {
             />
           </div>
 
-          {/* Desktop Navigation - Now handled by FloatingMenu */}
-          <div className="flex-1"></div>
+          {/* Center Show Stopper */}
+          <div className="flex-1 flex justify-center items-center">
+            <div className="flex items-center space-x-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-lg">
+              <Rocket className="w-5 h-5 text-primary animate-pulse" />
+              <span>AI-Powered Business Launch</span>
+            </div>
+          </div>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
