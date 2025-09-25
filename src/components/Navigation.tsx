@@ -1,4 +1,4 @@
-import { Download, BookOpen, Rocket, Moon, Sun } from 'lucide-react';
+import { Download, BookOpen, Rocket, Moon, Sun, Smartphone, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTheme } from 'next-themes';
@@ -41,8 +41,25 @@ const Navigation = () => {
                   Download Now
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Playstore and App Store</p>
+              <TooltipContent side="left">
+                <div className="flex items-center space-x-2">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-1 hover:bg-accent"
+                    onClick={() => window.open('https://play.google.com/store', '_blank')}
+                  >
+                    <Play className="w-4 h-4 text-green-600" />
+                  </Button>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-1 hover:bg-accent"
+                    onClick={() => window.open('https://apps.apple.com', '_blank')}
+                  >
+                    <Smartphone className="w-4 h-4 text-blue-600" />
+                  </Button>
+                </div>
               </TooltipContent>
             </Tooltip>
             <Button variant="outline" size="sm" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 hover:bg-accent" aria-label="Toggle dark mode">
