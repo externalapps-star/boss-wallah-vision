@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import googlePlayIcon from '@/assets/google-play-icon.png';
-import appStoreIcon from '@/assets/app-store-icon.png';
+import googlePlayIcon from '@/assets/google-play-transparent.png';
+import appStoreIcon from '@/assets/app-store-transparent.png';
 const Navigation = () => {
   const {
     theme,
