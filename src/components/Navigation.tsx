@@ -43,10 +43,10 @@ const Navigation = () => {
                   Download Now
                 </Button>
               </TooltipTrigger>
-              <TooltipContent side="bottom" className="bg-card border-2 border-primary/20 shadow-lg rounded-xl p-0 max-w-xs overflow-hidden">
-                <div className="relative bg-gradient-to-br from-background via-background/95 to-primary/5 backdrop-blur-sm">
+              <TooltipContent side="bottom" className="bg-popover border border-border shadow-lg rounded-xl p-0 max-w-xs overflow-hidden">
+                <div className="relative bg-popover backdrop-blur-sm">
                   {/* Chat bubble tail */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-card border-l-2 border-t-2 border-primary/20 rotate-45"></div>
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-popover border-l border-t border-border rotate-45"></div>
                   
                   {/* Content */}
                   <div className="pt-4 pb-4 px-4">
