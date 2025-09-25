@@ -100,7 +100,7 @@ const FloatingMenu = () => {
             <X className="w-6 h-6 text-primary" />
           </button>
           
-          <nav className="space-y-2">
+          <nav className="space-y-2 mt-8">
             {menuItems.map((item) => (
               <button
                 key={item.id}
