@@ -5,17 +5,17 @@ const WhyBossWallah = () => {
     {
       icon: <Target className="w-6 h-6" />,
       title: "One Platform. Complete Journey.",
-      description: "From ideation to launch, everything you need in one unified platform. No more jumping between different tools and services."
+      description: "Starting a business shouldn't feel overwhelming. Boss Wallah simplifies the complex process of launching your business by providing everything you need in one integrated platform—from initial idea exploration to successful launch and beyond."
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Built for Entrepreneurs, By Entrepreneurs",
-      description: "Created by successful entrepreneurs who understand your journey. Every feature is designed based on real-world experience."
+      description: "Our platform is designed specifically for launching real-world, offline businesses. Whether you're opening a bakery, a salon, or a home-based business, we have the tools and expertise to guide your journey."
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Proven Success Framework", 
-      description: "Our methodology has helped launch over 5,000 successful businesses. Follow the path that works."
+      title: "Comprehensive Business Toolkit", 
+      description: "Access proven templates, financial calculators, marketing strategies, and step-by-step guides tailored for your specific business type. Everything tested by real entrepreneurs."
     }
   ];
 
