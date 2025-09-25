@@ -102,7 +102,7 @@ const FloatingMenu = () => {
                   "w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200",
                   "hover:bg-muted hover:scale-105 hover:translate-x-2",
                   activeSection === item.id
-                    ? "bg-gradient-to-r from-primary/10 to-accent/10 text-primary border-l-4 border-primary shadow-sm"
+                    ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border-l-4 border-primary shadow-md font-semibold scale-105"
                     : "text-foreground hover:text-primary"
                 )}
               >
