@@ -58,7 +58,7 @@ const FeaturesSection = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-8 lg:mb-12">
           <h2 className="text-display font-bold text-foreground mb-6">
             Platform <span className="text-gradient">Features</span>
           </h2>
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Main Features Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
           {mainFeatures.map((feature, index) => (
             <div key={index} className="card-feature bg-card/50 backdrop-blur-sm">
               <div className="flex items-start space-x-4 mb-6">
@@ -99,7 +99,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Additional Features */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-medium">
+        <div className="bg-card rounded-3xl p-6 md:p-8 lg:p-10 border border-border shadow-medium">
           <h3 className="text-2xl font-bold text-center text-foreground mb-8">
             Plus Many More <span className="text-gradient">Powerful Features</span>
           </h3>
@@ -118,7 +118,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Global Business Solutions Teaser */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-8 lg:mt-12">
           <div className="inline-flex items-center space-x-2 bg-gradient-primary text-primary-foreground px-6 py-3 rounded-full font-medium shadow-brand">
             <Globe className="w-5 h-5" />
             <span>Global Business Launch Solutions</span>

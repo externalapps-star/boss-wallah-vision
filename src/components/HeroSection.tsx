@@ -18,18 +18,18 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section id="hero" className="relative flex items-center justify-center overflow-hidden bg-background">
       {/* Subtle Background Accents */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       
       <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-16">
           
           {/* Left Content */}
-          <div className="space-y-8 animate-slide-up">
+          <div className="space-y-6 animate-slide-up">
             
             {/* Main Headline */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 The{' '}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span>
