@@ -1,8 +1,10 @@
-import { Download, BookOpen, Rocket, Moon, Sun, Smartphone, Play } from 'lucide-react';
+import { Download, BookOpen, Rocket, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import googlePlayIcon from '@/assets/google-play-icon.png';
+import appStoreIcon from '@/assets/app-store-icon.png';
 const Navigation = () => {
   const {
     theme,
@@ -49,7 +51,7 @@ const Navigation = () => {
                     className="p-1 hover:bg-accent"
                     onClick={() => window.open('https://play.google.com/store', '_blank')}
                   >
-                    <Play className="w-4 h-4 text-green-600" />
+                    <img src={googlePlayIcon} alt="Google Play" className="w-4 h-4" />
                   </Button>
                   <Button 
                     variant="ghost" 
@@ -57,7 +59,7 @@ const Navigation = () => {
                     className="p-1 hover:bg-accent"
                     onClick={() => window.open('https://apps.apple.com', '_blank')}
                   >
-                    <Smartphone className="w-4 h-4 text-blue-600" />
+                    <img src={appStoreIcon} alt="App Store" className="w-4 h-4" />
                   </Button>
                 </div>
               </TooltipContent>
