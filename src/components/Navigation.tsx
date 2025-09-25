@@ -3,8 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import googlePlayIcon from '@/assets/google-play-transparent.png';
-import appStoreIcon from '@/assets/app-store-transparent.png';
+import storeBadges from '@/assets/store-badges.png';
 const Navigation = () => {
   const {
     theme,
@@ -43,31 +42,21 @@ const Navigation = () => {
                   Download Now
                 </Button>
               </TooltipTrigger>
-              <TooltipContent side="bottom" className="bg-card border-2 border-primary/20 shadow-lg rounded-xl p-4 max-w-xs">
-                <div className="flex flex-col items-center space-y-3">
-                  <p className="text-sm font-medium text-center text-muted-foreground">
-                    Download our app from:
-                  </p>
-                  <div className="flex items-center space-x-4">
-                    <Button 
-                      variant="ghost" 
-                      size="lg" 
-                      className="p-3 hover:bg-accent hover:scale-105 transition-all duration-200 rounded-lg border border-border/50"
-                      onClick={() => window.open('https://play.google.com/store', '_blank')}
-                    >
-                      <img src={googlePlayIcon} alt="Google Play" className="w-8 h-8" />
-                    </Button>
-                    <Button 
-                      variant="ghost" 
-                      size="lg" 
-                      className="p-3 hover:bg-accent hover:scale-105 transition-all duration-200 rounded-lg border border-border/50"
-                      onClick={() => window.open('https://apps.apple.com', '_blank')}
-                    >
-                      <img src={appStoreIcon} alt="App Store" className="w-8 h-8" />
-                    </Button>
-                  </div>
-                  <div className="text-xs text-muted-foreground text-center">
-                    Click to visit store
+              <TooltipContent side="bottom" className="bg-card border-2 border-primary/20 shadow-lg rounded-xl p-0 max-w-xs overflow-hidden">
+                <div className="relative bg-gradient-to-br from-background via-background/95 to-primary/5 backdrop-blur-sm">
+                  {/* Chat bubble tail */}
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-card border-l-2 border-t-2 border-primary/20 rotate-45"></div>
+                  
+                  {/* Content */}
+                  <div className="pt-4 pb-4 px-4">
+                    <div className="flex flex-col items-center">
+                      <img 
+                        src={storeBadges} 
+                        alt="Download from App Store or Google Play" 
+                        className="w-64 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+                        onClick={() => window.open('https://play.google.com/store', '_blank')}
+                      />
+                    </div>
                   </div>
                 </div>
               </TooltipContent>
