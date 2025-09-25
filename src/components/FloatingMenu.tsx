@@ -58,23 +58,21 @@ const FloatingMenu = () => {
 
   return (
     <>
-      {/* Floating Hamburger Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={cn(
-          "fixed left-6 top-1/2 transform -translate-y-1/2 z-50 p-3 rounded-full transition-all duration-300",
-          "bg-transparent border-2 border-primary/30 text-primary backdrop-blur-sm",
-          "hover:scale-110 hover:border-primary/50 hover:bg-primary/10 active:scale-95",
-          "md:block" // Always visible on all screen sizes
-        )}
-        aria-label="Toggle navigation menu"
-      >
-        {isOpen ? (
+      {/* Floating Hamburger Button - only show when menu is closed */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className={cn(
+            "fixed left-6 top-1/2 transform -translate-y-1/2 z-50 p-3 rounded-full transition-all duration-300",
+            "bg-transparent border-2 border-primary/30 text-primary backdrop-blur-sm",
+            "hover:scale-110 hover:border-primary/50 hover:bg-primary/10 active:scale-95",
+            "md:block" // Always visible on all screen sizes
+          )}
+          aria-label="Toggle navigation menu"
+        >
           <Menu className="w-6 h-6" />
-        ) : (
-          <Menu className="w-6 h-6" />
-        )}
-      </button>
+        </button>
+      )}
 
       {/* Overlay */}
       {isOpen && (
@@ -92,14 +90,14 @@ const FloatingMenu = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <div className="pt-20 px-6 relative">
+        <div className="pt-16 px-6 relative">
           {/* Close button in top right */}
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-muted transition-colors"
+            className="absolute top-4 right-4 p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-200 hover:scale-110"
             aria-label="Close menu"
           >
-            <X className="w-5 h-5 text-muted-foreground hover:text-primary" />
+            <X className="w-6 h-6 text-primary" />
           </button>
           
           <nav className="space-y-2">
@@ -111,7 +109,7 @@ const FloatingMenu = () => {
                   "w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200",
                   "hover:bg-muted hover:scale-105 hover:translate-x-2",
                   activeSection === item.id
-                    ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border-l-4 border-primary shadow-md font-semibold scale-105"
+                    ? "bg-gradient-to-r from-primary/30 to-accent/30 text-primary border-l-4 border-primary shadow-lg font-bold scale-105 transform translate-x-1"
                     : "text-foreground hover:text-primary"
                 )}
               >
