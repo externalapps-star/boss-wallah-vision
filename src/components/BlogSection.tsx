@@ -23,10 +23,12 @@ const BlogSection = () => {
     const scriptURL = "https://script.google.com/macros/s/AKfycby7rCeqSqgzxjr2zsTezYEJF4y2cpp6T9Cc1FBhZ_u6Sm8Ib4-tnE5X9yQ4LDym5-eSCA/exec";
 
     try {
+      const formData = new URLSearchParams();
+      formData.append('email', email);
+      
       const response = await fetch(scriptURL, {
         method: "POST",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({ email: email })
+        body: formData
       });
 
       const result = await response.json();
