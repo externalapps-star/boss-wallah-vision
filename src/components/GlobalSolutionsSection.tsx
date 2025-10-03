@@ -29,29 +29,33 @@ const GlobalSolutionsSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
       
       <div className="section-container relative">
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-display font-bold text-foreground mb-4">
+        <div className="text-center max-w-5xl mx-auto mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 whitespace-nowrap">
             Global Business Launch <span className="text-gradient">Solutions</span>
           </h2>
-          <p className="text-2xl font-semibold text-primary mb-6">
-            Wherever You Are, We're There
-          </p>
+          <div className="inline-block bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl px-8 py-4 mb-8 border border-primary/20">
+            <p className="text-xl md:text-2xl font-semibold text-primary">
+              Wherever You Are, We're There
+            </p>
+          </div>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             Boss Wallah adapts to your local market conditions, regulations, and opportunities. Our business plans are customized based on your geographic location, ensuring relevance and accuracy for your specific market.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold text-center text-foreground mb-8">
-            Growing Network of <span className="text-gradient">Support</span>
-          </h3>
+        {/* Features Section */}
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-foreground mb-2">
+              Growing Network of <span className="text-gradient">Support</span>
+            </h3>
+          </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
