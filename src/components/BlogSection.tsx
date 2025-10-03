@@ -1,7 +1,31 @@
 import { Calendar, Clock, ArrowRight, TrendingUp, Users, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 const BlogSection = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubscribe = () => {
+    if (!email || !email.includes('@')) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubscribed(true);
+    toast({
+      title: "Thank You for Subscribing! 🎉",
+      description: "You'll receive the latest insights and success stories in your inbox.",
+    });
+    setEmail('');
+  };
+
   const blogPosts = [
     {
       title: "How to grow Instagram from zero followers ( Step-by-step Guide)",
@@ -219,9 +243,15 @@ const BlogSection = () => {
                   <input 
                     type="email" 
                     placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
                     className="flex-1 px-4 py-3 rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
                   />
-                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px]">
+                  <Button 
+                    onClick={handleSubscribe}
+                    className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px]"
+                  >
                     Subscribe
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
