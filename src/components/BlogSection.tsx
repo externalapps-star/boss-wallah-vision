@@ -50,7 +50,8 @@ const BlogSection = () => {
       date: "Jul 28",
       readTime: "9 min",
       image: "https://bosswallah.com/assets/blog-financial-planning-guide-CI186fCo.png",
-      popular: true
+      popular: true,
+      url: "https://blog.bosswallah.com/financial-planning-for-beginners/"
     },
     {
       title: "How to Save Money Daily in India: Proven Techniques That Anyone Can Follow",
@@ -161,7 +162,7 @@ const BlogSection = () => {
               <div 
                 key={index + 2}
                 className="group relative cursor-pointer"
-                onClick={() => window.open('https://bosswallah.com/', '_blank')}
+                onClick={() => window.open(post.url || 'https://bosswallah.com/', '_blank')}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
