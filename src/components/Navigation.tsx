@@ -2,7 +2,7 @@ import { Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
-  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
         <div className="flex items-center justify-between h-16 relative">
           {/* Logo - Extreme Left */}
