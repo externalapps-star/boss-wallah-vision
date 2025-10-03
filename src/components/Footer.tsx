@@ -55,10 +55,10 @@ const Footer = () => {
       
       {/* Main Footer Content */}
       <div className="section-container">
-        <div className="py-10 border-b border-primary-foreground/10">
+        <div className="py-6 border-b border-primary-foreground/10">
           
           {/* Top Section */}
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-6">
             
             {/* Brand Section */}
             <div>
@@ -117,7 +117,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="py-6">
+        <div className="py-4">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             
             {/* Copyright */}
