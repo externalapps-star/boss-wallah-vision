@@ -1,10 +1,7 @@
-import { Download, BookOpen, Rocket, Moon, Sun } from 'lucide-react';
+import { Rocket, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import storeBadges from '@/assets/store-badges.png';
-import appStoreBadge from '@/assets/app-store-badge.png';
 const Navigation = () => {
   const {
     theme,
@@ -35,39 +32,6 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons & Dark Mode Toggle - Extreme Right */}
           <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
-            
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button className="btn-hero">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Now
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="bottom" className="bg-popover border border-border shadow-lg rounded-xl p-0 max-w-xs overflow-hidden">
-                <div className="relative bg-popover backdrop-blur-sm">
-                  {/* Chat bubble tail */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-popover border-l border-t border-border rotate-45"></div>
-                  
-                  {/* Content */}
-                  <div className="pt-4 pb-4 px-4">
-                    <div className="flex flex-col items-center space-y-2">
-                      <img 
-                        src={storeBadges} 
-                        alt="Download from Google Play" 
-                        className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
-                        onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
-                      />
-                      <img 
-                        src={appStoreBadge} 
-                        alt="Download from App Store" 
-                        className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
-                        onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </TooltipContent>
-            </Tooltip>
             <Button variant="outline" size="sm" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 hover:bg-accent" aria-label="Toggle dark mode">
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
