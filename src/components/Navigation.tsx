@@ -1,12 +1,23 @@
-import { Rocket, Mail } from 'lucide-react';
+import { Rocket, Mail, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const Navigation = () => {
+interface NavigationProps {
+  onMenuClick?: () => void;
+}
+
+const Navigation = ({ onMenuClick }: NavigationProps) => {
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
         <div className="flex items-center justify-between h-16 relative">
-          {/* Logo - Extreme Left */}
-          <div className="flex items-center flex-shrink-0">
+          {/* Mobile Menu Button & Logo */}
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <button
+              onClick={onMenuClick}
+              className="md:hidden p-2 rounded-lg border-2 border-primary/30 text-primary hover:bg-primary/10 transition-all"
+              aria-label="Toggle navigation menu"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
             <img src="/lovable-uploads/logo-transparent.png" alt="Boss Wallah Logo" className="h-14 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" />
           </div>
 
