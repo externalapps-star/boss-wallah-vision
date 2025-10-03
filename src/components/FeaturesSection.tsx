@@ -65,14 +65,14 @@ const FeaturesSection = () => {
           {mainFeatures.map((feature, index) => (
             <div key={index} className="group relative">
               {/* Glow Effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-10 group-hover:opacity-30 transition duration-300"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500 animate-gradient"></div>
               
               {/* Main Card */}
-              <div className="relative bg-card backdrop-blur-sm border border-border/50 rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1">
+              <div className="relative bg-card backdrop-blur-sm border-2 border-border/50 rounded-3xl p-8 h-full shadow-lg hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:bg-card/80">
                 
                 {/* Header Section */}
                 <div className="flex items-start space-x-4 mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center text-3xl border border-primary/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center text-3xl border border-primary/30 group-hover:scale-110 group-hover:rotate-3 group-hover:border-primary/60 group-hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all duration-300">
                     {feature.emoji}
                   </div>
                   <div className="flex-1 pt-2">
@@ -83,22 +83,22 @@ const FeaturesSection = () => {
                 </div>
                 
                 {/* Description */}
-                <p className="text-muted-foreground mb-6 leading-relaxed text-sm text-justify">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-sm text-justify group-hover:text-foreground/90 transition-colors duration-300">
                   {feature.description}
                 </p>
                 
                 {/* Benefits Grid */}
-                <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border/50">
+                <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border/50 group-hover:border-primary/30 transition-colors duration-300">
                   {feature.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-start space-x-2 text-sm group/item">
-                      <div className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full mt-1.5 flex-shrink-0 group-hover/item:scale-150 transition-transform"></div>
-                      <span className="text-foreground/80 group-hover/item:text-foreground transition-colors">{benefit}</span>
+                      <div className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full mt-1.5 flex-shrink-0 group-hover/item:scale-150 group-hover:shadow-[0_0_8px_rgba(var(--primary-rgb),0.6)] transition-all duration-300"></div>
+                      <span className="text-foreground/80 group-hover/item:text-foreground group-hover/item:font-medium transition-all duration-300">{benefit}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Bottom Accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center shadow-[0_4px_12px_rgba(var(--primary-rgb),0.5)]"></div>
               </div>
             </div>
           ))}
