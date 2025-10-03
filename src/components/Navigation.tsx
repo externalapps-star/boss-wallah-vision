@@ -9,15 +9,8 @@ const Navigation = ({ onMenuClick }: NavigationProps) => {
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
         <div className="flex items-center justify-between h-16 relative">
-          {/* Mobile Menu Button & Logo */}
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <button
-              onClick={onMenuClick}
-              className="md:hidden p-2 rounded-lg border-2 border-primary/30 text-primary hover:bg-primary/10 transition-all"
-              aria-label="Toggle navigation menu"
-            >
-              <Menu className="w-5 h-5" />
-            </button>
+          {/* Logo - Extreme Left */}
+          <div className="flex items-center flex-shrink-0">
             <img src="/lovable-uploads/logo-transparent.png" alt="Boss Wallah Logo" className="h-14 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" />
           </div>
 
@@ -53,6 +46,13 @@ const Navigation = ({ onMenuClick }: NavigationProps) => {
               <Mail className="w-3 h-3 mr-1" />
               Contact
             </Button>
+            <button
+              onClick={onMenuClick}
+              className="p-2 rounded-lg border-2 border-primary/30 text-primary hover:bg-primary/10 transition-all"
+              aria-label="Toggle navigation menu"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
           </div>
 
         </div>
