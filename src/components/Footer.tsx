@@ -102,6 +102,11 @@ const Footer = () => {
               </ul>
               
               <div className="space-y-2 text-sm text-primary-foreground/70">
+                <a href="mailto:brand@bosswallah.com" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
+                  <Mail className="w-4 h-4 text-accent" />
+                  <span>brand@bosswallah.com</span>
+                </a>
+                
                 <a href="tel:+1234567890" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
                   <Phone className="w-4 h-4 text-accent" />
                   <span>+1 (234) 567-890</span>
