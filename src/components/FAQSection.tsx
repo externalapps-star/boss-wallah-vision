@@ -119,7 +119,7 @@ const FAQSection = () => {
   });
 
   return (
-    <section id="faq" className="section-padding bg-gradient-to-b from-secondary/20 via-background to-primary/5 relative overflow-hidden">
+    <section id="faq" className="section-padding section-bg-default relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
       <div className="absolute top-40 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>

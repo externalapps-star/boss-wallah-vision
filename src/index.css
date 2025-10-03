@@ -165,7 +165,16 @@
   }
   
   .section-padding {
-    @apply py-4 md:py-6 lg:py-8;
+    @apply py-12 md:py-16 lg:py-20;
+  }
+  
+  /* Section Background Variations */
+  .section-bg-default {
+    @apply bg-background;
+  }
+  
+  .section-bg-alt {
+    @apply bg-secondary/20;
   }
   
   /* Interactive Elements */

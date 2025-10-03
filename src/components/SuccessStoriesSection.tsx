@@ -59,7 +59,7 @@ const SuccessStoriesSection = () => {
   const displayedStories = showAll ? stories : stories.slice(0, 2);
 
   return (
-    <section className="section-padding bg-gradient-to-b from-secondary/20 via-background to-primary/5 relative overflow-hidden">
+    <section className="section-padding section-bg-alt relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
