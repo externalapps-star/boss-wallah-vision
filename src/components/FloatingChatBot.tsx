@@ -3,8 +3,8 @@ import { MessageCircle, X, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import googlePlayBadge from '@/assets/google-play-transparent.png';
-import appStoreBadge from '@/assets/app-store-transparent.png';
+import storeBadges from '@/assets/store-badges.png';
+import appStoreBadge from '@/assets/app-store-badge.png';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -152,7 +152,7 @@ const FloatingChatBot = () => {
                   <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
                   <div className="flex gap-2">
                     <img
-                      src={googlePlayBadge}
+                      src={storeBadges}
                       alt="Get it on Google Play"
                       onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
                       className="h-10 object-contain cursor-pointer hover:opacity-80 transition-opacity"
