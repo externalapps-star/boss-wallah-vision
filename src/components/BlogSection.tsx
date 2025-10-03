@@ -221,7 +221,7 @@ const BlogSection = () => {
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
                   />
-                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0">
+                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px]">
                     Subscribe
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
