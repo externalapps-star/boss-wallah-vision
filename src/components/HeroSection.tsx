@@ -64,7 +64,7 @@ const HeroSection = () => {
             <div className="relative scale-90 sm:scale-100">
               
               {/* Phone Mockup */}
-              <div className="phone-mockup animate-float">
+              <div className="phone-mockup animate-float mt-16 sm:mt-20">
                 <div className="phone-screen">
                   <img src={appImages[currentImage]} alt="Boss Wallah App Screenshot" className="w-full h-full object-cover transition-opacity duration-1000" />
                 </div>
