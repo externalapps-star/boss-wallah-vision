@@ -3,7 +3,6 @@ import FloatingMenu from '@/components/FloatingMenu';
 import FloatingDownloadCTA from '@/components/FloatingDownloadCTA';
 import FloatingChatBot from '@/components/FloatingChatBot';
 import HeroSection from '@/components/HeroSection';
-import WhyBossWallah from '@/components/WhyBossWallah';
 import FeaturesSection from '@/components/FeaturesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
@@ -21,7 +20,6 @@ const Index = () => {
       
       <main>
         <HeroSection />
-        <WhyBossWallah />
         <FeaturesSection />
         <TestimonialsSection />
         <FAQSection />
