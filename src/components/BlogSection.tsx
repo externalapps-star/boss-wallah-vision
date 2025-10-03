@@ -59,7 +59,7 @@ const BlogSection = () => {
       <div className="section-container relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-5 py-2 mb-6 border border-primary/20">
             <Lightbulb className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Knowledge Hub</span>
@@ -187,7 +187,7 @@ const BlogSection = () => {
         </div>
 
         {/* Read More Articles Button */}
-        <div className="text-center mt-8 mb-10">
+        <div className="text-center mt-6 mb-8">
           <Button 
             size="lg"
             className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300"

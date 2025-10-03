@@ -127,7 +127,7 @@ const FAQSection = () => {
       <div className="section-container relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
+        <div className="text-center max-w-4xl mx-auto mb-6">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-5 py-2 mb-6 border border-primary/20">
             <MessageCircle className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Got Questions? We've Got Answers</span>
