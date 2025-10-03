@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import appStoreBadge from '@/assets/app-store-badge.png';
 import googlePlayBadge from '@/assets/google-play-badge.png';
 const FinalCTASection = () => {
-  return <section className="section-padding bg-gradient-to-br from-primary via-accent to-primary-glow text-primary-foreground relative overflow-hidden">
+  return <section id="download" className="section-padding bg-gradient-to-br from-primary via-accent to-primary-glow text-primary-foreground relative overflow-hidden">
       
       {/* Background Elements */}
       <div className="absolute inset-0 bg-dots opacity-10"></div>
