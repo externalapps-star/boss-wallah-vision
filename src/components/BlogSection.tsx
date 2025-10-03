@@ -4,48 +4,48 @@ import { Button } from '@/components/ui/button';
 const BlogSection = () => {
   const blogPosts = [
     {
-      title: "The Complete Guide to Validating Your Business Idea in 2024",
-      excerpt: "Learn the proven framework successful entrepreneurs use to test and validate their business ideas before investing time and money.",
-      author: "Sarah Chen",
-      date: "Dec 15, 2024", 
-      readTime: "8 min",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      popular: true
-    },
-    {
-      title: "AI-Powered Market Research: How to Understand Your Customers",
-      excerpt: "Discover how AI tools are revolutionizing market research and helping entrepreneurs make data-driven decisions.",
-      author: "Michael Rodriguez",
-      date: "Dec 12, 2024",
-      readTime: "6 min", 
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      popular: true
-    },
-    {
-      title: "From Idea to $100K: 5 Entrepreneurs Share Their Journey", 
-      excerpt: "Real stories from Boss Wallah users who built six-figure businesses and the key lessons they learned along the way.",
+      title: "How to grow Instagram from zero followers ( Step-by-step Guide)",
+      excerpt: "A comprehensive step-by-step guide to growing your Instagram account from zero followers to thousands. Learn proven strategies, content creation tips, and engagement techniques that actually work.",
       author: "Boss Wallah Team",
-      date: "Dec 10, 2024",
-      readTime: "12 min",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      date: "Sep 2", 
+      readTime: "8 min",
+      image: "https://bosswallah.com/assets/blog-instagram-zero-followers-BLr3JTbz.png",
       popular: true
     },
     {
-      title: "Building Your First Business Budget: A Step-by-Step Guide",
-      excerpt: "Master the art of financial planning with our comprehensive guide to creating a realistic business budget that sets you up for success.",
-      author: "Jennifer Park",
-      date: "Dec 8, 2024",
-      readTime: "10 min",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "How to Grow Your Instagram Business Account: A Proven Strategy for 2025",
+      excerpt: "Transform your Instagram business account with proven strategies for 2025. Learn about business profile optimization, content formats, posting consistency, and engagement techniques to boost your brand's reach.",
+      author: "Boss Wallah Team",
+      date: "Sep 7",
+      readTime: "7 min", 
+      image: "https://bosswallah.com/assets/blog-instagram-business-account-wIL92XWd.png",
+      popular: true
+    },
+    {
+      title: "Financial Planning for Beginners: A Simple Guide to Start in 2025", 
+      excerpt: "Master the basics of financial planning with this comprehensive beginner's guide. Learn about setting financial goals, creating budgets, building emergency funds, and making smart investment decisions for a secure financial future.",
+      author: "Boss Wallah Team",
+      date: "Jul 28",
+      readTime: "9 min",
+      image: "https://bosswallah.com/assets/blog-financial-planning-guide-CI186fCo.png",
+      popular: true
+    },
+    {
+      title: "How to Save Money Daily in India: Proven Techniques That Anyone Can Follow",
+      excerpt: "Discover practical money-saving techniques that work in the Indian context. From daily spending habits to smart financial decisions, learn proven methods to build wealth consistently.",
+      author: "Boss Wallah Team",
+      date: "Aug 28",
+      readTime: "6 min",
+      image: "https://bosswallah.com/assets/blog-save-money-daily-tips-DY8EPwyT.png",
       popular: false
     },
     {
-      title: "The Power of Networking: How to Build Meaningful Business Connections",
-      excerpt: "Learn effective networking strategies that help you build authentic relationships and grow your business through genuine connections.",
-      author: "David Lee",
-      date: "Dec 5, 2024",
-      readTime: "7 min",
-      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Top 10 Agri Startup Ideas for Entrepreneurs in 2025",
+      excerpt: "Explore profitable agriculture startup opportunities in 2025. From tech-driven solutions to modern farming business models, discover ideas with high ROI potential and scalability in India's evolving agricultural sector.",
+      author: "Boss Wallah Team",
+      date: "Jul 28",
+      readTime: "8 min",
+      image: "https://bosswallah.com/assets/blog-agriculture-business-ideas-CZIb7zrq.png",
       popular: false
     }
   ];
