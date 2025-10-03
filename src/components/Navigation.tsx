@@ -1,14 +1,8 @@
-import { useState } from 'react';
-import { Rocket, Mail, Menu } from 'lucide-react';
+import { Rocket, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import FloatingMenu from './FloatingMenu';
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
         <div className="flex items-center justify-between h-16 relative">
           {/* Logo - Extreme Left */}
@@ -48,23 +42,11 @@ const Navigation = () => {
               <Mail className="w-3 h-3 mr-1" />
               Contact
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="border-2 border-primary/30 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 p-2"
-              onClick={() => setIsMenuOpen(true)}
-              aria-label="Open menu"
-            >
-              <Menu className="w-4 h-4" />
-            </Button>
           </div>
 
         </div>
       </div>
-    </nav>
-    
-    <FloatingMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-    </>
-  );
+
+    </nav>;
 };
 export default Navigation;
