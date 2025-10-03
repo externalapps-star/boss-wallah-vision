@@ -139,9 +139,6 @@ const Footer = () => {
 
             {/* Brand Tagline */}
             <div className="text-center md:text-right">
-              <p className="text-lg font-bold text-accent mb-1">
-                Boss Wallah – Be the Boss
-              </p>
               <p className="text-sm text-primary-foreground/80">
                 The only platform you need to launch your business.
               </p>
