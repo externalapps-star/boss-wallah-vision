@@ -295,7 +295,7 @@ const FAQSection = () => {
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Live Chat
                   </Button>
-                  <Button variant="outline" className="border-2 border-primary/30 hover:bg-primary/5 hover:border-primary hover:scale-105 transition-all duration-300">
+                  <Button variant="outline" className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary hover:scale-105 transition-all duration-300">
                     <Phone className="w-4 h-4 mr-2" />
                     Contact Us
                   </Button>
