@@ -38,7 +38,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="flex relative group">
+            <div className="flex">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 font-semibold px-8 py-4 text-lg h-auto transition-all duration-300"
@@ -47,39 +47,6 @@ const HeroSection = () => {
                 <Download className="w-5 h-5 mr-2" />
                 Download Now
               </Button>
-              
-              {/* Hover Dropdown with Store Badges */}
-              <div className="absolute top-full right-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-xl p-4 min-w-[280px]">
-                  <p className="text-sm font-medium text-foreground mb-3 text-center">Download from:</p>
-                  <div className="flex flex-col gap-2">
-                    <a 
-                      href="https://play.google.com/store" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="transition-transform hover:scale-105"
-                    >
-                      <img 
-                        src={googlePlayBadge} 
-                        alt="Get it on Google Play" 
-                        className="h-12 w-auto mx-auto"
-                      />
-                    </a>
-                    <a 
-                      href="https://apps.apple.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="transition-transform hover:scale-105"
-                    >
-                      <img 
-                        src={appStoreBadge} 
-                        alt="Download on the App Store" 
-                        className="h-12 w-auto mx-auto"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Trust Indicators */}
