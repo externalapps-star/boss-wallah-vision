@@ -123,24 +123,9 @@ const BlogSection = () => {
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3 flex-1">
+                    <p className="text-muted-foreground leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
-                    
-                    <div className="flex items-center justify-between pt-4 border-t border-border/50 mt-auto">
-                      <span className="text-sm font-medium text-foreground">
-                        {post.author}
-                      </span>
-                      
-                      <Button 
-                        variant="ghost" 
-                        size="sm"
-                        className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2"
-                      >
-                        Read
-                        <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </Button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -189,24 +174,9 @@ const BlogSection = () => {
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
-                    
-                    <div className="flex items-center justify-between pt-3 border-t border-border/50 mt-auto">
-                      <span className="text-sm font-medium text-foreground truncate">
-                        {post.author}
-                      </span>
-                      
-                      <Button 
-                        variant="ghost" 
-                        size="sm"
-                        className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2 h-8"
-                      >
-                        Read
-                        <ArrowRight className="w-3 h-3 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </Button>
-                    </div>
                   </div>
                 </div>
               </div>
