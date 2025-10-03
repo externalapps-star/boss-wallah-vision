@@ -240,7 +240,7 @@ const BlogSection = () => {
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4 pb-px">
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4 pb-5">
                       {post.excerpt}
                     </p>
                   </div>
