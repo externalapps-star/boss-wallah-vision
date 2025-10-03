@@ -40,7 +40,8 @@ const BlogSection = () => {
       date: "Sep 7",
       readTime: "7 min", 
       image: "https://bosswallah.com/assets/blog-instagram-business-account-wIL92XWd.png",
-      popular: true
+      popular: true,
+      url: "https://blog.bosswallah.com/how-to-grow-your-instagram-business-account-a-proven-strategy-for-2025/"
     },
     {
       title: "Financial Planning for Beginners: A Simple Guide to Start in 2025", 
