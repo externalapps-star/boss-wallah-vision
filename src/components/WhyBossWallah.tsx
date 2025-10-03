@@ -15,7 +15,7 @@ const WhyBossWallah = () => {
   ];
 
   return (
-    <section id="why-boss-wallah" className="section-padding section-bg-default">
+    <section id="why-boss-wallah" className="section-padding bg-gradient-to-b from-background to-secondary/30">
       <div className="section-container">
         
         {/* Header */}

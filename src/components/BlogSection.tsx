@@ -51,7 +51,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section id="blog" className="section-padding section-bg-alt relative overflow-hidden">
+    <section id="blog" className="section-padding bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
       <div className="absolute top-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>

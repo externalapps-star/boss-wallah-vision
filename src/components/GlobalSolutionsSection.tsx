@@ -29,7 +29,7 @@ const GlobalSolutionsSection = () => {
   ];
 
   return (
-    <section className="section-padding section-bg-default relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
       
