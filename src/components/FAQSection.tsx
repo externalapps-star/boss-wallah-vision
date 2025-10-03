@@ -248,30 +248,30 @@ const FAQSection = () => {
         </div>
 
         {/* Support CTA - Redesigned */}
-        <div className="mt-10 max-w-4xl mx-auto">
+        <div className="mt-10 max-w-3xl mx-auto">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
-            <div className="relative bg-gradient-to-br from-card to-card/95 backdrop-blur-sm border border-primary/20 rounded-3xl p-8 md:p-10">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="relative bg-gradient-to-br from-card to-card/95 backdrop-blur-sm border border-primary/20 rounded-3xl p-6 md:p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6">
                 {/* Left side - Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg rotate-6 group-hover:rotate-0 transition-transform duration-500">
-                    <MessageCircle className="w-10 h-10 text-primary-foreground" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg rotate-6 group-hover:rotate-0 transition-transform duration-500">
+                    <MessageCircle className="w-8 h-8 text-primary-foreground" />
                   </div>
                 </div>
                 
                 {/* Middle - Content */}
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
                     Still Have Questions?
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     Our expert support team is available to help you succeed
                   </p>
                 </div>
                 
                 {/* Right - Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex-shrink-0">
                   <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-105 transition-all duration-300">
                     <Mail className="w-4 h-4 mr-2" />
                     Contact Us
