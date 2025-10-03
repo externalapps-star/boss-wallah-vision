@@ -30,7 +30,8 @@ const BlogSection = () => {
       date: "Sep 2", 
       readTime: "8 min",
       image: "https://bosswallah.com/assets/blog-instagram-zero-followers-BLr3JTbz.png",
-      popular: true
+      popular: true,
+      url: "https://blog.bosswallah.com/how-to-grow-instagram-from-zero-followers-step-by-step-guide/"
     },
     {
       title: "How to Grow Your Instagram Business Account: A Proven Strategy for 2025",
@@ -100,7 +101,7 @@ const BlogSection = () => {
               <div 
                 key={index}
                 className="group relative cursor-pointer"
-                onClick={() => window.open('https://bosswallah.com/', '_blank')}
+                onClick={() => window.open(post.url || 'https://bosswallah.com/', '_blank')}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
