@@ -21,52 +21,42 @@ const FloatingDownloadCTA = () => {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-40 transition-transform duration-300 ${
-        isVisible ? 'translate-y-0' : 'translate-y-full'
+      className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-300 ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
       }`}
     >
-      <div className="bg-gradient-to-r from-primary to-accent backdrop-blur-lg border-t border-white/20 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-6 py-8 sm:py-10">
-          <div className="flex flex-col items-center justify-center text-center space-y-4">
-            <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl">
-              Manage Your Business Seamlessly
-            </h2>
-            
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button 
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 font-bold text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-7 h-auto shadow-2xl rounded-full transition-transform hover:scale-105"
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Boss Wallah Now
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="top" className="bg-popover border border-border shadow-lg rounded-xl p-0 max-w-xs overflow-hidden mb-2">
-                <div className="relative bg-popover backdrop-blur-sm">
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-popover border-r border-b border-border rotate-45"></div>
-                  <div className="pt-4 pb-4 px-4">
-                    <div className="flex flex-col items-center space-y-2">
-                      <img 
-                        src={storeBadges} 
-                        alt="Download from Google Play" 
-                        className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
-                        onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
-                      />
-                      <img 
-                        src={appStoreBadge} 
-                        alt="Download from App Store" 
-                        className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
-                        onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </TooltipContent>
-            </Tooltip>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button 
+            size="lg"
+            className="bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 font-semibold px-6 py-3 h-auto shadow-xl rounded-full transition-all hover:scale-105 hover:shadow-2xl"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download Boss Wallah Now
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent side="top" className="bg-popover border border-border shadow-lg rounded-xl p-0 max-w-xs overflow-hidden mb-2">
+          <div className="relative bg-popover backdrop-blur-sm">
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-popover border-r border-b border-border rotate-45"></div>
+            <div className="pt-4 pb-4 px-4">
+              <div className="flex flex-col items-center space-y-2">
+                <img 
+                  src={storeBadges} 
+                  alt="Download from Google Play" 
+                  className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+                  onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
+                />
+                <img 
+                  src={appStoreBadge} 
+                  alt="Download from App Store" 
+                  className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+                  onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </TooltipContent>
+      </Tooltip>
     </div>
   );
 };
