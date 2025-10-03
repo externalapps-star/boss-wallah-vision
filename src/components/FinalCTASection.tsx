@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import appStoreBadge from '@/assets/app-store-badge.png';
 import googlePlayBadge from '@/assets/google-play-badge.png';
-
 const FinalCTASection = () => {
   return <section className="section-padding bg-gradient-to-br from-primary via-accent to-primary-glow text-primary-foreground relative overflow-hidden">
       
@@ -9,8 +8,8 @@ const FinalCTASection = () => {
       <div className="absolute inset-0 bg-dots opacity-10"></div>
       <div className="absolute top-10 left-10 w-64 h-64 bg-primary-foreground/10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-primary-foreground/5 rounded-full blur-3xl animate-float" style={{
-        animationDelay: '2s'
-      }}></div>
+      animationDelay: '2s'
+    }}></div>
       
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -33,61 +32,21 @@ const FinalCTASection = () => {
           {/* App Store Download Buttons */}
           <div className="mb-12">
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
-              <a 
-                href="https://play.google.com/store" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group relative"
-              >
+              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="group relative">
                 <div className="absolute inset-0 bg-primary-foreground/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <img 
-                  src={googlePlayBadge} 
-                  alt="Get it on Google Play" 
-                  className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl"
-                />
+                <img src={googlePlayBadge} alt="Get it on Google Play" className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl" />
               </a>
-              <a 
-                href="https://apps.apple.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group relative"
-              >
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="group relative">
                 <div className="absolute inset-0 bg-primary-foreground/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <img 
-                  src={appStoreBadge} 
-                  alt="Download on the App Store" 
-                  className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl"
-                />
+                <img src={appStoreBadge} alt="Download on the App Store" className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl" />
               </a>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8"
-              >
-                Download Now
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8"
-              >
-                Learn More
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8"
-              >
-                Contact Us
-              </Button>
-            </div>
+            
           </div>
         </div>
       </div>
     </section>;
 };
-
 export default FinalCTASection;
