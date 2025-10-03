@@ -35,15 +35,6 @@ const Navigation = () => {
               <Mail className="w-4 h-4 mr-2" />
               Contact Us
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="border-2 border-primary/30 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 p-2"
-              onClick={() => setIsMenuOpen(true)}
-              aria-label="Open menu"
-            >
-              <Menu className="w-4 h-4" />
-            </Button>
           </div>
 
           {/* Mobile Menu - Extreme Right */}
