@@ -6,7 +6,13 @@ import googlePlayBadge from '@/assets/google-play-badge.png';
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const appImages = ['/lovable-uploads/252f491b-dcc6-49c2-81ce-82c7542acd40.png', '/lovable-uploads/0a198c2f-6e45-49a3-9fa0-08d99bf8fa98.png', '/lovable-uploads/9896e543-40e7-4d89-b24b-8e6dad8980d0.png'];
+  const appImages = [
+    '/lovable-uploads/252f491b-dcc6-49c2-81ce-82c7542acd40.png',
+    '/lovable-uploads/0a198c2f-6e45-49a3-9fa0-08d99bf8fa98.png',
+    '/lovable-uploads/9896e543-40e7-4d89-b24b-8e6dad8980d0.png',
+    '/lovable-uploads/7a17d701-3f16-414f-ac52-2ab06da2f2ec.png',
+    '/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png'
+  ];
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage(prev => (prev + 1) % appImages.length);
