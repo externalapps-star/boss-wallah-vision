@@ -19,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 relative">
           {/* Logo - Extreme Left */}
           <div className="flex items-center flex-shrink-0">
-            <img src="/lovable-uploads/logo-transparent.png" alt="Boss Wallah Logo" className="h-14 w-auto object-contain" />
+            <img src="/lovable-uploads/logo-transparent.png" alt="Boss Wallah Logo" className="h-14 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" />
           </div>
 
           {/* Center Show Stopper */}
