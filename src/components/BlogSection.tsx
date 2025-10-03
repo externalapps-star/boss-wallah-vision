@@ -6,9 +6,10 @@ import { useToast } from '@/hooks/use-toast';
 const BlogSection = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubscribe = () => {
+  const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
       toast({
         title: "Invalid Email",
@@ -18,8 +19,39 @@ const BlogSection = () => {
       return;
     }
 
-    setIsSubscribed(true);
-    setEmail('');
+    setIsSubmitting(true);
+    const scriptURL = "https://script.google.com/macros/s/AKfycby7rCeqSqgzxjr2zsTezYEJF4y2cpp6T9Cc1FBhZ_u6Sm8Ib4-tnE5X9yQ4LDym5-eSCA/exec";
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email })
+      });
+
+      const result = await response.json();
+      
+      if (response.ok) {
+        setIsSubscribed(true);
+        setEmail('');
+        toast({
+          title: "Success!",
+          description: "Thank you for subscribing to our newsletter.",
+        });
+      } else {
+        throw new Error(result.message || "Subscription failed");
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const blogPosts = [
@@ -254,9 +286,10 @@ const BlogSection = () => {
                       />
                       <Button 
                         onClick={handleSubscribe}
-                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px]"
+                        disabled={isSubmitting}
+                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px] disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        Subscribe
+                        {isSubmitting ? "Subscribing..." : "Subscribe"}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
