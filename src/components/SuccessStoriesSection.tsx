@@ -106,16 +106,6 @@ const SuccessStoriesSection = () => {
                     "{story.quote}"
                   </blockquote>
 
-                  {/* Author section */}
-                  <div className="flex items-start gap-4 mb-6 p-4 rounded-2xl bg-gradient-to-br ${story.color} border border-primary/10">
-                    <div className="text-5xl">{story.image}</div>
-                    <div className="flex-1">
-                      <h4 className="font-bold text-foreground text-lg mb-1">{story.author}</h4>
-                      <p className="text-sm text-primary font-semibold mb-1">{story.business}</p>
-                      <p className="text-xs text-muted-foreground">{story.location}</p>
-                    </div>
-                  </div>
-
                   {/* Metrics */}
                   <div className="grid grid-cols-3 gap-3">
                     <div className="text-center p-3 rounded-xl bg-primary/5 border border-primary/10 group-hover:bg-primary/10 transition-colors duration-300">
