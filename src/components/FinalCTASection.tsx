@@ -1,6 +1,6 @@
-import { Star } from 'lucide-react';
-import appStoreBadge from '@/assets/app-store-transparent.png';
-import googlePlayBadge from '@/assets/google-play-transparent.png';
+import { Button } from '@/components/ui/button';
+import appStoreBadge from '@/assets/app-store-badge.png';
+import googlePlayBadge from '@/assets/google-play-badge.png';
 
 const FinalCTASection = () => {
   return <section className="section-padding bg-gradient-to-br from-primary via-accent to-primary-glow text-primary-foreground relative overflow-hidden">
@@ -14,12 +14,6 @@ const FinalCTASection = () => {
       
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          
-          {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-6 py-2 mb-10">
-            <Star className="w-4 h-4 fill-accent-light text-accent-light" />
-            <span className="text-sm font-medium">Trusted by 10,000+ Entrepreneurs</span>
-          </div>
 
           {/* Main Headline */}
           <div className="space-y-6 mb-12">
@@ -27,15 +21,18 @@ const FinalCTASection = () => {
               Ready to Be the <span className="text-accent-light">Boss?</span>
             </h2>
             
-            <p className="text-xl md:text-2xl font-medium leading-relaxed opacity-90 max-w-2xl mx-auto">
-              Start your business journey today. Download Boss Wallah and get AI-powered guidance every step of the way.
+            <p className="text-xl md:text-2xl font-medium leading-relaxed opacity-90 max-w-3xl mx-auto">
+              Download the app and start your entrepreneurial journey today.
+            </p>
+
+            <p className="text-lg md:text-xl leading-relaxed opacity-85 max-w-3xl mx-auto">
+              Join thousands of entrepreneurs worldwide who trust Boss Wallah to turn their business dreams into reality.
             </p>
           </div>
 
           {/* App Store Download Buttons */}
-          <div className="mb-10">
-            <p className="text-lg font-semibold mb-6 opacity-90">Download the app now:</p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="mb-12">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
               <a 
                 href="https://play.google.com/store" 
                 target="_blank" 
@@ -46,7 +43,7 @@ const FinalCTASection = () => {
                 <img 
                   src={googlePlayBadge} 
                   alt="Get it on Google Play" 
-                  className="relative h-16 md:h-20 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl"
+                  className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl"
                 />
               </a>
               <a 
@@ -59,20 +56,34 @@ const FinalCTASection = () => {
                 <img 
                   src={appStoreBadge} 
                   alt="Download on the App Store" 
-                  className="relative h-16 md:h-20 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl"
+                  className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl"
                 />
               </a>
             </div>
-          </div>
 
-          {/* Final Tagline */}
-          <div className="mt-12 space-y-2">
-            <p className="text-2xl md:text-3xl font-bold text-accent-light">
-              Boss Wallah – Be the Boss
-            </p>
-            <p className="text-base md:text-lg opacity-80">
-              The only platform you need to launch your business.
-            </p>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                size="lg"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8"
+              >
+                Download Now
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8"
+              >
+                Learn More
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8"
+              >
+                Contact Us
+              </Button>
+            </div>
           </div>
         </div>
       </div>
