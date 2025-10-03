@@ -1,11 +1,7 @@
-import { Rocket, Mail, Menu } from 'lucide-react';
+import { Rocket, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-interface NavigationProps {
-  onMenuClick?: () => void;
-}
-
-const Navigation = ({ onMenuClick }: NavigationProps) => {
+const Navigation = () => {
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
         <div className="flex items-center justify-between h-16 relative">
@@ -46,13 +42,6 @@ const Navigation = ({ onMenuClick }: NavigationProps) => {
               <Mail className="w-3 h-3 mr-1" />
               Contact
             </Button>
-            <button
-              onClick={onMenuClick}
-              className="p-2 rounded-lg border-2 border-primary/30 text-primary hover:bg-primary/10 transition-all"
-              aria-label="Toggle navigation menu"
-            >
-              <Menu className="w-5 h-5" />
-            </button>
           </div>
 
         </div>

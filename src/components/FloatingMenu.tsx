@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const menuItems = [
@@ -14,12 +14,8 @@ const menuItems = [
   { id: 'download', label: 'Download App', href: '#download' },
 ];
 
-interface FloatingMenuProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-}
-
-const FloatingMenu = ({ isOpen, setIsOpen }: FloatingMenuProps) => {
+const FloatingMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
@@ -65,6 +61,20 @@ const FloatingMenu = ({ isOpen, setIsOpen }: FloatingMenuProps) => {
 
   return (
     <>
+      {/* Floating Hamburger Button - only show when menu is closed */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className={cn(
+            "fixed left-4 sm:left-6 top-1/2 transform -translate-y-1/2 z-50 p-2 sm:p-3 rounded-full transition-all duration-300",
+            "bg-transparent border-2 border-primary/30 text-primary backdrop-blur-sm",
+            "hover:scale-110 hover:border-primary/50 hover:bg-primary/10 active:scale-95"
+          )}
+          aria-label="Toggle navigation menu"
+        >
+          <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
+        </button>
+      )}
 
       {/* Overlay */}
       {isOpen && (
