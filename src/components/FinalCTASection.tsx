@@ -36,7 +36,7 @@ const FinalCTASection = () => {
                 <div className="absolute inset-0 bg-primary-foreground/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <img src={googlePlayBadge} alt="Get it on Google Play" className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl" />
               </a>
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="group relative">
+              <a href="https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395" target="_blank" rel="noopener noreferrer" className="group relative">
                 <div className="absolute inset-0 bg-primary-foreground/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <img src={appStoreBadge} alt="Download on the App Store" className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl" />
               </a>
