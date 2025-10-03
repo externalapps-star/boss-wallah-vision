@@ -33,7 +33,7 @@ const WhyBossWallah = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
               
               {/* Main Card */}
-              <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300 group-hover:transform group-hover:-translate-y-2">
+              <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300 group-hover:transform group-hover:-translate-y-2 overflow-hidden">
                 
                 {/* Icon Container */}
                 <div className="relative mb-6">
