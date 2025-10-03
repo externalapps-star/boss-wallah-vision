@@ -218,27 +218,27 @@ const BlogSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
-            <div className="relative bg-gradient-to-br from-card via-card to-secondary/20 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 md:p-10 shadow-xl">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div className="flex items-start gap-5 flex-1">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Lightbulb className="w-8 h-8 text-primary-foreground" />
+            <div className="relative bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex items-start gap-4 flex-1">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Stay Updated</h3>
-                    <p className="text-base text-muted-foreground leading-relaxed">
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       Get the latest entrepreneurship insights and success stories delivered to your inbox
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto md:min-w-[400px]">
+                <div className="flex gap-3 w-full md:w-auto md:min-w-[350px]">
                   <input 
                     type="email" 
                     placeholder="Enter your email"
-                    className="flex-1 px-5 py-4 rounded-xl bg-background border-2 border-border/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300 shadow-sm"
+                    className="flex-1 px-4 py-3 rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
                   />
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:shadow-xl hover:scale-105 transition-all duration-300 flex-shrink-0 px-6">
+                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0">
                     Subscribe
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
