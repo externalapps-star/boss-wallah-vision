@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="py-6 border-b border-primary-foreground/10">
           
           {/* Top Section */}
-          <div className="grid md:grid-cols-3 gap-8 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
             
             {/* Brand Section */}
             <div>
@@ -76,7 +76,7 @@ const Footer = () => {
               
               {/* Social Links */}
               <div className="flex space-x-3">
-                {socialLinks.map((social, index) => <a key={index} href={social.href} aria-label={social.name} className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300">
+                {socialLinks.map((social, index) => <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background">
                     {social.icon}
                   </a>)}
               </div>
@@ -84,10 +84,10 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="text-center">
-              <h4 className="font-semibold text-lg mb-4 text-accent">Quick Links</h4>
-              <ul className="space-y-2">
+              <h4 className="font-semibold text-lg mb-5 text-accent">Quick Links</h4>
+              <ul className="space-y-3">
                 {quickLinks.map((link, index) => <li key={index}>
-                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm inline-block focus:outline-none focus:text-accent focus:underline">
                       {link.name}
                     </a>
                   </li>)}
@@ -96,20 +96,20 @@ const Footer = () => {
 
             {/* Legal & Contact */}
             <div className="text-left">
-              <h4 className="font-semibold text-lg mb-4 text-accent">Legal & Contact</h4>
-              <ul className="space-y-2 mb-6">
+              <h4 className="font-semibold text-lg mb-5 text-accent">Legal & Contact</h4>
+              <ul className="space-y-3 mb-6">
                 {legal.map((link, index) => <li key={index}>
-                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm inline-block focus:outline-none focus:text-accent focus:underline">
                       {link.name}
                     </a>
                   </li>)}
               </ul>
               
               <div className="space-y-2 text-sm text-primary-foreground/70">
-                <div className="flex items-center justify-start space-x-2">
+                <a href="mailto:brand@bosswallah.com" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
                   <Mail className="w-4 h-4 text-accent" />
                   <span>brand@bosswallah.com</span>
-                </div>
+                </a>
                 
               </div>
             </div>
