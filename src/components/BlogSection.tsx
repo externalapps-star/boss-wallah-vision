@@ -60,7 +60,8 @@ const BlogSection = () => {
       date: "Aug 28",
       readTime: "6 min",
       image: "https://bosswallah.com/assets/blog-save-money-daily-tips-DY8EPwyT.png",
-      popular: false
+      popular: false,
+      url: "https://blog.bosswallah.com/how-to-save-money-daily-in-india-proven-techniques-that-anyone-can-follow/"
     },
     {
       title: "Top 10 Agri Startup Ideas for Entrepreneurs in 2025",
