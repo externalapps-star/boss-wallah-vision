@@ -216,8 +216,8 @@ const BlogSection = () => {
 
         {/* Stay Updated Section - Full Width Banner */}
         <div className="max-w-4xl mx-auto">
-          <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+          <div className="relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-30"></div>
             <div className="relative bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-start gap-4 flex-1">
