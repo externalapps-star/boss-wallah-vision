@@ -2,17 +2,23 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, A
 import { Button } from '@/components/ui/button';
 const Footer = () => {
   const quickLinks = [{
+    name: "Home",
+    href: "#hero"
+  }, {
+    name: "Why Us?",
+    href: "#why-boss-wallah"
+  }, {
     name: "Features",
     href: "#features"
-  }, {
-    name: "Pricing",
-    href: "#pricing"
   }, {
     name: "Success Stories",
     href: "#testimonials"
   }, {
     name: "FAQ",
     href: "#faq"
+  }, {
+    name: "Blog",
+    href: "#blog"
   }];
   
   const legal = [{
