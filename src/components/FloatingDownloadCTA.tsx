@@ -41,7 +41,7 @@ const FloatingDownloadCTA = () => {
             <p className="text-xs font-medium text-foreground mb-2 text-center">Download from:</p>
             <div className="flex flex-col gap-2">
               <a 
-                href="https://play.google.com/store/search?q=bosswallah&c=apps" 
+                href="https://play.google.com/store/apps/details?id=com.wealthdoctor" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-105"
