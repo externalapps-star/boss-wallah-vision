@@ -120,27 +120,10 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            
-            {/* Brand Tagline */}
-            <div className="text-center md:text-left">
-              <p className="text-lg font-bold text-accent mb-1">
-                Boss Wallah – Be the Boss
-              </p>
-              <p className="text-sm text-primary-foreground/80">
-                The only platform you need to launch your business.
-              </p>
-            </div>
-
-            {/* Copyright */}
-            <div className="text-center md:text-right">
-              <p className="text-sm text-primary-foreground/80">
-                © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
-              </p>
-              <p className="text-xs text-primary-foreground/60 mt-1">
-                Built for entrepreneurs, by entrepreneurs.
-              </p>
-            </div>
+          <div className="text-left">
+            <p className="text-sm text-primary-foreground/80">
+              © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
