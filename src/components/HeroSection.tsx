@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-16 sm:py-20">
           
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-4xl">
+          <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-5xl">
             
             {/* Main Headline */}
             <div className="space-y-3 sm:space-y-4">
