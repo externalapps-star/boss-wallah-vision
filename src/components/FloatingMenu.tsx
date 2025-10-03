@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 const menuItems = [
   { id: 'hero', label: 'Home', href: '#hero' },
   { id: 'features', label: 'Features', href: '#features' },
-  { id: 'pricing', label: 'Pricing', href: '#pricing' },
   { id: 'testimonials', label: 'Success Stories', href: '#testimonials' },
   { id: 'faq', label: 'FAQ', href: '#faq' },
   { id: 'blog', label: 'Blog', href: '#blog' },
