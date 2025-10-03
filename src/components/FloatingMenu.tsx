@@ -6,9 +6,12 @@ const menuItems = [
   { id: 'hero', label: 'Home', href: '#hero' },
   { id: 'why-boss-wallah', label: 'Why Us?', href: '#why-boss-wallah' },
   { id: 'features', label: 'Features', href: '#features' },
-  { id: 'testimonials', label: 'Success Stories', href: '#testimonials' },
+  { id: 'global-solutions', label: 'Global Solutions', href: '#global-solutions' },
+  { id: 'success-stories', label: 'Success Stories', href: '#success-stories' },
   { id: 'faq', label: 'FAQ', href: '#faq' },
   { id: 'blog', label: 'Blog', href: '#blog' },
+  { id: 'newsletter', label: 'Newsletter', href: '#newsletter' },
+  { id: 'download', label: 'Download App', href: '#download' },
 ];
 
 const FloatingMenu = () => {
