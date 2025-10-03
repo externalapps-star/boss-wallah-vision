@@ -30,18 +30,12 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Desktop CTA Buttons & Dark Mode Toggle - Extreme Right */}
+          {/* Desktop CTA Buttons - Extreme Right */}
           <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
-            <Button variant="outline" size="sm" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 hover:bg-accent" aria-label="Toggle dark mode">
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </Button>
           </div>
 
           {/* Mobile Menu - Extreme Right */}
           <div className="md:hidden flex items-center space-x-2 flex-shrink-0">
-            <Button variant="outline" size="sm" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2" aria-label="Toggle dark mode">
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </Button>
           </div>
 
         </div>
