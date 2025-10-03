@@ -32,10 +32,26 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons - Extreme Right */}
           <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300"
+              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Contact Us
+            </Button>
           </div>
 
           {/* Mobile Menu - Extreme Right */}
           <div className="md:hidden flex items-center space-x-2 flex-shrink-0">
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 text-xs px-3"
+              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Contact
+            </Button>
           </div>
 
         </div>
