@@ -40,7 +40,7 @@ const FloatingChatBot = () => {
     
     // Feature queries
     if (input.includes('feature') || input.includes('what can') || input.includes('what does')) {
-      return "Boss Wallah has amazing features like business management, invoicing, inventory tracking, and much more! 🚀 To explore all features and start using them, download our app now. You'll find download links at the top of this page or in the app stores!";
+      return "Boss Wallah offers powerful features including business management, invoicing, inventory tracking, payment processing, and comprehensive analytics! 🚀 Ready to experience them? Use the download buttons right here in our chat to get started instantly!";
     }
     
     // Pricing queries
@@ -50,7 +50,7 @@ const FloatingChatBot = () => {
     
     // How to start/sign up
     if (input.includes('start') || input.includes('sign up') || input.includes('register') || input.includes('account')) {
-      return "Getting started is super easy! Just download the Boss Wallah app from the App Store or Google Play Store (links at the top of this page), and you can create your account right there. The whole process takes less than 2 minutes! 📱";
+      return "Getting started is incredibly simple! Just tap one of the download buttons below in this chat to get the Boss Wallah app from the App Store or Google Play Store. Create your account in under 2 minutes and you're all set! 📱";
     }
     
     // Support/help queries
@@ -79,7 +79,7 @@ const FloatingChatBot = () => {
     }
     
     // Default response
-    return "I can help with that! For the most detailed information and to take action, I recommend downloading the Boss Wallah app. You'll find everything you need right at your fingertips, plus you can start managing your business immediately! 📲 Check the download buttons at the top of this page!";
+    return "I'd be happy to help you with that! For complete information and to get started right away, download the Boss Wallah app using the buttons below. You'll have everything you need at your fingertips to transform your business operations! 📲";
   };
 
   const handleSend = () => {
@@ -110,9 +110,9 @@ const FloatingChatBot = () => {
     <>
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 md:right-8 w-[calc(100vw-2rem)] max-w-md h-[70vh] max-h-[500px] bg-background border border-border rounded-lg shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-4">
+        <div className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 md:right-8 w-[calc(100vw-2rem)] max-w-md h-[70vh] max-h-[500px] bg-background border border-border rounded-2xl shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-4 overflow-hidden">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary to-accent">
+          <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary to-accent rounded-t-2xl">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                 <MessageCircle className="w-5 h-5 text-white" />
@@ -177,7 +177,7 @@ const FloatingChatBot = () => {
           </ScrollArea>
 
           {/* Input */}
-          <div className="p-4 border-t border-border">
+          <div className="p-4 border-t border-border rounded-b-2xl bg-background">
             <div className="flex gap-2">
               <Input
                 value={input}
