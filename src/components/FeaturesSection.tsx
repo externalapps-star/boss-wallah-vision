@@ -1,4 +1,4 @@
-import { Brain, Bot, BarChart3, Target, TrendingUp, BookOpen, Zap, Globe, Users, Shield } from 'lucide-react';
+import { Brain, Bot, BarChart3, Target, TrendingUp, BookOpen } from 'lucide-react';
 
 const FeaturesSection = () => {
   const mainFeatures = [
@@ -6,51 +6,44 @@ const FeaturesSection = () => {
       icon: <Brain className="w-8 h-8" />,
       emoji: "🧠",
       title: "AI-Powered Business Planning",
-      description: "Generate comprehensive business plans in minutes. Our AI analyzes your industry, market conditions, and creates tailored strategies for success.",
+      description: "Choose from hundreds of proven business ideas with detailed, customizable plans. Our AI learns about you—your location, skills, and goals—to create a personalized roadmap tailored to your market and circumstances.",
       benefits: ["Market analysis & research", "Financial projections", "Risk assessment", "Growth strategies"]
     },
     {
       icon: <Bot className="w-8 h-8" />,
       emoji: "🤖", 
       title: "Specialist AI Agents",
-      description: "Get expert advice from AI agents specialized in different business areas. Each agent is trained on specific domains to provide targeted guidance.",
+      description: "Deploy your digital workforce of AI specialists trained for specific business tasks. Need market research for your restaurant location? Want competitor analysis for your retail store? Our AI agents handle the routine work so you can focus on what matters most.",
       benefits: ["Marketing expert AI", "Finance advisor AI", "Legal consultant AI", "Operations specialist AI"]
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       emoji: "📊",
       title: "Smart Progress Tracking",
-      description: "Monitor your business journey with intelligent analytics. Track milestones, identify bottlenecks, and stay on course to launch.",
+      description: "Never lose momentum with our intelligent daily tracker. See exactly what needs to be done today, understand task dependencies, and receive gentle nudges to keep your business launch on schedule.",
       benefits: ["Real-time dashboards", "Milestone tracking", "Performance analytics", "Progress insights"]
     },
     {
       icon: <Target className="w-8 h-8" />,
       emoji: "🎯",
       title: "AI Business Mentor",
-      description: "Your personal AI mentor available 24/7. Get instant answers, strategic advice, and motivation whenever you need it.",
+      description: "Get instant answers from BB AI, your 24/7 business mentor trained on specialized knowledge across hundreds of business types. From regulatory questions to marketing strategies, get expert guidance whenever you need it.",
       benefits: ["24/7 availability", "Personalized advice", "Strategic guidance", "Motivational support"]
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       emoji: "📈",
       title: "Executive Dashboards",
-      description: "Professional dashboards that give you a complete view of your business health. Make data-driven decisions with confidence.",
+      description: "Transform complexity into clarity with comprehensive analytics and reporting. Monitor your progress, track milestones, and make informed decisions with data-driven insights designed for business launches.",
       benefits: ["Business metrics", "Financial overview", "Market insights", "Growth indicators"]
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
       emoji: "🎓",
       title: "Learning & Support Library",
-      description: "Access thousands of resources, courses, and guides. Learn from successful entrepreneurs and industry experts.",
+      description: "Access thousands of practical lessons from successful entrepreneurs, expert tutorials, and step-by-step guides. Get the right knowledge precisely when you need it, plus connections to trusted service providers and advisors.",
       benefits: ["Video courses", "Interactive guides", "Expert interviews", "Community forums"]
     }
-  ];
-
-  const additionalFeatures = [
-    { icon: <Zap className="w-5 h-5" />, title: "Lightning Fast Setup", desc: "Get started in under 5 minutes" },
-    { icon: <Globe className="w-5 h-5" />, title: "Global Support", desc: "Available in 50+ countries" },
-    { icon: <Users className="w-5 h-5" />, title: "Community Network", desc: "Connect with 10K+ entrepreneurs" },
-    { icon: <Shield className="w-5 h-5" />, title: "Secure & Private", desc: "Bank-level security for your data" }
   ];
 
   return (
@@ -70,67 +63,50 @@ const FeaturesSection = () => {
         {/* Main Features Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {mainFeatures.map((feature, index) => (
-            <div key={index} className="card-feature bg-card/50 backdrop-blur-sm">
-              <div className="flex items-start space-x-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center text-primary-foreground text-2xl group-hover:scale-110 transition-transform">
-                  {feature.emoji}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {feature.title}
-                  </h3>
-                </div>
-              </div>
+            <div key={index} className="group relative">
+              {/* Glow Effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-10 group-hover:opacity-30 transition duration-300"></div>
               
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {feature.description}
-              </p>
-              
-              <div className="grid grid-cols-2 gap-3">
-                {feature.benefits.map((benefit, idx) => (
-                  <div key={idx} className="flex items-center space-x-2 text-sm">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                    <span className="text-foreground">{benefit}</span>
+              {/* Main Card */}
+              <div className="relative bg-card backdrop-blur-sm border border-border/50 rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1">
+                
+                {/* Header Section */}
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center text-3xl border border-primary/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    {feature.emoji}
                   </div>
-                ))}
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                      {feature.title}
+                    </h3>
+                  </div>
+                </div>
+                
+                {/* Description */}
+                <p className="text-muted-foreground mb-6 leading-relaxed text-sm text-justify">
+                  {feature.description}
+                </p>
+                
+                {/* Benefits Grid */}
+                <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border/50">
+                  {feature.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start space-x-2 text-sm group/item">
+                      <div className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full mt-1.5 flex-shrink-0 group-hover/item:scale-150 transition-transform"></div>
+                      <span className="text-foreground/80 group-hover/item:text-foreground transition-colors">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Accent */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Additional Features */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-medium">
-          <h3 className="text-2xl font-bold text-center text-foreground mb-8">
-            Plus Many More <span className="text-gradient">Powerful Features</span>
-          </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalFeatures.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 bg-gradient-primary rounded-xl mx-auto mb-4 flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform">
-                  {feature.icon}
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
-                <p className="text-sm text-muted-foreground">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Additional Features - Removed */}
 
-        {/* Global Business Solutions Teaser */}
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center space-x-2 bg-gradient-primary text-primary-foreground px-6 py-3 rounded-full font-medium shadow-brand">
-            <Globe className="w-5 h-5" />
-            <span>Global Business Launch Solutions</span>
-          </div>
-          <h3 className="text-3xl font-bold text-foreground mt-6 mb-4">
-            Wherever You Are, <span className="text-gradient">We're There</span>
-          </h3>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Growing network of support across 50+ countries with local expertise, 
-            regulatory guidance, and market-specific strategies for your business launch.
-          </p>
-        </div>
+        {/* Global Business Solutions Teaser - Removed */}
       </div>
     </section>
   );
