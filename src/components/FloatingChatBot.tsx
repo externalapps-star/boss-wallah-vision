@@ -150,18 +150,18 @@ const FloatingChatBot = () => {
                 <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-4 text-white">
                   <h4 className="font-semibold mb-2">Ready to get started?</h4>
                   <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex gap-2">
                     <img
                       src={googlePlayBadge}
                       alt="Get it on Google Play"
                       onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
-                      className="h-10 cursor-pointer hover:opacity-80 transition-opacity"
+                      className="h-10 object-contain cursor-pointer hover:opacity-80 transition-opacity"
                     />
                     <img
                       src={appStoreBadge}
                       alt="Download on the App Store"
                       onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
-                      className="h-10 cursor-pointer hover:opacity-80 transition-opacity"
+                      className="h-10 object-contain cursor-pointer hover:opacity-80 transition-opacity"
                     />
                   </div>
                 </div>
