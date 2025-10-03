@@ -44,7 +44,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="flex">
+            <div className="flex mb-8 sm:mb-0">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 font-semibold px-8 py-4 text-lg h-auto transition-all duration-300"
@@ -60,7 +60,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - App Screenshots */}
-          <div className="relative flex justify-center lg:justify-end -mt-20 lg:mt-0">
+          <div className="relative flex justify-center lg:justify-end mt-0 lg:-mt-20">
             <div className="relative scale-90 sm:scale-100">
               
               {/* Phone Mockup */}
