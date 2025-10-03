@@ -87,12 +87,12 @@ const FloatingMenu = () => {
       {/* Sliding Menu */}
       <div
         className={cn(
-          "fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 sm:w-80 bg-background/95 backdrop-blur-lg border-r border-border z-40",
+          "fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 sm:w-80 bg-background/95 backdrop-blur-lg border-r border-border z-40 overflow-hidden flex flex-col",
           "transform transition-transform duration-300 ease-in-out shadow-strong",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <div className="pt-6 px-6 relative">
+        <div className="pt-6 px-6 relative overflow-y-auto flex-1 pb-6">
           {/* Close button in top right */}
           <button
             onClick={() => setIsOpen(false)}
@@ -120,7 +120,7 @@ const FloatingMenu = () => {
           </nav>
 
           {/* Menu Footer */}
-          <div className="mt-12 pt-6 border-t border-border">
+          <div className="mt-auto pt-6 border-t border-border flex-shrink-0">
             <div className="text-sm text-muted-foreground">
               <div className="font-semibold text-gradient mb-2">Boss Wallah</div>
               <p>Your Business Launch Platform</p>
