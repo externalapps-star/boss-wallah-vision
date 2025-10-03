@@ -101,7 +101,7 @@ const FloatingChatBot = () => {
     <>
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-4 md:right-8 w-[90vw] md:w-96 h-[500px] bg-background border border-border rounded-lg shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-4">
+        <div className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 md:right-8 w-[calc(100vw-2rem)] max-w-md h-[70vh] max-h-[500px] bg-background border border-border rounded-lg shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-4">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary to-accent">
             <div className="flex items-center gap-2">
@@ -166,13 +166,13 @@ const FloatingChatBot = () => {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-4 md:right-8 w-14 h-14 rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50 group"
+        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 md:right-8 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50 group"
         aria-label="Open BBAI Chat"
       >
         {isOpen ? (
-          <X className="w-6 h-6" />
+          <X className="w-5 h-5 sm:w-6 sm:h-6" />
         ) : (
-          <MessageCircle className="w-6 h-6 group-hover:animate-bounce" />
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-bounce" />
         )}
       </button>
     </>

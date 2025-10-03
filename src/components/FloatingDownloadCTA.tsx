@@ -21,7 +21,7 @@ const FloatingDownloadCTA = () => {
 
   return (
     <div
-      className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-300 ${
+      className={`fixed bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-300 px-4 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
       }`}
     >
@@ -29,10 +29,11 @@ const FloatingDownloadCTA = () => {
         <TooltipTrigger asChild>
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 font-semibold px-6 py-3 h-auto shadow-xl rounded-full transition-all hover:scale-105 hover:shadow-2xl"
+            className="bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 font-semibold px-4 sm:px-6 py-2.5 sm:py-3 h-auto shadow-xl rounded-full transition-all hover:scale-105 hover:shadow-2xl text-sm sm:text-base whitespace-nowrap"
           >
-            <Download className="w-4 h-4 mr-2" />
-            Download Boss Wallah Now
+            <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+            <span className="hidden xs:inline">Download Boss Wallah Now</span>
+            <span className="xs:hidden">Download Now</span>
           </Button>
         </TooltipTrigger>
         <TooltipContent side="top" className="bg-popover border border-border shadow-lg rounded-xl p-0 max-w-xs overflow-hidden mb-2">

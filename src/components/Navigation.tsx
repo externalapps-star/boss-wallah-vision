@@ -22,8 +22,8 @@ const Navigation = () => {
             <img src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" alt="Boss Wallah Logo" className="h-12 w-auto" />
           </div>
 
-          {/* Center Show Stopper */}
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          {/* Center Show Stopper - Hidden on mobile */}
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">
             <div className="flex items-center space-x-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-lg whitespace-nowrap">
               <Rocket className="w-5 h-5 text-primary animate-pulse" />
               <span>AI-Powered Business Launch Platform</span>

@@ -63,14 +63,13 @@ const FloatingMenu = () => {
         <button
           onClick={() => setIsOpen(true)}
           className={cn(
-            "fixed left-6 top-1/2 transform -translate-y-1/2 z-50 p-3 rounded-full transition-all duration-300",
+            "fixed left-4 sm:left-6 top-1/2 transform -translate-y-1/2 z-50 p-2 sm:p-3 rounded-full transition-all duration-300",
             "bg-transparent border-2 border-primary/30 text-primary backdrop-blur-sm",
-            "hover:scale-110 hover:border-primary/50 hover:bg-primary/10 active:scale-95",
-            "md:block" // Always visible on all screen sizes
+            "hover:scale-110 hover:border-primary/50 hover:bg-primary/10 active:scale-95"
           )}
           aria-label="Toggle navigation menu"
         >
-          <Menu className="w-6 h-6" />
+          <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
       )}
 
@@ -85,7 +84,7 @@ const FloatingMenu = () => {
       {/* Sliding Menu */}
       <div
         className={cn(
-          "fixed left-0 top-16 h-[calc(100vh-4rem)] w-80 bg-background/95 backdrop-blur-lg border-r border-border z-40",
+          "fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 sm:w-80 bg-background/95 backdrop-blur-lg border-r border-border z-40",
           "transform transition-transform duration-300 ease-in-out shadow-strong",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}

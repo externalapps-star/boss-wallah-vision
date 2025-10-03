@@ -18,21 +18,21 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       
       <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-16 sm:py-20">
           
           {/* Left Content */}
-          <div className="space-y-8 animate-slide-up">
+          <div className="space-y-6 sm:space-y-8 animate-slide-up">
             
             {/* Main Headline */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <h1 className="font-bold leading-tight space-y-2">
-                <div className="text-4xl lg:text-5xl xl:text-6xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Ready to be the Boss?</div>
-                <div className="text-3xl lg:text-4xl xl:text-5xl">
+                <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Ready to be the Boss?</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
                   The <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span> for launching Your Business
                 </div>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-foreground/80 max-w-2xl leading-relaxed text-left">
+              <p className="text-base sm:text-xl lg:text-2xl text-foreground/80 max-w-2xl leading-relaxed text-left">
                 Transform your entrepreneurial vision into reality with the only platform you need to go from idea to launch. Boss Wallah empowers entrepreneurs worldwide with AI-powered tools, expert guidance, and comprehensive support every step of the way.
               </p>
             </div>
@@ -65,8 +65,8 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - App Screenshots */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
+          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+            <div className="relative scale-90 sm:scale-100">
               
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float">
