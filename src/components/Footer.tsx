@@ -11,8 +11,11 @@ const Footer = () => {
     name: "Features",
     href: "#features"
   }, {
+    name: "Global Solutions",
+    href: "#global-solutions"
+  }, {
     name: "Success Stories",
-    href: "#testimonials"
+    href: "#success-stories"
   }, {
     name: "FAQ",
     href: "#faq"
