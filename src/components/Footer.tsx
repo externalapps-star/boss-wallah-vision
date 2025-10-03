@@ -63,9 +63,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground font-bold">
-                  BW
-                </div>
+                
                 <div>
                   <h3 className="text-xl font-bold">BOSS WALLAH</h3>
                   <p className="text-sm opacity-80">BE THE BOSS</p>
@@ -120,10 +118,27 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="py-6">
-          <div className="text-left">
-            <p className="text-sm text-primary-foreground/80">
-              © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
-            </p>
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            
+            {/* Brand Tagline */}
+            <div className="text-center md:text-left">
+              <p className="text-lg font-bold text-accent mb-1">
+                Boss Wallah – Be the Boss
+              </p>
+              <p className="text-sm text-primary-foreground/80">
+                The only platform you need to launch your business.
+              </p>
+            </div>
+
+            {/* Copyright */}
+            <div className="text-center md:text-right">
+              <p className="text-sm text-primary-foreground/80">
+                © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
+              </p>
+              <p className="text-xs text-primary-foreground/60 mt-1">
+                Built for entrepreneurs, by entrepreneurs.
+              </p>
+            </div>
           </div>
         </div>
       </div>
