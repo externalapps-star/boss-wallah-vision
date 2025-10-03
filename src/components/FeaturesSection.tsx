@@ -68,7 +68,7 @@ const FeaturesSection = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500 animate-gradient"></div>
               
               {/* Main Card */}
-              <div className="relative bg-card backdrop-blur-sm border-2 border-transparent rounded-3xl p-8 h-full shadow-lg hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-card/80 group-hover:border-primary group-hover:[background:linear-gradient(var(--card),var(--card))_padding-box,linear-gradient(90deg,hsl(var(--primary)),hsl(var(--accent)))_border-box]">
+              <div className="relative bg-card backdrop-blur-sm border border-border/40 rounded-3xl p-8 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-card/80 group-hover:border-primary/60 group-hover:shadow-[0_25px_70px_-20px_rgba(var(--primary-rgb),0.5)]">
                 
                 {/* Header Section */}
                 <div className="flex items-start space-x-4 mb-6">
