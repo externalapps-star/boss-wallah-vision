@@ -35,7 +35,7 @@ const GlobalSolutionsSection = () => {
       
       <div className="section-container relative">
         {/* Header */}
-        <div className="text-center max-w-5xl mx-auto mb-12">
+        <div className="text-center max-w-5xl mx-auto mb-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 whitespace-nowrap">
             Global Business Launch <span className="text-gradient">Solutions</span>
           </h2>
@@ -51,7 +51,7 @@ const GlobalSolutionsSection = () => {
 
         {/* Features Section */}
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <h3 className="text-3xl font-bold text-foreground mb-2">
               Growing Network of <span className="text-gradient">Support</span>
             </h3>

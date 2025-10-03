@@ -15,10 +15,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       
       <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-16 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center min-h-screen py-8 sm:py-12">
           
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-5xl overflow-visible">
+          <div className="space-y-4 sm:space-y-5 animate-slide-up max-w-5xl overflow-visible">
             
             {/* Main Headline */}
             <div className="space-y-3 sm:space-y-4 overflow-visible">

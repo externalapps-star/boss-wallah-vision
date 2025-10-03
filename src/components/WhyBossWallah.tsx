@@ -19,7 +19,7 @@ const WhyBossWallah = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-display font-bold text-foreground mb-6">
             Why <span className="text-gradient">Boss Wallah?</span>
           </h2>

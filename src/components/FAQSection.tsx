@@ -127,7 +127,7 @@ const FAQSection = () => {
       <div className="section-container relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
+        <div className="text-center max-w-4xl mx-auto mb-8">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-5 py-2 mb-6 border border-primary/20">
             <MessageCircle className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Got Questions? We've Got Answers</span>
@@ -141,7 +141,7 @@ const FAQSection = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-10">
+        <div className="max-w-2xl mx-auto mb-6">
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
             <div className="relative">
@@ -158,7 +158,7 @@ const FAQSection = () => {
         </div>
 
         {/* Category Pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           <button
             onClick={() => setSelectedCategory(null)}
             className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${
@@ -261,7 +261,7 @@ const FAQSection = () => {
         </div>
 
         {/* Support CTA - Redesigned */}
-        <div className="mt-16 max-w-4xl mx-auto">
+        <div className="mt-10 max-w-4xl mx-auto">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
             <div className="relative bg-gradient-to-br from-card/80 to-card backdrop-blur-sm border border-primary/20 rounded-3xl p-8 md:p-10">

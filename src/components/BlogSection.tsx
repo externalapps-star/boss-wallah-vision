@@ -59,7 +59,7 @@ const BlogSection = () => {
       <div className="section-container relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-5 py-2 mb-6 border border-primary/20">
             <Lightbulb className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Knowledge Hub</span>
@@ -73,7 +73,7 @@ const BlogSection = () => {
         </div>
 
         {/* Blog Grid - 2 Cards First Row, 3 Cards Second Row */}
-        <div className="space-y-6 mb-12">
+        <div className="space-y-5 mb-10">
           {/* First Row - 2 Cards */}
           <div className="grid md:grid-cols-2 gap-6">
             {blogPosts.slice(0, 2).map((post, index) => (

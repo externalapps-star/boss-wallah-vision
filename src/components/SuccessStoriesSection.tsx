@@ -67,7 +67,7 @@ const SuccessStoriesSection = () => {
       
       <div className="section-container relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-6 py-2 mb-6 border border-primary/20">
             <Star className="w-5 h-5 text-primary fill-primary" />
             <span className="text-sm font-semibold text-primary">Real Entrepreneurs, Real Results</span>
@@ -81,7 +81,7 @@ const SuccessStoriesSection = () => {
         </div>
 
         {/* Stories Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-6 mb-8">
           {displayedStories.map((story, index) => (
             <div 
               key={story.id}
@@ -171,7 +171,7 @@ const SuccessStoriesSection = () => {
         )}
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <div className="inline-block p-8 rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border-2 border-primary/20">
             <p className="text-xl font-semibold text-foreground mb-2">
               Ready to Write Your Success Story?

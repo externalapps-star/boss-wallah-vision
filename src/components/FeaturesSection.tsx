@@ -51,7 +51,7 @@ const FeaturesSection = () => {
       <div className="section-container">
         
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
+        <div className="text-center max-w-4xl mx-auto mb-8">
           <h2 className="text-display font-bold text-foreground mb-6">
             Platform <span className="text-gradient">Features</span>
           </h2>
@@ -61,7 +61,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Main Features Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-6 mb-8">
           {mainFeatures.map((feature, index) => (
             <div key={index} className="group relative">
               {/* Glow Effect */}
