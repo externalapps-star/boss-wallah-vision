@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Sparkles, Shield, Rocket, Globe, DollarSign, Users, Clock, MessageCircle, Phone, ChevronDown, ChevronUp } from 'lucide-react';
+import { Search, Sparkles, Shield, Rocket, Globe, Users, Clock, MessageCircle, Phone, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const FAQSection = () => {
@@ -19,7 +19,6 @@ const FAQSection = () => {
     { id: 'getting-started', name: 'Getting Started', icon: Rocket, color: 'from-blue-500/20 to-cyan-500/20', borderColor: 'border-blue-500/30' },
     { id: 'features', name: 'Features', icon: Sparkles, color: 'from-purple-500/20 to-pink-500/20', borderColor: 'border-purple-500/30' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-green-500/20 to-emerald-500/20', borderColor: 'border-green-500/30' },
-    { id: 'pricing', name: 'Pricing', icon: DollarSign, color: 'from-yellow-500/20 to-orange-500/20', borderColor: 'border-yellow-500/30' },
     { id: 'support', name: 'Support', icon: Users, color: 'from-red-500/20 to-rose-500/20', borderColor: 'border-red-500/30' },
   ];
 
@@ -77,18 +76,6 @@ const FAQSection = () => {
       question: "Is my business information secure and private?",
       answer: "Yes, absolutely. We use bank-level encryption to protect all your data. Your business plans, financial information, and strategic details are completely private and never shared with third parties. We're committed to maintaining the confidentiality of your entrepreneurial journey.",
       icon: Shield
-    },
-    {
-      category: 'pricing',
-      question: "What are the pricing plans available?",
-      answer: "We offer two flexible plans: Monthly Plan at $9 USD (₹399 INR) perfect for getting started, and Annual Plan at $99 USD (₹2,499 INR) for best value. All plans include access to AI agents, business planning tools, tracking systems, and learning resources.",
-      icon: DollarSign
-    },
-    {
-      category: 'pricing',
-      question: "Is there a free trial or demo available?",
-      answer: "Yes! You can explore Boss Wallah with our free demo to see how the platform works. Experience our AI agents, browse business templates, and test the planning tools before committing to a paid plan. No credit card required to start exploring.",
-      icon: DollarSign
     },
     {
       category: 'support',
