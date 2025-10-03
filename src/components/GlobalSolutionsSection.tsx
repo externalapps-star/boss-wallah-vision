@@ -1,4 +1,4 @@
-import { Globe, MapPin, DollarSign, Users } from 'lucide-react';
+import { Globe, MapPin, DollarSign, Users, Network } from 'lucide-react';
 
 const GlobalSolutionsSection = () => {
   const features = [
@@ -36,6 +36,10 @@ const GlobalSolutionsSection = () => {
       <div className="section-container relative">
         {/* Header */}
         <div className="text-center max-w-5xl mx-auto mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-5 py-2 mb-6 border border-primary/20">
+            <Network className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-primary">Global Reach</span>
+          </div>
           <h2 className="text-display font-bold text-foreground mb-6 whitespace-nowrap">
             Global Business Launch <span className="text-gradient">Solutions</span>
           </h2>

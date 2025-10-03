@@ -1,4 +1,4 @@
-import { Target, Users } from 'lucide-react';
+import { Target, Users, Zap } from 'lucide-react';
 
 const WhyBossWallah = () => {
   const features = [
@@ -20,6 +20,10 @@ const WhyBossWallah = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-5 py-2 mb-6 border border-primary/20">
+            <Zap className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-primary">Our Value</span>
+          </div>
           <h2 className="text-display font-bold text-foreground mb-6">
             Why <span className="text-gradient">Boss Wallah?</span>
           </h2>

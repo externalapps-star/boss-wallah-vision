@@ -1,4 +1,4 @@
-import { Brain, Bot, BarChart3, Target, TrendingUp, BookOpen } from 'lucide-react';
+import { Brain, Bot, BarChart3, Target, TrendingUp, BookOpen, Rocket } from 'lucide-react';
 
 const FeaturesSection = () => {
   const mainFeatures = [
@@ -52,6 +52,10 @@ const FeaturesSection = () => {
         
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-5 py-2 mb-6 border border-primary/20">
+            <Rocket className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-primary">Powerful Tools</span>
+          </div>
           <h2 className="text-display font-bold text-foreground mb-6">
             Platform <span className="text-gradient">Features</span>
           </h2>
