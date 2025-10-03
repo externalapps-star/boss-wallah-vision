@@ -20,7 +20,6 @@ const Footer = () => {
     name: "Blog",
     href: "#blog"
   }];
-  
   const legal = [{
     name: "Privacy Policy",
     href: "#"
@@ -111,12 +110,9 @@ const Footer = () => {
               <div className="space-y-2 text-sm text-primary-foreground/70">
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-accent" />
-                  <span>hello@bosswallah.com</span>
+                  <span>brand@bosswallah.com</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-accent" />
-                  <span>Global - 50+ Countries</span>
-                </div>
+                
               </div>
             </div>
           </div>
