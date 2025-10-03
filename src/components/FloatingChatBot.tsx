@@ -3,6 +3,8 @@ import { MessageCircle, X, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import googlePlayBadge from '@/assets/google-play-transparent.png';
+import appStoreBadge from '@/assets/app-store-transparent.png';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -143,25 +145,27 @@ const FloatingChatBot = () => {
                 </div>
               ))}
               
-              {/* Download CTA Card */}
-              <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-4 text-white">
-                <h4 className="font-semibold mb-2">Ready to get started?</h4>
-                <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
-                <div className="space-y-2">
-                  <button
-                    onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
-                    className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-2 px-4 rounded-lg transition-all text-sm"
-                  >
-                    📱 Download on Google Play
-                  </button>
-                  <button
-                    onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
-                    className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-2 px-4 rounded-lg transition-all text-sm"
-                  >
-                    🍎 Download on App Store
-                  </button>
+              {/* Download CTA Card - Only show after first user message */}
+              {messages.length > 1 && (
+                <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-4 text-white">
+                  <h4 className="font-semibold mb-2">Ready to get started?</h4>
+                  <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
+                  <div className="flex flex-col gap-2">
+                    <img
+                      src={googlePlayBadge}
+                      alt="Get it on Google Play"
+                      onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
+                      className="h-10 cursor-pointer hover:opacity-80 transition-opacity"
+                    />
+                    <img
+                      src={appStoreBadge}
+                      alt="Download on the App Store"
+                      onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
+                      className="h-10 cursor-pointer hover:opacity-80 transition-opacity"
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </ScrollArea>
 
