@@ -53,7 +53,7 @@ const FloatingDownloadCTA = () => {
                 />
               </a>
               <a 
-                href="https://apps.apple.com" 
+                href="https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-105"
