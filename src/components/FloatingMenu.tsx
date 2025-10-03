@@ -106,10 +106,9 @@ const FloatingMenu = () => {
                 onClick={() => handleMenuClick(item.href)}
                 className={cn(
                   "w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200",
-                  "hover:bg-muted hover:scale-105 hover:translate-x-2",
                   activeSection === item.id
-                    ? "bg-gradient-to-r from-primary/30 to-accent/30 text-primary border-l-4 border-primary shadow-lg font-bold scale-105 transform translate-x-1"
-                    : "text-foreground hover:text-primary"
+                    ? "bg-gradient-to-r from-primary to-accent text-white border-l-4 border-white shadow-lg font-bold scale-105 transform translate-x-1"
+                    : "text-foreground hover:bg-muted hover:scale-105 hover:translate-x-2 hover:text-primary"
                 )}
               >
                 {item.label}
