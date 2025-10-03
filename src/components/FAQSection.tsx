@@ -272,7 +272,10 @@ const FAQSection = () => {
                 
                 {/* Right - Buttons */}
                 <div className="flex-shrink-0">
-                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  <Button 
+                    className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    onClick={() => window.location.href = 'mailto:support@bosswallah.com'}
+                  >
                     <Mail className="w-4 h-4 mr-2" />
                     Contact Us
                   </Button>

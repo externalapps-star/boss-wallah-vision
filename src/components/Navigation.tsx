@@ -1,4 +1,4 @@
-import { Rocket } from 'lucide-react';
+import { Rocket, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
@@ -24,8 +24,9 @@ const Navigation = () => {
               variant="outline" 
               size="sm"
               className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300"
-              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.location.href = 'mailto:support@bosswallah.com'}
             >
+              <Mail className="w-4 h-4 mr-2" />
               Contact Us
             </Button>
           </div>
@@ -36,8 +37,9 @@ const Navigation = () => {
               variant="outline" 
               size="sm"
               className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 text-xs px-3"
-              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.location.href = 'mailto:support@bosswallah.com'}
             >
+              <Mail className="w-3 h-3 mr-1" />
               Contact
             </Button>
           </div>

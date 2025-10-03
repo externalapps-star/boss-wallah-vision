@@ -102,7 +102,7 @@ const Footer = () => {
               </ul>
               
               <div className="space-y-2 text-sm text-primary-foreground/70">
-                <a href="mailto:brand@bosswallah.com" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
+                <a href="mailto:support@bosswallah.com" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
                   <Mail className="w-4 h-4 text-accent" />
                   <span>support@bosswallah.com</span>
                 </a>
