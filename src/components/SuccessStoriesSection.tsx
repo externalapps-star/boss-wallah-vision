@@ -176,7 +176,7 @@ const SuccessStoriesSection = () => {
             <p className="text-xl font-semibold text-foreground mb-2">
               Ready to Write Your Success Story?
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground mb-4">
               Join our community of successful entrepreneurs today
             </p>
           </div>
