@@ -73,7 +73,7 @@ const BlogSection = () => {
         </div>
 
         {/* Blog Grid - 2 Cards First Row, 3 Cards Second Row */}
-        <div className="space-y-5 mb-10">
+        <div className="space-y-5">
           {/* First Row - 2 Cards */}
           <div className="grid md:grid-cols-2 gap-6">
             {blogPosts.slice(0, 2).map((post, index) => (
@@ -83,7 +83,7 @@ const BlogSection = () => {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[480px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
@@ -141,7 +141,7 @@ const BlogSection = () => {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[480px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
@@ -182,6 +182,17 @@ const BlogSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Read More Articles Button */}
+        <div className="text-center mt-8 mb-10">
+          <Button 
+            size="lg"
+            className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+          >
+            Read More Articles
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
         </div>
 
         {/* Stay Updated Section - Full Width Banner */}
