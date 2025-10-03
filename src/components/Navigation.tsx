@@ -10,7 +10,7 @@ const Navigation = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
-        <div className="flex items-center justify-between h-16 relative">
+        <div className="flex items-center justify-between h-20 md:h-16 relative">
           {/* Logo - Extreme Left */}
           <div className="flex items-center flex-shrink-0">
             <img src="/lovable-uploads/logo-transparent.png" alt="Boss Wallah Logo" className="h-14 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" />
