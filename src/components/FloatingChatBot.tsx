@@ -148,30 +148,22 @@ const FloatingChatBot = () => {
               
               {/* Download CTA Card - only shows after first query */}
               {showDownloadCTA && (
-                <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-4 text-white animate-in slide-in-from-bottom-2">
-                  <h4 className="font-semibold mb-2">Ready to get started?</h4>
-                  <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
-                  <div className="space-y-2">
-                    <button
+                <div className="bg-card border border-border rounded-lg p-3 shadow-md animate-in slide-in-from-bottom-2">
+                  <h4 className="font-semibold mb-2 text-sm text-foreground">Ready to get started?</h4>
+                  <p className="text-xs mb-3 text-muted-foreground">Download Boss Wallah now and unlock all features!</p>
+                  <div className="flex flex-col items-center space-y-2">
+                    <img 
+                      src="/lovable-uploads/7a17d701-3f16-414f-ac52-2ab06da2f2ec.png"
+                      alt="Get it on Google Play"
+                      className="w-36 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
                       onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
-                      className="w-full bg-white hover:bg-white/90 rounded-lg transition-all overflow-hidden"
-                    >
-                      <img 
-                        src="/lovable-uploads/7a17d701-3f16-414f-ac52-2ab06da2f2ec.png"
-                        alt="Get it on Google Play"
-                        className="w-full h-auto"
-                      />
-                    </button>
-                    <button
+                    />
+                    <img 
+                      src={appStoreBadge}
+                      alt="Download on the App Store"
+                      className="w-36 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
                       onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
-                      className="w-full bg-white hover:bg-white/90 rounded-lg transition-all overflow-hidden"
-                    >
-                      <img 
-                        src={appStoreBadge}
-                        alt="Download on the App Store"
-                        className="w-full h-auto"
-                      />
-                    </button>
+                    />
                   </div>
                 </div>
               )}
