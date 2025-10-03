@@ -16,10 +16,10 @@ const Navigation = () => {
   }
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
-        <div className="flex items-center justify-between h-14 relative">
+        <div className="flex items-center justify-between h-16 relative">
           {/* Logo - Extreme Left */}
           <div className="flex items-center flex-shrink-0">
-            <img src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" alt="Boss Wallah Logo" className="h-12 w-auto object-contain" />
+            <img src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" alt="Boss Wallah Logo" className="h-14 w-auto object-contain" />
           </div>
 
           {/* Center Show Stopper */}
