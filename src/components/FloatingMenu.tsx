@@ -120,7 +120,7 @@ const FloatingMenu = () => {
           </nav>
 
           {/* Menu Footer */}
-          <div className="mt-auto pt-6 border-t border-border flex-shrink-0">
+          <div className="fixed bottom-0 left-0 w-72 sm:w-80 pt-6 pb-4 px-6 border-t border-border bg-background/95 backdrop-blur-lg">
             <div className="text-sm text-muted-foreground">
               <div className="font-semibold text-gradient mb-2">Boss Wallah</div>
               <p>Your Business Launch Platform</p>
