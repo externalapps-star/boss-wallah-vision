@@ -36,7 +36,7 @@ const GlobalSolutionsSection = () => {
       <div className="section-container relative">
         {/* Header */}
         <div className="text-center max-w-5xl mx-auto mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 whitespace-nowrap">
+          <h2 className="text-display font-bold text-foreground mb-6 whitespace-nowrap">
             Global Business Launch <span className="text-gradient">Solutions</span>
           </h2>
           <div className="inline-block bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl px-8 py-4 mb-8 border border-primary/20">
