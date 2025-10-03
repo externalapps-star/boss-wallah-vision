@@ -9,7 +9,7 @@ const BlogSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubscribe = () => {
+  const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
       toast({
         title: "Invalid Email",
@@ -20,40 +20,37 @@ const BlogSection = () => {
     }
 
     setIsSubmitting(true);
-    
-    // Create a hidden iframe for form submission
-    const iframe = document.createElement('iframe');
-    iframe.name = 'hidden_iframe';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
+    const scriptURL = "https://script.google.com/macros/s/AKfycby7rCeqSqgzxjr2zsTezYEJF4y2cpp6T9Cc1FBhZ_u6Sm8Ib4-tnE5X9yQ4LDym5-eSCA/exec";
 
-    // Create and submit form
-    const form = document.createElement('form');
-    form.action = "https://script.google.com/macros/s/AKfycby7rCeqSqgzxjr2zsTezYEJF4y2cpp6T9Cc1FBhZ_u6Sm8Ib4-tnE5X9yQ4LDym5-eSCA/exec";
-    form.method = 'POST';
-    form.target = 'hidden_iframe';
+    try {
+      // Use FormData for proper form encoding
+      const formData = new FormData();
+      formData.append('email', email);
+      
+      // Use no-cors mode to bypass CORS restrictions
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      });
 
-    const emailInput = document.createElement('input');
-    emailInput.type = 'hidden';
-    emailInput.name = 'email';
-    emailInput.value = email;
-    form.appendChild(emailInput);
-
-    document.body.appendChild(form);
-    form.submit();
-
-    // Clean up and show success
-    setTimeout(() => {
-      document.body.removeChild(form);
-      document.body.removeChild(iframe);
+      // With no-cors, we can't read the response, but if no error is thrown, assume success
       setIsSubscribed(true);
       setEmail('');
-      setIsSubmitting(false);
       toast({
         title: "Success!",
         description: "Thank you for subscribing to our newsletter.",
       });
-    }, 1500);
+    } catch (error) {
+      console.error("Subscription error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const blogPosts = [
