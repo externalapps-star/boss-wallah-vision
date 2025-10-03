@@ -15,7 +15,7 @@ const WhyBossWallah = () => {
   ];
 
   return (
-    <section id="why-boss-wallah" className="section-padding bg-background">
+    <section id="why-boss-wallah" className="section-padding bg-background border-b border-border/30">
       <div className="section-container">
         
         {/* Header */}
