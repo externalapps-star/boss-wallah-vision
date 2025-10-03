@@ -16,6 +16,13 @@ const Navigation = () => {
             <img src="/lovable-uploads/logo-transparent.png" alt="Boss Wallah Logo" className="h-14 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" />
           </div>
 
+          {/* Mobile Tagline */}
+          <div className="md:hidden flex items-center ml-2 flex-1 min-w-0">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold text-[10px] xs:text-xs whitespace-nowrap overflow-hidden text-ellipsis">
+              AI-Powered Business Launch Platform
+            </span>
+          </div>
+
           {/* Center Show Stopper */}
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
             <div className="flex items-center space-x-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-sm lg:text-base xl:text-lg whitespace-nowrap">
