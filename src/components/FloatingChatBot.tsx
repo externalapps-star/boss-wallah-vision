@@ -14,7 +14,7 @@ const FloatingChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi! I'm BBAI, your Boss Wallah assistant. 👋 I'm here to help you get started with the app. What would you like to know?"
+      content: "Hi! I'm BB AI, your Boss Wallah assistant. 👋 I'm here to help you get started with the app. What would you like to know?"
     }
   ]);
   const [input, setInput] = useState('');
@@ -109,7 +109,7 @@ const FloatingChatBot = () => {
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="font-semibold text-white">BBAI Assistant</h3>
+                <h3 className="font-semibold text-white">BB AI Assistant</h3>
                 <p className="text-xs text-white/80">Always here to help</p>
               </div>
             </div>
@@ -142,6 +142,26 @@ const FloatingChatBot = () => {
                   </div>
                 </div>
               ))}
+              
+              {/* Download CTA Card */}
+              <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-4 text-white">
+                <h4 className="font-semibold mb-2">Ready to get started?</h4>
+                <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
+                <div className="space-y-2">
+                  <button
+                    onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
+                    className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-2 px-4 rounded-lg transition-all text-sm"
+                  >
+                    📱 Download on Google Play
+                  </button>
+                  <button
+                    onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
+                    className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-2 px-4 rounded-lg transition-all text-sm"
+                  >
+                    🍎 Download on App Store
+                  </button>
+                </div>
+              </div>
             </div>
           </ScrollArea>
 
@@ -167,7 +187,7 @@ const FloatingChatBot = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 md:right-8 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50 group"
-        aria-label="Open BBAI Chat"
+        aria-label="Open BB AI Chat"
       >
         {isOpen ? (
           <X className="w-5 h-5 sm:w-6 sm:h-6" />
