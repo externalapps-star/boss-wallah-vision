@@ -28,6 +28,13 @@ const FloatingChatBot = () => {
     }
   }, [messages]);
 
+  // Listen for custom event to open chatbot
+  useEffect(() => {
+    const handleOpenChat = () => setIsOpen(true);
+    window.addEventListener('openChatBot', handleOpenChat);
+    return () => window.removeEventListener('openChatBot', handleOpenChat);
+  }, []);
+
   const getResponse = (userInput: string): string => {
     const input = userInput.toLowerCase();
     

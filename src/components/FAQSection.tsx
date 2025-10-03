@@ -285,7 +285,13 @@ const FAQSection = () => {
                 
                 {/* Right - Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  <Button 
+                    className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    onClick={() => {
+                      // Dispatch custom event to open chatbot
+                      window.dispatchEvent(new CustomEvent('openChatBot'));
+                    }}
+                  >
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Live Chat
                   </Button>
