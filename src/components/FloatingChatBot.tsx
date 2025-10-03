@@ -3,6 +3,7 @@ import { MessageCircle, X, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import appStoreBadge from '@/assets/app-store-badge.png';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -18,6 +19,7 @@ const FloatingChatBot = () => {
     }
   ]);
   const [input, setInput] = useState('');
+  const [showDownloadCTA, setShowDownloadCTA] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -78,6 +80,7 @@ const FloatingChatBot = () => {
 
     const userMessage: Message = { role: 'user', content: input };
     setMessages(prev => [...prev, userMessage]);
+    setShowDownloadCTA(true); // Show download CTA after first query
 
     setTimeout(() => {
       const botResponse: Message = {
@@ -143,25 +146,35 @@ const FloatingChatBot = () => {
                 </div>
               ))}
               
-              {/* Download CTA Card */}
-              <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-4 text-white">
-                <h4 className="font-semibold mb-2">Ready to get started?</h4>
-                <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
-                <div className="space-y-2">
-                  <button
-                    onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
-                    className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-2 px-4 rounded-lg transition-all text-sm"
-                  >
-                    📱 Download on Google Play
-                  </button>
-                  <button
-                    onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
-                    className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-2 px-4 rounded-lg transition-all text-sm"
-                  >
-                    🍎 Download on App Store
-                  </button>
+              {/* Download CTA Card - only shows after first query */}
+              {showDownloadCTA && (
+                <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-4 text-white animate-in slide-in-from-bottom-2">
+                  <h4 className="font-semibold mb-2">Ready to get started?</h4>
+                  <p className="text-sm mb-3 opacity-90">Download Boss Wallah now and unlock all features!</p>
+                  <div className="space-y-2">
+                    <button
+                      onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
+                      className="w-full bg-white hover:bg-white/90 rounded-lg transition-all overflow-hidden"
+                    >
+                      <img 
+                        src="/lovable-uploads/7a17d701-3f16-414f-ac52-2ab06da2f2ec.png"
+                        alt="Get it on Google Play"
+                        className="w-full h-auto"
+                      />
+                    </button>
+                    <button
+                      onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
+                      className="w-full bg-white hover:bg-white/90 rounded-lg transition-all overflow-hidden"
+                    >
+                      <img 
+                        src={appStoreBadge}
+                        alt="Download on the App Store"
+                        className="w-full h-auto"
+                      />
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </ScrollArea>
 
