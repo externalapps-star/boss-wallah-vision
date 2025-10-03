@@ -73,81 +73,96 @@ const BlogSection = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {blogPosts.map((post, index) => (
-            <div 
-              key={index}
-              className="group relative"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Glow effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
-              
-              {/* Card */}
-              <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-full hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {blogPosts.map((post, index) => {
+            const isFeatured = index === 0;
+            
+            return (
+              <div 
+                key={index}
+                className={`group relative ${isFeatured ? 'md:col-span-2 md:row-span-2' : ''}`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                {/* Image */}
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                {/* Card */}
+                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-full hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1">
                   
-                  {/* Popular badge */}
-                  {post.popular && (
-                    <div className="absolute top-3 right-3">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
-                        Popular
-                      </span>
-                    </div>
-                  )}
-                </div>
-                
-                {/* Content */}
-                <div className="p-5">
-                  {/* Meta info */}
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5" />
-                      <span>{post.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" />
-                      <span>{post.readTime}</span>
+                  {/* Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+                        isFeatured ? 'h-64 md:h-80' : 'h-48'
+                      }`}
+                    />
+                    
+                    {/* Badges */}
+                    <div className="absolute top-3 right-3 flex gap-2">
+                      {isFeatured && (
+                        <span className="bg-gradient-to-r from-primary to-accent text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                          Featured
+                        </span>
+                      )}
+                      {post.popular && !isFeatured && (
+                        <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
+                          <TrendingUp className="w-3 h-3" />
+                          Trending
+                        </span>
+                      )}
                     </div>
                   </div>
                   
-                  {/* Title */}
-                  <h3 className="font-bold text-foreground text-lg mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  
-                  {/* Excerpt */}
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  
-                  {/* Author & Read More */}
-                  <div className="flex items-center justify-between pt-3 border-t border-border/50">
-                    <span className="text-sm font-medium text-foreground">
-                      {post.author}
-                    </span>
+                  {/* Content */}
+                  <div className={`p-5 ${isFeatured ? 'md:p-6' : ''}`}>
+                    {/* Meta info */}
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
                     
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2"
-                    >
-                      Read
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                    </Button>
+                    {/* Title */}
+                    <h3 className={`font-bold text-foreground mb-2 leading-tight group-hover:text-primary transition-colors duration-300 ${
+                      isFeatured ? 'text-xl md:text-2xl mb-3' : 'text-lg line-clamp-2'
+                    }`}>
+                      {post.title}
+                    </h3>
+                    
+                    {/* Excerpt */}
+                    <p className={`text-muted-foreground text-sm leading-relaxed mb-4 ${
+                      isFeatured ? 'line-clamp-3' : 'line-clamp-2'
+                    }`}>
+                      {post.excerpt}
+                    </p>
+                    
+                    {/* Author & Read More */}
+                    <div className="flex items-center justify-between pt-3 border-t border-border/50">
+                      <span className="text-sm font-medium text-foreground">
+                        {post.author}
+                      </span>
+                      
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2"
+                      >
+                        Read
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Bottom Section - Stay Updated & Popular Tags */}
