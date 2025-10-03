@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Play, Star, Users, Briefcase } from 'lucide-react';
+import { Download, Star, Users, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import storeBadges from '@/assets/store-badges.png';
+import appStoreBadge from '@/assets/app-store-badge.png';
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -42,23 +45,40 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 font-semibold px-8 py-4 text-lg h-auto transition-all duration-300"
-              >
-                Get Started
-              </Button>
-              
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 text-lg h-auto transition-all duration-300"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Learn More
-              </Button>
+            {/* CTA Button */}
+            <div className="flex">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 font-semibold px-8 py-4 text-lg h-auto transition-all duration-300"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Now
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" className="bg-popover border border-border shadow-lg rounded-xl p-0 max-w-xs overflow-hidden">
+                  <div className="relative bg-popover backdrop-blur-sm">
+                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-popover border-l border-t border-border rotate-45"></div>
+                    <div className="pt-4 pb-4 px-4">
+                      <div className="flex flex-col items-center space-y-2">
+                        <img 
+                          src={storeBadges} 
+                          alt="Download from Google Play" 
+                          className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+                          onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wealthdoctor', '_blank')}
+                        />
+                        <img 
+                          src={appStoreBadge} 
+                          alt="Download from App Store" 
+                          className="w-48 h-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+                          onClick={() => window.open('https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395?ls=1', '_blank')}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </TooltipContent>
+              </Tooltip>
             </div>
 
             {/* Trust Indicators */}

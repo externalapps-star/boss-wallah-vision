@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import FloatingMenu from '@/components/FloatingMenu';
+import FloatingDownloadCTA from '@/components/FloatingDownloadCTA';
 import HeroSection from '@/components/HeroSection';
 import WhyBossWallah from '@/components/WhyBossWallah';
 import FeaturesSection from '@/components/FeaturesSection';
@@ -15,6 +16,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <FloatingMenu />
+      <FloatingDownloadCTA />
       
       <main>
         <HeroSection />
