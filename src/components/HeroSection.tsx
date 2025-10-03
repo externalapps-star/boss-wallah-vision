@@ -21,13 +21,13 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-16 sm:py-20">
           
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-5xl">
+          <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-5xl overflow-visible">
             
             {/* Main Headline */}
-            <div className="space-y-3 sm:space-y-4">
-              <h1 className="font-bold leading-tight space-y-2">
-                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent sm:whitespace-nowrap">Ready to be the Boss?</div>
-                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl sm:whitespace-nowrap">
+            <div className="space-y-3 sm:space-y-4 overflow-visible">
+              <h1 className="font-bold leading-tight space-y-2 overflow-visible">
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">Ready to be the Boss?</div>
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap">
                   The <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span> for launching Your Business
                 </div>
               </h1>
