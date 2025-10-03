@@ -263,8 +263,8 @@ const FAQSection = () => {
         {/* Support CTA - Redesigned */}
         <div className="mt-10 max-w-4xl mx-auto">
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
-            <div className="relative bg-gradient-to-br from-card/80 to-card backdrop-blur-sm border border-primary/20 rounded-3xl p-8 md:p-10">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
+            <div className="relative bg-gradient-to-br from-card to-card/95 backdrop-blur-sm border border-primary/20 rounded-3xl p-8 md:p-10">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 {/* Left side - Icon */}
                 <div className="flex-shrink-0">
@@ -279,7 +279,7 @@ const FAQSection = () => {
                     Still Have Questions?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Our expert support team is available 24/7 to help you succeed
+                    Our expert support team is available to help you succeed
                   </p>
                 </div>
                 
@@ -297,7 +297,7 @@ const FAQSection = () => {
                   </Button>
                   <Button variant="outline" className="border-2 border-primary/30 hover:bg-primary/5 hover:border-primary hover:scale-105 transition-all duration-300">
                     <Phone className="w-4 h-4 mr-2" />
-                    Schedule Call
+                    Contact Us
                   </Button>
                 </div>
               </div>
