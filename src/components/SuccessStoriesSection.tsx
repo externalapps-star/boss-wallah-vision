@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import { Quote, ChevronDown, ChevronUp, Star, TrendingUp, Clock } from 'lucide-react';
-import { Button } from './ui/button';
+import { Quote, Star, TrendingUp, Clock } from 'lucide-react';
 
 const SuccessStoriesSection = () => {
-  const [showAll, setShowAll] = useState(false);
 
   const stories = [
     {
@@ -56,7 +53,7 @@ const SuccessStoriesSection = () => {
     }
   ];
 
-  const displayedStories = showAll ? stories : stories.slice(0, 2);
+  const displayedStories = stories.slice(0, 2);
 
   return (
     <section id="success-stories" className="section-padding bg-gradient-to-b from-secondary/20 via-background to-primary/5 relative overflow-hidden">
@@ -132,33 +129,6 @@ const SuccessStoriesSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Show More/Less Button */}
-        {stories.length > 2 && (
-          <div className="text-center">
-            <Button
-              onClick={() => setShowAll(!showAll)}
-              variant="outline"
-              size="lg"
-              className="group relative overflow-hidden border-2 border-primary/30 hover:border-primary bg-card hover:bg-primary/5 px-8 py-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_-10px_rgba(var(--primary-rgb),0.4)]"
-            >
-              <span className="relative z-10 flex items-center gap-2 text-foreground font-semibold">
-                {showAll ? (
-                  <>
-                    Show Less Stories
-                    <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
-                  </>
-                ) : (
-                  <>
-                    View More Success Stories
-                    <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
-                  </>
-                )}
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-            </Button>
-          </div>
-        )}
 
         {/* Bottom CTA */}
         <div className="mt-10 text-center">
