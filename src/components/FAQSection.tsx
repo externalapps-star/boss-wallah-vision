@@ -77,8 +77,8 @@ const FAQSection = () => {
     },
     {
       category: 'pricing',
-      question: "What if I'm not satisfied with the platform?",
-      answer: "We offer a 30-day money-back guarantee on all plans. If you're not completely satisfied with Boss Wallah within the first 30 days, we'll provide a full refund, no questions asked.",
+      question: "Is there a free trial or demo available?",
+      answer: "Yes! You can explore Boss Wallah with our free demo to see how the platform works. Experience our AI agents, browse business templates, and test the planning tools before committing to a paid plan. No credit card required to start exploring.",
       icon: DollarSign
     },
     {
