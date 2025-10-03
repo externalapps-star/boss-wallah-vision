@@ -1,49 +1,92 @@
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Footer = () => {
-  const quickLinks = [
-    { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Success Stories", href: "#testimonials" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Blog", href: "#blog" }
-  ];
-
-  const resources = [
-    { name: "Getting Started Guide", href: "#" },
-    { name: "Business Plan Templates", href: "#" },
-    { name: "AI Agent Documentation", href: "#" },
-    { name: "Video Tutorials", href: "#" },
-    { name: "Community Forum", href: "#" }
-  ];
-
-  const company = [
-    { name: "About Us", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Press Kit", href: "#" },
-    { name: "Partner Program", href: "#" },
-    { name: "Affiliate Program", href: "#" }
-  ];
-
-  const legal = [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "GDPR Compliance", href: "#" },
-    { name: "Security", href: "#" }
-  ];
-
-  const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: "#", name: "Facebook" },
-    { icon: <Twitter className="w-5 h-5" />, href: "#", name: "Twitter" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#", name: "Instagram" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", name: "LinkedIn" },
-    { icon: <Youtube className="w-5 h-5" />, href: "#", name: "YouTube" }
-  ];
-
-  return (
-    <footer className="bg-gradient-dark text-primary-foreground">
+  const quickLinks = [{
+    name: "Features",
+    href: "#features"
+  }, {
+    name: "Pricing",
+    href: "#pricing"
+  }, {
+    name: "Success Stories",
+    href: "#testimonials"
+  }, {
+    name: "FAQ",
+    href: "#faq"
+  }, {
+    name: "Blog",
+    href: "#blog"
+  }];
+  const resources = [{
+    name: "Getting Started Guide",
+    href: "#"
+  }, {
+    name: "Business Plan Templates",
+    href: "#"
+  }, {
+    name: "AI Agent Documentation",
+    href: "#"
+  }, {
+    name: "Video Tutorials",
+    href: "#"
+  }, {
+    name: "Community Forum",
+    href: "#"
+  }];
+  const company = [{
+    name: "About Us",
+    href: "#"
+  }, {
+    name: "Careers",
+    href: "#"
+  }, {
+    name: "Press Kit",
+    href: "#"
+  }, {
+    name: "Partner Program",
+    href: "#"
+  }, {
+    name: "Affiliate Program",
+    href: "#"
+  }];
+  const legal = [{
+    name: "Privacy Policy",
+    href: "#"
+  }, {
+    name: "Terms of Service",
+    href: "#"
+  }, {
+    name: "Cookie Policy",
+    href: "#"
+  }, {
+    name: "GDPR Compliance",
+    href: "#"
+  }, {
+    name: "Security",
+    href: "#"
+  }];
+  const socialLinks = [{
+    icon: <Facebook className="w-5 h-5" />,
+    href: "#",
+    name: "Facebook"
+  }, {
+    icon: <Twitter className="w-5 h-5" />,
+    href: "#",
+    name: "Twitter"
+  }, {
+    icon: <Instagram className="w-5 h-5" />,
+    href: "#",
+    name: "Instagram"
+  }, {
+    icon: <Linkedin className="w-5 h-5" />,
+    href: "#",
+    name: "LinkedIn"
+  }, {
+    icon: <Youtube className="w-5 h-5" />,
+    href: "#",
+    name: "YouTube"
+  }];
+  return <footer className="bg-gradient-dark text-primary-foreground">
       
       {/* Main Footer Content */}
       <div className="section-container">
@@ -92,67 +135,29 @@ const Footer = () => {
               <div>
                 <h4 className="font-semibold text-lg mb-4 text-accent">Quick Links</h4>
                 <ul className="space-y-3">
-                  {quickLinks.map((link, index) => (
-                    <li key={index}>
-                      <a 
-                        href={link.href}
-                        className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline"
-                      >
+                  {quickLinks.map((link, index) => <li key={index}>
+                      <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline">
                         {link.name}
                       </a>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
               {/* Resources */}
-              <div>
-                <h4 className="font-semibold text-lg mb-4 text-accent">Resources</h4>
-                <ul className="space-y-3">
-                  {resources.map((link, index) => (
-                    <li key={index}>
-                      <a 
-                        href={link.href}
-                        className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline"
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              
 
               {/* Company */}
-              <div>
-                <h4 className="font-semibold text-lg mb-4 text-accent">Company</h4>
-                <ul className="space-y-3">
-                  {company.map((link, index) => (
-                    <li key={index}>
-                      <a 
-                        href={link.href}
-                        className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline"
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              
 
               {/* Legal */}
               <div>
                 <h4 className="font-semibold text-lg mb-4 text-accent">Legal</h4>
                 <ul className="space-y-3">
-                  {legal.map((link, index) => (
-                    <li key={index}>
-                      <a 
-                        href={link.href}
-                        className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline"
-                      >
+                  {legal.map((link, index) => <li key={index}>
+                      <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline">
                         {link.name}
                       </a>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
             </div>
@@ -169,11 +174,7 @@ const Footer = () => {
               </div>
               
               <div className="flex gap-3">
-                <input 
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 rounded-lg bg-primary-foreground text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-                />
+                <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 rounded-lg bg-primary-foreground text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent" />
                 <Button className="bg-accent hover:bg-accent-light text-accent-foreground font-semibold px-6">
                   Subscribe
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -186,16 +187,9 @@ const Footer = () => {
           <div className="text-center">
             <h4 className="font-semibold text-lg mb-6 text-accent">Connect with Us</h4>
             <div className="flex justify-center space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.name}
-                  className="w-12 h-12 bg-primary-foreground/10 rounded-xl flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
-                >
+              {socialLinks.map((social, index) => <a key={index} href={social.href} aria-label={social.name} className="w-12 h-12 bg-primary-foreground/10 rounded-xl flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110">
                   {social.icon}
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
         </div>
@@ -226,8 +220,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
