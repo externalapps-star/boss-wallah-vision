@@ -79,11 +79,12 @@ const BlogSection = () => {
             {blogPosts.slice(0, 2).map((post, index) => (
               <div 
                 key={index}
-                className="group relative"
+                className="group relative cursor-pointer"
+                onClick={() => window.open('https://bosswallah.com/', '_blank')}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border-2 border-border/30 hover:border-primary/40 rounded-2xl overflow-hidden h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
@@ -137,11 +138,12 @@ const BlogSection = () => {
             {blogPosts.slice(2, 5).map((post, index) => (
               <div 
                 key={index + 2}
-                className="group relative"
+                className="group relative cursor-pointer"
+                onClick={() => window.open('https://bosswallah.com/', '_blank')}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border-2 border-border/30 hover:border-primary/40 rounded-2xl overflow-hidden h-[380px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
@@ -159,7 +161,7 @@ const BlogSection = () => {
                   </div>
                   
                   <div className="p-5 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
                         <span>{post.date}</span>
@@ -174,7 +176,7 @@ const BlogSection = () => {
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
                       {post.excerpt}
                     </p>
                   </div>
