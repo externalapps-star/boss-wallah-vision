@@ -18,8 +18,8 @@ const Navigation = () => {
       <div className="max-w-none px-6">
         <div className="flex items-center justify-between h-14 relative">
           {/* Logo - Extreme Left */}
-          <div className="flex items-center flex-shrink-0">
-            <img src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" alt="Boss Wallah Logo" className="h-16 w-auto" />
+          <div className="flex items-center flex-shrink-0 py-1">
+            <img src="/lovable-uploads/41d3575a-a2d8-4bd7-b01b-c5e2d999114a.png" alt="Boss Wallah Logo" className="h-16 w-auto scale-125 object-contain" style={{ marginTop: '-0.25rem', marginBottom: '-0.25rem' }} />
           </div>
 
           {/* Center Show Stopper */}
