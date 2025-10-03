@@ -1,10 +1,19 @@
 import { useState } from 'react';
-import { Search, Sparkles, Shield, Rocket, Globe, DollarSign, Users, Clock, MessageCircle, Phone } from 'lucide-react';
+import { Search, Sparkles, Shield, Rocket, Globe, DollarSign, Users, Clock, MessageCircle, Phone, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const FAQSection = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [openItems, setOpenItems] = useState<number[]>([0]); // First item open by default
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
 
   const categories = [
     { id: 'getting-started', name: 'Getting Started', icon: Rocket, color: 'from-blue-500/20 to-cyan-500/20', borderColor: 'border-blue-500/30' },
@@ -179,12 +188,13 @@ const FAQSection = () => {
           })}
         </div>
 
-        {/* FAQ Grid - Unique Masonry-style Layout */}
+        {/* FAQ Accordion - Traditional Expandable with Modern Design */}
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
             {filteredFaqs.map((faq, index) => {
               const Icon = faq.icon;
               const category = categories.find(c => c.id === faq.category);
+              const isOpen = openItems.includes(index);
               
               return (
                 <div
@@ -196,26 +206,53 @@ const FAQSection = () => {
                   <div className={`absolute -inset-0.5 bg-gradient-to-r ${category?.color || 'from-primary/20 to-accent/20'} rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition-all duration-500`}></div>
                   
                   {/* Card */}
-                  <div className={`relative bg-card border ${category?.borderColor || 'border-border/40'} rounded-2xl p-6 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-1`}>
+                  <div className={`relative bg-card border ${category?.borderColor || 'border-border/40'} rounded-2xl overflow-hidden shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-1`}>
                     
-                    {/* Icon badge */}
-                    <div className={`inline-flex items-center gap-2 bg-gradient-to-r ${category?.color || 'from-primary/20 to-accent/20'} rounded-full px-3 py-1.5 mb-4 border ${category?.borderColor || 'border-primary/30'}`}>
-                      <Icon className="w-3.5 h-3.5 text-primary" />
-                      <span className="text-xs font-semibold text-foreground">{category?.name}</span>
-                    </div>
+                    {/* Question Button */}
+                    <button
+                      onClick={() => toggleItem(index)}
+                      className="w-full p-6 text-left flex items-start gap-4 hover:bg-secondary/20 transition-colors duration-300 focus:outline-none"
+                    >
+                      {/* Icon badge */}
+                      <div className={`flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r ${category?.color || 'from-primary/20 to-accent/20'} rounded-full px-3 py-1.5 border ${category?.borderColor || 'border-primary/30'}`}>
+                        <Icon className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      
+                      <div className="flex-1 min-w-0">
+                        {/* Question */}
+                        <h3 className="text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 pr-2">
+                          {faq.question}
+                        </h3>
+                        
+                        {/* Category label */}
+                        <span className="text-xs font-semibold text-muted-foreground mt-1 block">
+                          {category?.name}
+                        </span>
+                      </div>
+                      
+                      {/* Expand/Collapse Icon */}
+                      <div className="flex-shrink-0">
+                        {isOpen ? (
+                          <ChevronUp className="w-5 h-5 text-primary transition-transform duration-300" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-all duration-300" />
+                        )}
+                      </div>
+                    </button>
                     
-                    {/* Question */}
-                    <h3 className="text-lg font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors duration-300">
-                      {faq.question}
-                    </h3>
-                    
-                    {/* Answer */}
-                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                      {faq.answer}
-                    </p>
+                    {/* Answer - Expandable */}
+                    {isOpen && (
+                      <div className="px-6 pb-6 animate-accordion-down">
+                        <div className="border-t border-border/50 pt-4 pl-12">
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    )}
 
                     {/* Decorative corner */}
-                    <div className={`absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl ${category?.color || 'from-primary/10 to-transparent'} rounded-tl-full rounded-br-2xl opacity-50`}></div>
+                    <div className={`absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl ${category?.color || 'from-primary/10 to-transparent'} rounded-tl-full rounded-br-2xl opacity-50 pointer-events-none`}></div>
                   </div>
                 </div>
               );
