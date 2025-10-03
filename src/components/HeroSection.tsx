@@ -49,7 +49,7 @@ const HeroSection = () => {
               </Button>
               
               {/* Hover Dropdown with Store Badges */}
-              <div className="absolute top-full left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full right-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-xl p-4 min-w-[280px]">
                   <p className="text-sm font-medium text-foreground mb-3 text-center">Download from:</p>
                   <div className="flex flex-col gap-2">
