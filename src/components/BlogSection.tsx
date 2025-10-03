@@ -70,7 +70,8 @@ const BlogSection = () => {
       date: "Jul 28",
       readTime: "8 min",
       image: "https://bosswallah.com/assets/blog-agriculture-business-ideas-CZIb7zrq.png",
-      popular: false
+      popular: false,
+      url: "https://blog.bosswallah.com/agri-startups/"
     }
   ];
 
