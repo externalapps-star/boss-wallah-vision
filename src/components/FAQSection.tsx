@@ -23,6 +23,12 @@ const FAQSection = () => {
     },
     {
       category: 'getting-started',
+      question: "What types of businesses does Boss Wallah support?",
+      answer: "Boss Wallah specializes in offline, real-world businesses across hundreds of categories including retail stores, restaurants, service businesses, manufacturing, home-based businesses, and professional services. Our focus is on helping you build tangible businesses in your local community.",
+      icon: Rocket
+    },
+    {
+      category: 'getting-started',
       question: "Can beginners with no business experience use this platform?",
       answer: "Absolutely! Boss Wallah is designed specifically for first-time entrepreneurs. Our AI mentor breaks down complex business concepts into simple, actionable steps. The platform includes educational content, video tutorials, and step-by-step guides.",
       icon: Rocket
@@ -35,6 +41,12 @@ const FAQSection = () => {
     },
     {
       category: 'features',
+      question: "How is Boss Wallah different from using ChatGPT or other AI tools?",
+      answer: "While general AI tools can generate business plans, Boss Wallah goes far beyond planning. We specialize in execution—providing task management, progress tracking, specialized AI agents, expert resources, and ongoing mentorship specifically designed for business launches. Think of us as your complete business launch operating system, not just a planning tool.",
+      icon: Sparkles
+    },
+    {
+      category: 'features',
       question: "How is this different from other business planning tools?",
       answer: "Unlike traditional business planning software, Boss Wallah combines AI-powered guidance with real-world entrepreneurial expertise. Our platform doesn't just help you create documents - it provides ongoing mentorship, connects you with relevant resources, and adapts recommendations based on your specific industry.",
       icon: Sparkles
@@ -43,6 +55,12 @@ const FAQSection = () => {
       category: 'features',
       question: "What kind of AI agents are available and how do they help?",
       answer: "We have specialist AI agents for different business functions: Marketing AI, Finance AI, Legal AI, and Operations AI. Each agent is trained on specific domain expertise to provide targeted advice for branding, budgeting, compliance, and scaling.",
+      icon: Sparkles
+    },
+    {
+      category: 'features',
+      question: "What can I expect in upcoming releases?",
+      answer: "We're continuously enhancing the platform with: Granular task breakdown making every action item clear and manageable, Enhanced AI capabilities with more powerful and specialized AI agents, and Community features connecting entrepreneurs for networking, partnerships, and peer support.",
       icon: Sparkles
     },
     {
@@ -62,6 +80,12 @@ const FAQSection = () => {
       question: "Can I upgrade or downgrade my plan anytime?",
       answer: "Yes, you can change your plan at any time. Upgrading gives you immediate access to additional features, while downgrading takes effect at your next billing cycle. Your data and progress are always preserved.",
       icon: DollarSign
+    },
+    {
+      category: 'support',
+      question: "Is Boss Wallah suitable for international entrepreneurs?",
+      answer: "Absolutely. Boss Wallah is designed as a global platform that customizes business plans and guidance based on your location and target market. While our service provider network and funding database are most comprehensive in India currently, we're rapidly expanding to serve entrepreneurs worldwide.",
+      icon: Globe
     },
     {
       category: 'support',
