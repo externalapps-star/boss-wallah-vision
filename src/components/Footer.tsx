@@ -13,42 +13,8 @@ const Footer = () => {
   }, {
     name: "FAQ",
     href: "#faq"
-  }, {
-    name: "Blog",
-    href: "#blog"
   }];
-  const resources = [{
-    name: "Getting Started Guide",
-    href: "#"
-  }, {
-    name: "Business Plan Templates",
-    href: "#"
-  }, {
-    name: "AI Agent Documentation",
-    href: "#"
-  }, {
-    name: "Video Tutorials",
-    href: "#"
-  }, {
-    name: "Community Forum",
-    href: "#"
-  }];
-  const company = [{
-    name: "About Us",
-    href: "#"
-  }, {
-    name: "Careers",
-    href: "#"
-  }, {
-    name: "Press Kit",
-    href: "#"
-  }, {
-    name: "Partner Program",
-    href: "#"
-  }, {
-    name: "Affiliate Program",
-    href: "#"
-  }];
+  
   const legal = [{
     name: "Privacy Policy",
     href: "#"
@@ -56,13 +22,7 @@ const Footer = () => {
     name: "Terms of Service",
     href: "#"
   }, {
-    name: "Cookie Policy",
-    href: "#"
-  }, {
-    name: "GDPR Compliance",
-    href: "#"
-  }, {
-    name: "Security",
+    name: "Refund & Cancellation",
     href: "#"
   }];
   const socialLinks = [{
@@ -93,11 +53,11 @@ const Footer = () => {
         <div className="py-10 border-b border-primary-foreground/10">
           
           {/* Top Section */}
-          <div className="grid lg:grid-cols-4 gap-12 mb-12">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
             
             {/* Brand Section */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-6">
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center text-primary-foreground font-bold">
                   BW
                 </div>
@@ -107,89 +67,51 @@ const Footer = () => {
                 </div>
               </div>
               
-              <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-                The only platform you need to launch your business. Transform your entrepreneurial vision into reality with AI-powered guidance and proven frameworks.
+              <p className="text-primary-foreground/80 mb-6 leading-relaxed text-sm">
+                The only platform you need to launch your business. Transform your entrepreneurial vision into reality.
               </p>
               
-              {/* Contact Info */}
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center space-x-3">
+              {/* Social Links */}
+              <div className="flex space-x-3">
+                {socialLinks.map((social, index) => <a key={index} href={social.href} aria-label={social.name} className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300">
+                    {social.icon}
+                  </a>)}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-accent">Quick Links</h4>
+              <ul className="space-y-2">
+                {quickLinks.map((link, index) => <li key={index}>
+                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                      {link.name}
+                    </a>
+                  </li>)}
+              </ul>
+            </div>
+
+            {/* Legal & Contact */}
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-accent">Legal & Contact</h4>
+              <ul className="space-y-2 mb-6">
+                {legal.map((link, index) => <li key={index}>
+                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                      {link.name}
+                    </a>
+                  </li>)}
+              </ul>
+              
+              <div className="space-y-2 text-sm text-primary-foreground/70">
+                <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-accent" />
                   <span>hello@bosswallah.com</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-accent" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 text-accent" />
                   <span>Global - 50+ Countries</span>
                 </div>
               </div>
-            </div>
-
-            {/* Links Sections */}
-            <div className="lg:col-span-3 grid md:grid-cols-4 gap-8">
-              
-              {/* Quick Links */}
-              <div>
-                <h4 className="font-semibold text-lg mb-4 text-accent">Quick Links</h4>
-                <ul className="space-y-3">
-                  {quickLinks.map((link, index) => <li key={index}>
-                      <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline">
-                        {link.name}
-                      </a>
-                    </li>)}
-                </ul>
-              </div>
-
-              {/* Resources */}
-              
-
-              {/* Company */}
-              
-
-              {/* Legal */}
-              <div>
-                <h4 className="font-semibold text-lg mb-4 text-accent">Legal</h4>
-                <ul className="space-y-3">
-                  {legal.map((link, index) => <li key={index}>
-                      <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors hover:underline">
-                        {link.name}
-                      </a>
-                    </li>)}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Newsletter Section */}
-          <div className="bg-primary-foreground/5 rounded-2xl p-8 mb-12 border border-primary-foreground/10">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-2 text-accent">Stay Updated</h3>
-                <p className="text-primary-foreground/80">
-                  Get the latest entrepreneurship insights, platform updates, and exclusive resources delivered to your inbox.
-                </p>
-              </div>
-              
-              <div className="flex gap-3">
-                <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 rounded-lg bg-primary-foreground text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent" />
-                <Button className="bg-accent hover:bg-accent-light text-accent-foreground font-semibold px-6">
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Social Links */}
-          <div className="text-center">
-            <h4 className="font-semibold text-lg mb-6 text-accent">Connect with Us</h4>
-            <div className="flex justify-center space-x-4">
-              {socialLinks.map((social, index) => <a key={index} href={social.href} aria-label={social.name} className="w-12 h-12 bg-primary-foreground/10 rounded-xl flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110">
-                  {social.icon}
-                </a>)}
             </div>
           </div>
         </div>
