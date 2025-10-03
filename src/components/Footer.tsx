@@ -211,7 +211,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center md:text-right">
               <p className="text-sm text-primary-foreground/80">
-                © {new Date().getFullYear()} Boss Wallah. All rights reserved.
+                © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
               </p>
               <p className="text-xs text-primary-foreground/60 mt-1">
                 Built for entrepreneurs, by entrepreneurs.
