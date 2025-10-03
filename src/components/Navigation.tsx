@@ -1,19 +1,7 @@
-import { Rocket, Moon, Sun } from 'lucide-react';
+import { Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+
 const Navigation = () => {
-  const {
-    theme,
-    setTheme
-  } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  if (!mounted) {
-    return null;
-  }
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-6">
         <div className="flex items-center justify-between h-16 relative">
