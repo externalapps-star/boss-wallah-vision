@@ -27,7 +27,7 @@ const HeroSection = () => {
             <div className="space-y-3 sm:space-y-4">
               <h1 className="font-bold leading-tight space-y-2">
                 <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">Ready to be the Boss?</div>
-                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl sm:whitespace-nowrap">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl sm:whitespace-nowrap">
                   The <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span> for launching Your Business
                 </div>
               </h1>
