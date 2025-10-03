@@ -9,7 +9,6 @@ const BlogSection = () => {
       author: "Sarah Chen",
       date: "Dec 15, 2024", 
       readTime: "8 min",
-      category: "Strategy",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       popular: true
     },
@@ -19,7 +18,6 @@ const BlogSection = () => {
       author: "Michael Rodriguez",
       date: "Dec 12, 2024",
       readTime: "6 min", 
-      category: "AI & Technology",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       popular: true
     },
@@ -29,7 +27,6 @@ const BlogSection = () => {
       author: "Boss Wallah Team",
       date: "Dec 10, 2024",
       readTime: "12 min",
-      category: "Success Stories", 
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       popular: true
     },
@@ -39,7 +36,6 @@ const BlogSection = () => {
       author: "Jennifer Park",
       date: "Dec 8, 2024",
       readTime: "10 min",
-      category: "Finance",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       popular: false
     },
@@ -49,7 +45,6 @@ const BlogSection = () => {
       author: "David Lee",
       date: "Dec 5, 2024",
       readTime: "7 min",
-      category: "Growth",
       image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       popular: false
     }
@@ -78,100 +73,81 @@ const BlogSection = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {blogPosts.map((post, index) => {
-            const isLarge = index === 0;
-            
-            return (
-              <div 
-                key={index}
-                className={`group relative ${isLarge ? 'lg:col-span-2 lg:row-span-2' : ''}`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Glow effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-0 group-hover:opacity-40 transition-all duration-700"></div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {blogPosts.map((post, index) => (
+            <div 
+              key={index}
+              className="group relative"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {/* Glow effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+              
+              {/* Card */}
+              <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-full hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1">
                 
-                {/* Card */}
-                <div className="relative bg-card border border-border/40 rounded-3xl overflow-hidden h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_25px_70px_-20px_rgba(var(--primary-rgb),0.5)] transition-all duration-700 group-hover:-translate-y-2">
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   
-                  {/* Image */}
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
-                        isLarge ? 'h-80' : 'h-48'
-                      }`}
-                    />
-                    
-                    {/* Overlay badges */}
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="bg-gradient-to-r from-primary/90 to-accent/90 backdrop-blur-sm text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                        {post.category}
+                  {/* Popular badge */}
+                  {post.popular && (
+                    <div className="absolute top-3 right-3">
+                      <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
+                        <TrendingUp className="w-3 h-3" />
+                        Popular
                       </span>
-                      {post.popular && (
-                        <span className="bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-                          <TrendingUp className="w-3 h-3" />
-                          Popular
-                        </span>
-                      )}
                     </div>
-                    
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className={`p-6 ${isLarge ? 'lg:p-8' : ''}`}>
-                    {/* Meta info */}
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5" />
-                        <span>{post.readTime}</span>
-                      </div>
+                  )}
+                </div>
+                
+                {/* Content */}
+                <div className="p-5">
+                  {/* Meta info */}
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{post.date}</span>
                     </div>
-                    
-                    {/* Title */}
-                    <h3 className={`font-bold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors duration-300 ${
-                      isLarge ? 'text-2xl lg:text-3xl mb-4' : 'text-lg'
-                    }`}>
-                      {post.title}
-                    </h3>
-                    
-                    {/* Excerpt */}
-                    <p className={`text-muted-foreground leading-relaxed mb-4 ${
-                      isLarge ? 'text-base' : 'text-sm line-clamp-2'
-                    }`}>
-                      {post.excerpt}
-                    </p>
-                    
-                    {/* Author & Read More */}
-                    <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                      <span className="text-sm font-medium text-foreground">
-                        {post.author}
-                      </span>
-                      
-                      <Button 
-                        variant="ghost" 
-                        size="sm"
-                        className="text-primary hover:text-primary hover:bg-primary/10 group/btn"
-                      >
-                        Read
-                        <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </Button>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{post.readTime}</span>
                     </div>
                   </div>
                   
-                  {/* Decorative corner */}
-                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-primary/10 to-transparent rounded-tl-full rounded-br-3xl"></div>
+                  {/* Title */}
+                  <h3 className="font-bold text-foreground text-lg mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  
+                  {/* Excerpt */}
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  
+                  {/* Author & Read More */}
+                  <div className="flex items-center justify-between pt-3 border-t border-border/50">
+                    <span className="text-sm font-medium text-foreground">
+                      {post.author}
+                    </span>
+                    
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2"
+                    >
+                      Read
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </Button>
+                  </div>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         {/* Bottom Section - Stay Updated & Popular Tags */}
