@@ -71,14 +71,14 @@ const FAQSection = () => {
     },
     {
       category: 'pricing',
-      question: "What if I'm not satisfied with the platform?",
-      answer: "We offer a 30-day money-back guarantee on all plans. If you're not completely satisfied with Boss Wallah within the first 30 days, we'll provide a full refund, no questions asked.",
+      question: "What are the pricing plans available?",
+      answer: "We offer two flexible plans: Monthly Plan at $9 USD (₹399 INR) perfect for getting started, and Annual Plan at $99 USD (₹2,499 INR) for best value. All plans include access to AI agents, business planning tools, tracking systems, and learning resources.",
       icon: DollarSign
     },
     {
       category: 'pricing',
-      question: "Can I upgrade or downgrade my plan anytime?",
-      answer: "Yes, you can change your plan at any time. Upgrading gives you immediate access to additional features, while downgrading takes effect at your next billing cycle. Your data and progress are always preserved.",
+      question: "What if I'm not satisfied with the platform?",
+      answer: "We offer a 30-day money-back guarantee on all plans. If you're not completely satisfied with Boss Wallah within the first 30 days, we'll provide a full refund, no questions asked.",
       icon: DollarSign
     },
     {
