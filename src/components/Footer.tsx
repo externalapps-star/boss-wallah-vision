@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
 
             {/* Legal & Contact */}
-            <div>
+            <div className="text-right">
               <h4 className="font-semibold text-lg mb-4 text-accent">Legal & Contact</h4>
               <ul className="space-y-2 mb-6">
                 {legal.map((link, index) => <li key={index}>
@@ -106,7 +106,7 @@ const Footer = () => {
               </ul>
               
               <div className="space-y-2 text-sm text-primary-foreground/70">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center justify-end space-x-2">
                   <Mail className="w-4 h-4 text-accent" />
                   <span>brand@bosswallah.com</span>
                 </div>
