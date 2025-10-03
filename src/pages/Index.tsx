@@ -5,6 +5,7 @@ import FloatingChatBot from '@/components/FloatingChatBot';
 import HeroSection from '@/components/HeroSection';
 import WhyBossWallah from '@/components/WhyBossWallah';
 import FeaturesSection from '@/components/FeaturesSection';
+import GlobalSolutionsSection from '@/components/GlobalSolutionsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
@@ -23,6 +24,7 @@ const Index = () => {
         <HeroSection />
         <WhyBossWallah />
         <FeaturesSection />
+        <GlobalSolutionsSection />
         <TestimonialsSection />
         <FAQSection />
         <BlogSection />
