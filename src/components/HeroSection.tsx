@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Download, Star, Users, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import appStoreBadge from '@/assets/app-store-badge.png';
+import googlePlayBadge from '@/assets/google-play-badge.png';
+
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const appImages = ['/lovable-uploads/252f491b-dcc6-49c2-81ce-82c7542acd40.png', '/lovable-uploads/0a198c2f-6e45-49a3-9fa0-08d99bf8fa98.png', '/lovable-uploads/9896e543-40e7-4d89-b24b-8e6dad8980d0.png'];
@@ -35,7 +38,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="flex">
+            <div className="flex relative group">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 font-semibold px-8 py-4 text-lg h-auto transition-all duration-300"
@@ -44,6 +47,39 @@ const HeroSection = () => {
                 <Download className="w-5 h-5 mr-2" />
                 Download Now
               </Button>
+              
+              {/* Hover Dropdown with Store Badges */}
+              <div className="absolute top-full left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-xl p-4 min-w-[280px]">
+                  <p className="text-sm font-medium text-foreground mb-3 text-center">Download from:</p>
+                  <div className="flex flex-col gap-2">
+                    <a 
+                      href="https://play.google.com/store" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-105"
+                    >
+                      <img 
+                        src={googlePlayBadge} 
+                        alt="Get it on Google Play" 
+                        className="h-12 w-auto mx-auto"
+                      />
+                    </a>
+                    <a 
+                      href="https://apps.apple.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-105"
+                    >
+                      <img 
+                        src={appStoreBadge} 
+                        alt="Download on the App Store" 
+                        className="h-12 w-auto mx-auto"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Trust Indicators */}
