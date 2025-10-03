@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Sparkles, Shield, Rocket, Globe, Users, Clock, MessageCircle, Phone, ChevronDown, ChevronUp } from 'lucide-react';
+import { Search, Sparkles, Shield, Rocket, Globe, Users, Clock, MessageCircle, Mail, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const FAQSection = () => {
@@ -272,18 +272,8 @@ const FAQSection = () => {
                 
                 {/* Right - Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button 
-                    className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-105 transition-all duration-300"
-                    onClick={() => {
-                      // Dispatch custom event to open chatbot
-                      window.dispatchEvent(new CustomEvent('openChatBot'));
-                    }}
-                  >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Live Chat
-                  </Button>
-                  <Button variant="outline" className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary hover:scale-105 transition-all duration-300">
-                    <Phone className="w-4 h-4 mr-2" />
+                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <Mail className="w-4 h-4 mr-2" />
                     Contact Us
                   </Button>
                 </div>
