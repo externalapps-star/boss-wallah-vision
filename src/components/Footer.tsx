@@ -73,16 +73,9 @@ const Footer = () => {
                 </div>
               </div>
               
-              <p className="text-primary-foreground/80 mb-6 leading-relaxed text-sm">
+              <p className="text-primary-foreground/80 leading-relaxed text-sm">
                 The only platform you need to launch your business. Transform your entrepreneurial vision into reality.
               </p>
-              
-              {/* Social Links */}
-              <div className="flex space-x-3">
-                {socialLinks.map((social, index) => <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background">
-                    {social.icon}
-                  </a>)}
-              </div>
             </div>
 
             {/* Quick Links */}
