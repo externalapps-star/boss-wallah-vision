@@ -1,4 +1,4 @@
-import { Calendar, Clock, ArrowRight, TrendingUp, Users, Lightbulb } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, TrendingUp, Users, Lightbulb, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -19,10 +19,6 @@ const BlogSection = () => {
     }
 
     setIsSubscribed(true);
-    toast({
-      title: "Thank You for Subscribing! 🎉",
-      description: "You'll receive the latest insights and success stories in your inbox.",
-    });
     setEmail('');
   };
 
@@ -226,37 +222,68 @@ const BlogSection = () => {
           <div className="relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-30"></div>
             <div className="relative bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="flex items-start gap-4 flex-1">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-6 h-6 text-primary-foreground" />
+              {!isSubscribed ? (
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-start gap-4 flex-1">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Lightbulb className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Get the latest entrepreneurship insights and success stories delivered to your inbox
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Get the latest entrepreneurship insights and success stories delivered to your inbox
+                  
+                  <div className="flex flex-col gap-2 w-full md:w-auto md:min-w-[350px]">
+                    <div className="flex gap-3">
+                      <input 
+                        type="email" 
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
+                        className="flex-1 px-4 py-3 rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
+                      />
+                      <Button 
+                        onClick={handleSubscribe}
+                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px]"
+                      >
+                        Subscribe
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
+                    <p className="text-xs text-muted-foreground/70 text-center md:text-left">
+                      We respect your privacy. Unsubscribe at any time.
                     </p>
                   </div>
                 </div>
-                
-                <div className="flex gap-3 w-full md:w-auto md:min-w-[350px]">
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
-                    className="flex-1 px-4 py-3 rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
-                  />
+              ) : (
+                <div className="text-center py-6">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-10 h-10 text-primary-foreground" />
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
+                    Thank You!
+                  </h3>
+                  <p className="text-lg text-foreground mb-4">
+                    🎉 You are now subscribed to our newsletter!
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6">
+                    Get ready to receive the latest entrepreneurship insights, success stories, and business growth strategies delivered straight to your inbox.
+                  </p>
                   <Button 
-                    onClick={handleSubscribe}
-                    className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px]"
+                    onClick={() => setIsSubscribed(false)}
+                    variant="outline"
+                    className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   >
-                    Subscribe
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    Subscribe Another Email
                   </Button>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
