@@ -32,7 +32,7 @@ const FinalCTASection = () => {
           {/* App Store Download Buttons */}
           <div className="mb-6">
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-6">
-              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="group relative">
+              <a href="https://play.google.com/store/search?q=bosswallah&c=apps" target="_blank" rel="noopener noreferrer" className="group relative">
                 <div className="absolute inset-0 bg-primary-foreground/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <img src={googlePlayBadge} alt="Get it on Google Play" className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl" />
               </a>
