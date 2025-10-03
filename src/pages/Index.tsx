@@ -7,7 +7,6 @@ import WhyBossWallah from '@/components/WhyBossWallah';
 import FeaturesSection from '@/components/FeaturesSection';
 import GlobalSolutionsSection from '@/components/GlobalSolutionsSection';
 import SuccessStoriesSection from '@/components/SuccessStoriesSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import BlogSection from '@/components/BlogSection';
 import FinalCTASection from '@/components/FinalCTASection';
@@ -27,7 +26,6 @@ const Index = () => {
         <FeaturesSection />
         <GlobalSolutionsSection />
         <SuccessStoriesSection />
-        <TestimonialsSection />
         <FAQSection />
         <BlogSection />
         <FinalCTASection />
