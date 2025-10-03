@@ -47,7 +47,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="section-padding bg-gradient-to-b from-secondary/30 to-background">
+    <section id="features" className="section-padding bg-secondary/20">
       <div className="section-container">
         
         {/* Header */}
