@@ -72,127 +72,146 @@ const BlogSection = () => {
           </p>
         </div>
 
-        {/* Blog Grid - Featured + Regular Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {/* Featured Large Card - First Post */}
-          <div className="md:col-span-2 md:row-span-2 group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
-            
-            <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-full hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1">
-              <div className="relative overflow-hidden">
-                <img 
-                  src={blogPosts[0].image} 
-                  alt={blogPosts[0].title}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-4 right-4">
-                  <span className="bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
-                    Featured
-                  </span>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-xs text-muted-foreground mb-4">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{blogPosts[0].date}</span>
+        {/* Blog Grid - 2 Cards First Row, 3 Cards Second Row */}
+        <div className="space-y-6 mb-12">
+          {/* First Row - 2 Cards */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {blogPosts.slice(0, 2).map((post, index) => (
+              <div 
+                key={index}
+                className="group relative"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                
+                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[480px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                  <div className="relative overflow-hidden flex-shrink-0">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {index === 0 && (
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
+                          Featured
+                        </span>
+                      </div>
+                    )}
+                    {post.popular && index !== 0 && (
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
+                          <TrendingUp className="w-3 h-3" />
+                          Trending
+                        </span>
+                      </div>
+                    )}
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>{blogPosts[0].readTime}</span>
-                  </div>
-                </div>
-                
-                <h3 className="font-bold text-foreground text-2xl mb-3 leading-tight group-hover:text-primary transition-colors duration-300">
-                  {blogPosts[0].title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3">
-                  {blogPosts[0].excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                  <span className="text-sm font-medium text-foreground">
-                    {blogPosts[0].author}
-                  </span>
                   
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
-                    className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2"
-                  >
-                    Read
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </Button>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="font-bold text-foreground text-xl mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3 flex-1">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between pt-4 border-t border-border/50 mt-auto">
+                      <span className="text-sm font-medium text-foreground">
+                        {post.author}
+                      </span>
+                      
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2"
+                      >
+                        Read
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Regular Cards - Remaining 4 Posts */}
-          {blogPosts.slice(1).map((post, index) => (
-            <div 
-              key={index + 1}
-              className="group relative"
-            >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
-              
-              <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-full hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {post.popular && (
-                    <div className="absolute top-3 right-3">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
-                        Trending
-                      </span>
-                    </div>
-                  )}
-                </div>
+          {/* Second Row - 3 Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {blogPosts.slice(2, 5).map((post, index) => (
+              <div 
+                key={index + 2}
+                className="group relative"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="p-4">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      <span>{post.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{post.readTime}</span>
-                    </div>
+                <div className="relative bg-card border border-border/40 rounded-2xl overflow-hidden h-[480px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                  <div className="relative overflow-hidden flex-shrink-0">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {post.popular && (
+                      <div className="absolute top-3 right-3">
+                        <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-lg">
+                          <TrendingUp className="w-3 h-3" />
+                          Trending
+                        </span>
+                      </div>
+                    )}
                   </div>
                   
-                  <h3 className="font-bold text-foreground text-base mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between pt-3 border-t border-border/50">
-                    <span className="text-xs font-medium text-foreground truncate">
-                      {post.author}
-                    </span>
+                  <div className="p-5 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-3 h-3" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
                     
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2 h-8"
-                    >
-                      Read
-                      <ArrowRight className="w-3 h-3 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                    </Button>
+                    <h3 className="font-bold text-foreground text-lg mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between pt-3 border-t border-border/50 mt-auto">
+                      <span className="text-sm font-medium text-foreground truncate">
+                        {post.author}
+                      </span>
+                      
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-primary hover:text-primary hover:bg-primary/10 group/btn -mr-2 h-8"
+                      >
+                        Read
+                        <ArrowRight className="w-3 h-3 ml-1 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Stay Updated Section - Full Width Banner */}
