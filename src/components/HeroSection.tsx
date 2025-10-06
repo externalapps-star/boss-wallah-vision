@@ -63,10 +63,27 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
-              {/* Decorative Graphics - Plant only */}
+              {/* Decorative Graphics - Plant and Confetti */}
               {/* Top left - Plant in white space */}
               <div className="hidden lg:block absolute -top-12 -left-28 w-32 h-32 z-40 animate-float">
                 <img src="/lovable-uploads/plant-pot.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
+              </div>
+
+              {/* Confetti decorations around phone */}
+              <div className="hidden lg:block absolute -top-8 -right-12 w-24 h-24 z-40 animate-float opacity-80">
+                <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              
+              <div className="hidden lg:block absolute top-1/4 -left-16 w-20 h-20 z-40 animate-float opacity-70" style={{ animationDelay: '1s' }}>
+                <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              
+              <div className="hidden lg:block absolute bottom-1/4 -right-8 w-16 h-16 z-40 animate-float opacity-60" style={{ animationDelay: '2s' }}>
+                <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              
+              <div className="hidden lg:block absolute -bottom-6 -left-12 w-20 h-20 z-40 animate-float opacity-75" style={{ animationDelay: '1.5s' }}>
+                <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
               </div>
 
               {/* Phone Mockup */}
