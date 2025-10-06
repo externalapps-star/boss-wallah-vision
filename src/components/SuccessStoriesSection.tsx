@@ -92,8 +92,8 @@ const SuccessStoriesSection = () => {
               <div className="relative bg-card border border-border/40 rounded-3xl p-5 sm:p-8 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_25px_70px_-20px_rgba(var(--primary-rgb),0.5)] transition-all duration-700 group-hover:-translate-y-2">
                 
                 {/* Quote icon */}
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg rotate-12 group-hover:rotate-0 transition-transform duration-500">
-                  <Quote className="w-8 h-8 text-primary-foreground" fill="currentColor" />
+                <div className="absolute -top-3 -left-3 w-12 h-12 sm:-top-4 sm:-left-4 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                  <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" fill="currentColor" />
                 </div>
 
                 {/* Story content */}
