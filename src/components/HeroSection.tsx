@@ -67,13 +67,12 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
-              {/* Crown Background */}
-              <div className="absolute -top-12 right-0 w-40 h-40 z-20 opacity-50 rotate-[15deg]">
-                <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-2xl" />
-              </div>
-
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float relative z-30">
+                {/* Crown on phone border */}
+                <div className="absolute -top-16 -right-12 w-32 h-32 z-40 opacity-60 rotate-[20deg]">
+                  <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-2xl" />
+                </div>
                 <div className="phone-screen">
                   <img src={appImages[currentImage]} alt="Boss Wallah App Screenshot" className="w-full h-full object-cover transition-opacity duration-1000" />
                 </div>
