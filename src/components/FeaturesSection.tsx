@@ -72,14 +72,14 @@ const FeaturesSection = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500 animate-gradient"></div>
               
               {/* Main Card */}
-              <div className="relative bg-card backdrop-blur-sm border border-border/40 rounded-3xl p-8 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-card/80 group-hover:border-primary/60 group-hover:shadow-[0_25px_70px_-20px_rgba(var(--primary-rgb),0.5)]">
+              <div className="relative bg-card backdrop-blur-sm border border-border/40 rounded-3xl p-4 sm:p-8 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-card/80 group-hover:border-primary/60 group-hover:shadow-[0_25px_70px_-20px_rgba(var(--primary-rgb),0.5)]">
                 
                 {/* Header Section */}
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center text-3xl border border-primary/30 group-hover:scale-110 group-hover:rotate-3 group-hover:border-primary/60 group-hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all duration-300">
+                <div className="flex items-start space-x-3 sm:space-x-4 mb-3 sm:mb-6">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl border border-primary/30 group-hover:scale-110 group-hover:rotate-3 group-hover:border-primary/60 group-hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all duration-300">
                     {feature.emoji}
                   </div>
-                  <div className="flex-1 pt-2">
+                  <div className="flex-1 pt-1 sm:pt-2">
                     <h3 className="text-base sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {feature.title}
                     </h3>
@@ -87,12 +87,12 @@ const FeaturesSection = () => {
                 </div>
                 
                 {/* Description */}
-                <p className="text-muted-foreground mb-6 leading-relaxed text-xs sm:text-sm text-justify group-hover:text-foreground/90 transition-colors duration-300">
+                <p className="text-muted-foreground mb-3 sm:mb-6 leading-relaxed text-xs sm:text-sm text-justify group-hover:text-foreground/90 transition-colors duration-300">
                   {feature.description}
                 </p>
                 
                 {/* Benefits Grid */}
-                <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border/50 group-hover:border-primary/30 transition-colors duration-300">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-border/50 group-hover:border-primary/30 transition-colors duration-300">
                   {feature.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-start space-x-2 text-sm group/item">
                       <div className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full mt-1.5 flex-shrink-0 group-hover/item:scale-150 group-hover:shadow-[0_0_8px_rgba(var(--primary-rgb),0.6)] transition-all duration-300"></div>
