@@ -63,29 +63,19 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
-              {/* Decorative Graphics - Spread in white space with some overlapping */}
-              {/* Top left - in white space */}
-              <div className="hidden lg:block absolute -top-16 -left-32 w-32 h-32 z-10 animate-float">
-                <img src="/lovable-uploads/growth-chart.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
-              </div>
-              
-              {/* Mid left - partially overlapping */}
-              <div className="hidden lg:block absolute top-32 -left-24 w-28 h-28 z-40 animate-float" style={{ animationDelay: '1s' }}>
+              {/* Decorative Graphics - Only 3 elements */}
+              {/* Top left - Plant in white space */}
+              <div className="hidden lg:block absolute -top-12 -left-28 w-32 h-32 z-40 animate-float">
                 <img src="/lovable-uploads/plant-pot.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
               
-              {/* Bottom left - in white space */}
-              <div className="hidden lg:block absolute bottom-8 -left-28 w-36 h-36 z-10 animate-float" style={{ animationDelay: '2s' }}>
+              {/* Bottom left - Hand with pot, partially overlapping */}
+              <div className="hidden lg:block absolute bottom-12 -left-20 w-40 h-40 z-40 animate-float" style={{ animationDelay: '1.5s' }}>
                 <img src="/lovable-uploads/hand-pot.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
               
-              {/* Top right - partially overlapping */}
-              <div className="hidden lg:block absolute -top-8 -right-20 w-32 h-32 z-40 animate-float" style={{ animationDelay: '0.5s' }}>
-                <img src="/lovable-uploads/house.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
-              </div>
-              
-              {/* Bottom right - in white space */}
-              <div className="hidden lg:block absolute bottom-16 -right-32 w-36 h-36 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
+              {/* Right side - Shop in white space */}
+              <div className="hidden lg:block absolute top-1/3 -right-32 w-40 h-40 z-10 animate-float" style={{ animationDelay: '0.8s' }}>
                 <img src="/lovable-uploads/retail-shop.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
 
