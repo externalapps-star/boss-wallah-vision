@@ -21,14 +21,6 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
             </div>
             
             <div className="flex items-center gap-2">
-              <button
-                onClick={onMenuToggle}
-                className="p-2 rounded-lg border-2 border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300"
-                aria-label="Toggle menu"
-              >
-                <Menu className="w-4 h-4" />
-              </button>
-              
               <Button 
                 variant="outline" 
                 size="sm"
@@ -37,6 +29,14 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
               >
                 <Mail className="w-3 h-3" />
               </Button>
+              
+              <button
+                onClick={onMenuToggle}
+                className="p-2 rounded-lg border-2 border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300"
+                aria-label="Toggle menu"
+              >
+                <Menu className="w-4 h-4" />
+              </button>
             </div>
           </div>
           
