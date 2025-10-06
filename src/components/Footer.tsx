@@ -64,7 +64,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-6">
             
             {/* Brand Section */}
-            <div className="col-span-2 md:col-span-1">
+            <div className="col-span-2 md:col-span-1 px-4 sm:px-0">
               <div className="flex items-center space-x-3 mb-4">
                 
                 <div>
