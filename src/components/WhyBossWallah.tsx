@@ -15,8 +15,20 @@ const WhyBossWallah = () => {
   ];
 
   return (
-    <section id="why-boss-wallah" className="section-padding bg-background border-b border-border/30">
-      <div className="section-container">
+    <section id="why-boss-wallah" className="section-padding bg-background border-b border-border/30 relative overflow-hidden">
+      <div className="section-container relative z-10">
+        
+        {/* Decorative Background Graphics */}
+        <img 
+          src="/lovable-uploads/briefcase.png" 
+          alt="" 
+          className="absolute top-10 right-10 w-24 h-24 opacity-5 pointer-events-none hidden lg:block" 
+        />
+        <img 
+          src="/lovable-uploads/crown.png" 
+          alt="" 
+          className="absolute bottom-10 left-10 w-20 h-20 opacity-5 pointer-events-none hidden lg:block" 
+        />
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-6">

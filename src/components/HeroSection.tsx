@@ -59,12 +59,31 @@ const HeroSection = () => {
             
           </div>
 
-          {/* Right Content - App Screenshots */}
+          {/* Right Content - App Screenshots with Decorative Graphics */}
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
+              {/* Decorative Graphics - Subtle Background */}
+              <img 
+                src="/lovable-uploads/launch-rocket.png" 
+                alt="" 
+                className="absolute -top-12 -right-8 w-24 h-24 opacity-20 animate-float pointer-events-none" 
+              />
+              <img 
+                src="/lovable-uploads/opportunity-key.png" 
+                alt="" 
+                className="absolute -bottom-8 -left-8 w-20 h-20 opacity-15 animate-float pointer-events-none" 
+                style={{ animationDelay: '1s' }}
+              />
+              <img 
+                src="/lovable-uploads/plant-seedling.png" 
+                alt="" 
+                className="absolute top-1/2 -right-12 w-16 h-16 opacity-10 animate-float pointer-events-none" 
+                style={{ animationDelay: '2s' }}
+              />
+              
               {/* Phone Mockup */}
-              <div className="phone-mockup animate-float">
+              <div className="phone-mockup animate-float relative z-10">
                 <div className="phone-screen">
                   <img src={appImages[currentImage]} alt="Boss Wallah App Screenshot" className="w-full h-full object-cover transition-opacity duration-1000" />
                 </div>

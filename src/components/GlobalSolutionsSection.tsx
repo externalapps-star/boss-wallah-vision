@@ -123,6 +123,47 @@ const GlobalSolutionsSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Business Categories Section */}
+        <div className="max-w-6xl mx-auto mt-12">
+          <div className="text-center mb-8">
+            <h3 className="text-xl sm:text-3xl font-bold text-foreground mb-2">
+              Business <span className="text-gradient">Categories We Support</span>
+            </h3>
+            <p className="text-sm sm:text-lg text-muted-foreground">
+              From food service to retail, we've got your industry covered
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { image: "/lovable-uploads/cafe.png", title: "Café & Coffee" },
+              { image: "/lovable-uploads/cloth-store.png", title: "Fashion & Retail" },
+              { image: "/lovable-uploads/modern-store.png", title: "General Store" },
+              { image: "/lovable-uploads/factory.png", title: "Manufacturing" },
+              { image: "/lovable-uploads/handcrafts.png", title: "Handicrafts" },
+              { image: "/lovable-uploads/delivery-box.png", title: "Delivery Service" },
+              { image: "/lovable-uploads/door.png", title: "Real Estate" },
+              { image: "/lovable-uploads/confetti.png", title: "Events & More" }
+            ].map((category, index) => (
+              <div key={index} className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-0 group-hover:opacity-30 transition-all duration-300"></div>
+                <div className="relative bg-card/50 backdrop-blur-sm border border-border/40 rounded-xl p-4 hover:border-primary/40 transition-all duration-300 text-center">
+                  <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center p-3 group-hover:scale-110 transition-transform duration-300">
+                    <img 
+                      src={category.image} 
+                      alt={category.title}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <p className="text-xs sm:text-sm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {category.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

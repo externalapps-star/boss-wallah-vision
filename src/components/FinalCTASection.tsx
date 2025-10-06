@@ -11,6 +11,19 @@ const FinalCTASection = () => {
       animationDelay: '2s'
     }}></div>
       
+      {/* Custom Graphics - Subtle Decoration */}
+      <img 
+        src="/lovable-uploads/launch-rocket.png" 
+        alt="" 
+        className="absolute top-20 right-10 w-24 h-24 opacity-10 pointer-events-none hidden lg:block animate-float" 
+      />
+      <img 
+        src="/lovable-uploads/paper-plane.png" 
+        alt="" 
+        className="absolute bottom-20 left-10 w-20 h-20 opacity-10 pointer-events-none hidden lg:block animate-float" 
+        style={{ animationDelay: '1s' }}
+      />
+      
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
 
