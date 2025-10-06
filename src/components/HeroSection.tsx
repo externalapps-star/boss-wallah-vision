@@ -66,7 +66,7 @@ const HeroSection = () => {
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float relative z-30">
                 {/* Crown on top of phone */}
-                <div className="absolute -top-[54px] left-1/2 translate-x-[calc(-50%+135px)] w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 z-40 opacity-90 rotate-[25deg]">
+                <div className="absolute -top-[54px] left-1/2 translate-x-[calc(-50%+137px)] w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 z-40 opacity-90 rotate-[25deg]">
                   <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-xl" />
                 </div>
                 <div className="phone-screen">
