@@ -271,7 +271,7 @@ const BlogSection = () => {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="flex items-start gap-4 flex-1">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center flex-shrink-0 p-2 border border-primary/30">
-                      <img src="/lovable-uploads/lightbulb-3d.png" alt="" className="w-full h-full object-contain" />
+                      <img src="/lovable-uploads/rocket-3d.png" alt="" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <h3 className="text-base sm:text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
