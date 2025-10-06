@@ -282,7 +282,7 @@ const BlogSection = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 w-full md:w-auto md:min-w-[350px]">
-                    <div className="flex gap-3">
+                    <div className="flex flex-col md:flex-row gap-3">
                       <input 
                         type="email" 
                         placeholder="Enter your email"
