@@ -81,7 +81,7 @@ const GlobalSolutionsSection = () => {
                     
                     {/* Content */}
                     <div className="flex flex-col flex-1 min-h-0">
-                      <h4 className="text-sm font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors duration-300 line-clamp-1 leading-tight">
+                      <h4 className="text-sm font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-300 line-clamp-1 leading-tight">
                         {feature.title}
                       </h4>
                       <p className="text-xs text-muted-foreground leading-tight group-hover:text-foreground/90 transition-colors duration-300 line-clamp-2">
