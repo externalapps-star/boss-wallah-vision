@@ -103,7 +103,7 @@ const Footer = () => {
               
               <div className="space-y-2 text-xs sm:text-sm text-primary-foreground/70">
                 <a href="mailto:support@bosswallah.com" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
-                  <Mail className="w-6 h-6 sm:w-4 sm:h-4 text-white sm:text-accent" />
+                  <Mail className="w-6 h-6 sm:w-4 sm:h-4 text-accent" />
                   <span>support@bosswallah.com</span>
                 </a>
               </div>
