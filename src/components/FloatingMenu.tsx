@@ -17,9 +17,10 @@ const menuItems = [
 interface FloatingMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  onOpen: () => void;
 }
 
-const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
+const FloatingMenu = ({ isOpen, onClose, onOpen }: FloatingMenuProps) => {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
@@ -68,7 +69,7 @@ const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
       {/* Floating Hamburger Button - only show when menu is closed - Desktop/Tablet only */}
       {!isOpen && (
         <button
-          onClick={onClose}
+          onClick={onOpen}
           className={cn(
             "hidden md:block fixed left-4 top-1/2 transform -translate-y-1/2 z-50 p-2.5 rounded-full transition-all duration-300",
             "bg-primary/10 border-2 border-primary/40 text-primary backdrop-blur-sm shadow-md",

@@ -18,7 +18,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation onMenuToggle={() => setIsMenuOpen(true)} />
-      <FloatingMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <FloatingMenu 
+        isOpen={isMenuOpen} 
+        onClose={() => setIsMenuOpen(false)}
+        onOpen={() => setIsMenuOpen(true)}
+      />
       <FloatingDownloadCTA />
       
       <main>
