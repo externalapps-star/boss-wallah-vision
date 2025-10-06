@@ -73,18 +73,18 @@ const GlobalSolutionsSection = () => {
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
                   
                   {/* Card */}
-                  <div className="relative bg-card border border-border/40 rounded-2xl p-4 h-[180px] flex flex-col shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] transition-all duration-500 group-hover:border-primary/60">
+                  <div className="relative bg-card border border-border/40 rounded-2xl p-3 h-[140px] flex flex-col shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] transition-all duration-500 group-hover:border-primary/60">
                     {/* Icon */}
-                    <div className="w-10 h-10 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center text-xl mb-2 border border-primary/30 flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                    <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center text-lg mb-2 border border-primary/30 flex-shrink-0 group-hover:scale-110 transition-all duration-300">
                       {feature.emoji}
                     </div>
                     
                     {/* Content */}
                     <div className="flex flex-col flex-1 min-h-0">
-                      <h4 className="text-sm font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                      <h4 className="text-xs font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300 line-clamp-2 leading-tight">
                         {feature.title}
                       </h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 line-clamp-4">
+                      <p className="text-[10px] text-muted-foreground leading-snug group-hover:text-foreground/90 transition-colors duration-300 line-clamp-3">
                         {feature.description}
                       </p>
                     </div>
