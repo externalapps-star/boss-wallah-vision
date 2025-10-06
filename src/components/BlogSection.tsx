@@ -225,7 +225,7 @@ const BlogSection = () => {
                   </div>
                   
                   <div className="p-4 pb-4 sm:p-5 sm:pb-7 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1.5 sm:mb-2">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
                         <span>{post.date}</span>
@@ -236,11 +236,11 @@ const BlogSection = () => {
                       </div>
                     </div>
                     
-                    <h3 className="font-bold text-foreground text-sm sm:text-lg mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    <h3 className="font-bold text-foreground text-sm sm:text-lg mb-1.5 sm:mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-4 pb-5">
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-4">
                       {post.excerpt}
                     </p>
                   </div>
