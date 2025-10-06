@@ -58,7 +58,7 @@ const Footer = () => {
       
       {/* Main Footer Content */}
       <div className="section-container">
-        <div className="pt-6 pb-4 border-b border-primary-foreground/10">
+        <div className="pt-2 pb-4 border-b border-primary-foreground/10">
           
           {/* Top Section */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-6">
