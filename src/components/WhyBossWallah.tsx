@@ -26,26 +26,26 @@ const WhyBossWallah = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div key={index} className="group relative">
               {/* Background Glow Effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
               
               {/* Main Card */}
-              <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 h-full hover:shadow-xl transition-all duration-300 group-hover:transform group-hover:-translate-y-2 overflow-hidden">
+              <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-4 md:p-8 h-full hover:shadow-xl transition-all duration-300 group-hover:transform group-hover:-translate-y-2 overflow-hidden">
                 
                 {/* Icon Container */}
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-primary/30">
-                    <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white">
+                <div className="relative mb-3 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-primary/30">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white">
                       {feature.icon}
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="space-y-4">
+                <div className="space-y-2 md:space-y-4">
                   <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {feature.title}
                   </h3>
