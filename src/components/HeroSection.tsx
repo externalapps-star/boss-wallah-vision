@@ -30,7 +30,7 @@ const HeroSection = () => {
           <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-5xl overflow-visible">
             
             {/* Main Headline */}
-            <div className="space-y-3 sm:space-y-4 overflow-visible px-4 pt-12 sm:px-0 sm:pt-0">
+            <div className="space-y-3 sm:space-y-4 overflow-visible px-4 pt-24 sm:px-0 sm:pt-0">
               <h1 className="font-bold leading-tight space-y-2 overflow-visible">
                 <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap w-max">Ready to be the Boss?</div>
                 <div className="text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap">
