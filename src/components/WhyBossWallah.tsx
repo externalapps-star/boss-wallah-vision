@@ -20,7 +20,7 @@ const WhyBossWallah = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-6">
-          <h2 className="text-display font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Why <span className="text-gradient">Boss Wallah?</span>
           </h2>
         </div>
@@ -46,10 +46,10 @@ const WhyBossWallah = () => {
 
                 {/* Content */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm text-justify">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base text-justify">
                     {feature.description}
                   </p>
                 </div>
