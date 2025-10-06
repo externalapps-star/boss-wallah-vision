@@ -30,11 +30,15 @@ const HeroSection = () => {
           <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-5xl overflow-visible">
             
             {/* Main Headline */}
-            <div className="space-y-3 sm:space-y-4 overflow-visible px-4 pt-16 sm:px-0 sm:pt-0">
+            <div className="space-y-3 sm:space-y-4 overflow-visible px-4 pt-16 sm:px-0 sm:pt-0 relative">
               <h1 className="font-bold leading-tight space-y-2 overflow-visible">
                 <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap w-max">Ready to be the Boss?</div>
-                <div className="text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap">
-                  The <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span> for Launching Your Business
+                <div className="text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap flex items-center gap-2">
+                  The <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span> for Launching Your 
+                  <span className="inline-flex items-center gap-1">
+                    Business
+                    <img src="/lovable-uploads/retail-shop.png" alt="" className="hidden lg:inline-block w-8 h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 object-contain drop-shadow-lg animate-float" />
+                  </span>
                 </div>
               </h1>
               
@@ -63,11 +67,6 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
-              {/* Decorative Graphics - Shop next to Business word */}
-              <div className="hidden lg:block absolute top-[4.5rem] left-[28rem] w-16 h-16 z-40 animate-float">
-                <img src="/lovable-uploads/retail-shop.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
-              </div>
-
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float relative z-30">
                 <div className="phone-screen">
