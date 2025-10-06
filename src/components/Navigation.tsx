@@ -12,7 +12,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/logo-transparent.png" 
                 alt="Boss Wallah Logo" 
-                className="h-10 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" 
+                className="h-12 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" 
               />
             </div>
             
