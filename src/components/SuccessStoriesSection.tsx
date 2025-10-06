@@ -72,7 +72,7 @@ const SuccessStoriesSection = () => {
           <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Success <span className="text-gradient">Stories</span>
           </h2>
-          <p className="text-sm sm:text-lg text-muted-foreground">
+          <p className="text-xs sm:text-lg text-muted-foreground">
             Join thousands of entrepreneurs who transformed their dreams into thriving businesses
           </p>
         </div>

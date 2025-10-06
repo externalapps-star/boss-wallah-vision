@@ -48,7 +48,7 @@ const GlobalSolutionsSection = () => {
               Wherever You Are, We're There
             </p>
           </div>
-          <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xs sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             Boss Wallah adapts to your local market conditions, regulations, and opportunities. Our business plans are customized based on your geographic location, ensuring relevance and accuracy for your specific market.
           </p>
         </div>

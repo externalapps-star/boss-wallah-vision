@@ -59,7 +59,7 @@ const FeaturesSection = () => {
           <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Platform <span className="text-gradient">Features</span>
           </h2>
-          <p className="text-sm sm:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xs sm:text-xl text-muted-foreground leading-relaxed">
             Powerful tools and AI-driven features designed to accelerate your entrepreneurial journey from idea to successful launch
           </p>
         </div>
