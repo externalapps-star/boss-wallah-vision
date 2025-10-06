@@ -148,12 +148,12 @@ const BlogSection = () => {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[380px] sm:h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-44 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     {index === 0 && (
                       <div className="absolute top-4 right-4">
@@ -172,8 +172,8 @@ const BlogSection = () => {
                     )}
                   </div>
                   
-                  <div className="px-6 pt-6 pb-3 sm:pb-6 flex flex-col flex-1">
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                  <div className="px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2 sm:mb-3">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{post.date}</span>
@@ -184,7 +184,7 @@ const BlogSection = () => {
                       </div>
                     </div>
                     
-                    <h3 className="font-bold text-foreground text-base sm:text-xl mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    <h3 className="font-bold text-foreground text-base sm:text-xl mb-2 sm:mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
                     
@@ -207,12 +207,12 @@ const BlogSection = () => {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[380px] sm:h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-40 sm:h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     {post.popular && (
                       <div className="absolute top-3 right-3">
@@ -224,7 +224,7 @@ const BlogSection = () => {
                     )}
                   </div>
                   
-                  <div className="p-5 pb-7 flex flex-col flex-1">
+                  <div className="p-4 pb-4 sm:p-5 sm:pb-7 flex flex-col flex-1">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
