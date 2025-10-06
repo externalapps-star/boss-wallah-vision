@@ -62,30 +62,32 @@ const GlobalSolutionsSection = () => {
           </div>
           
           {/* Mobile: Horizontal Scroll | Desktop: Grid */}
-          <div className="sm:hidden relative overflow-hidden">
-            <div className="flex gap-4 animate-scroll-mobile pb-4">
+          <div className="sm:hidden relative overflow-hidden py-4">
+            <div className="flex gap-4 animate-scroll-mobile">
               {[...features, ...features].map((feature, index) => (
                 <div 
                   key={index} 
-                  className="group relative flex-shrink-0 w-[280px]"
+                  className="group relative flex-shrink-0 w-[260px]"
                 >
                   {/* Glow effect */}
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
                   
                   {/* Card */}
-                  <div className="relative bg-card border border-border/40 rounded-2xl p-4 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_-15px_rgba(var(--primary-rgb),0.4)] transition-all duration-500 group-hover:-translate-y-1 group-hover:border-primary/60">
+                  <div className="relative bg-card border border-border/40 rounded-2xl p-4 h-[180px] flex flex-col shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] transition-all duration-500 group-hover:border-primary/60">
                     {/* Icon */}
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center text-2xl mb-3 border border-primary/30 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] transition-all duration-300">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center text-xl mb-2 border border-primary/30 flex-shrink-0 group-hover:scale-110 transition-all duration-300">
                       {feature.emoji}
                     </div>
                     
                     {/* Content */}
-                    <h4 className="text-sm font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-300">
-                      {feature.title}
-                    </h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
-                      {feature.description}
-                    </p>
+                    <div className="flex flex-col flex-1 min-h-0">
+                      <h4 className="text-sm font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                        {feature.title}
+                      </h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 line-clamp-4">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}

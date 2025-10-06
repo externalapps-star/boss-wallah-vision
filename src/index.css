@@ -257,7 +257,7 @@
   
   @keyframes scroll-mobile {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-280px * 4 - 1rem * 4)); }
+    100% { transform: translateX(calc(-260px * 4 - 1rem * 4)); }
   }
   
   .animate-scroll-mobile {
