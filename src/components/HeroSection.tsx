@@ -69,20 +69,20 @@ const HeroSection = () => {
                 <img src="/lovable-uploads/plant-pot.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
 
-              {/* Confetti decorations around phone */}
-              <div className="hidden lg:block absolute -top-8 -right-12 w-24 h-24 z-40 animate-float opacity-80">
+              {/* Confetti decorations around phone - behind and very light */}
+              <div className="hidden lg:block absolute -top-8 -right-12 w-24 h-24 z-20 animate-float opacity-20">
                 <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
               </div>
               
-              <div className="hidden lg:block absolute top-1/4 -left-16 w-20 h-20 z-40 animate-float opacity-70" style={{ animationDelay: '1s' }}>
+              <div className="hidden lg:block absolute top-1/4 -left-16 w-20 h-20 z-20 animate-float opacity-15" style={{ animationDelay: '1s' }}>
                 <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
               </div>
               
-              <div className="hidden lg:block absolute bottom-1/4 -right-8 w-16 h-16 z-40 animate-float opacity-60" style={{ animationDelay: '2s' }}>
+              <div className="hidden lg:block absolute bottom-1/4 -right-8 w-16 h-16 z-20 animate-float opacity-15" style={{ animationDelay: '2s' }}>
                 <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
               </div>
               
-              <div className="hidden lg:block absolute -bottom-6 -left-12 w-20 h-20 z-40 animate-float opacity-75" style={{ animationDelay: '1.5s' }}>
+              <div className="hidden lg:block absolute -bottom-6 -left-12 w-20 h-20 z-20 animate-float opacity-20" style={{ animationDelay: '1.5s' }}>
                 <img src="/lovable-uploads/confetti.png" alt="" className="w-full h-full object-contain" />
               </div>
 
