@@ -67,6 +67,11 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
+              {/* Crown Background */}
+              <div className="absolute -top-8 -right-4 w-32 h-32 z-20 opacity-30 rotate-12">
+                <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
+              </div>
+
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float relative z-30">
                 <div className="phone-screen">
