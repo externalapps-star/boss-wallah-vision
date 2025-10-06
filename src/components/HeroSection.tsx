@@ -60,7 +60,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - App Screenshots */}
-          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <div className="relative flex justify-center lg:justify-end mt-4 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
               {/* Phone Mockup */}
