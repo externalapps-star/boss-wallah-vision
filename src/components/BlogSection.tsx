@@ -148,12 +148,12 @@ const BlogSection = () => {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[380px] sm:h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[350px] sm:h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-44 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-40 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     {index === 0 && (
                       <div className="absolute top-4 right-4">
@@ -172,8 +172,8 @@ const BlogSection = () => {
                     )}
                   </div>
                   
-                  <div className="px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-6 flex flex-col flex-1">
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2 sm:mb-3">
+                  <div className="p-4 pb-4 sm:px-6 sm:pt-6 sm:pb-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-1.5 sm:mb-3">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{post.date}</span>
@@ -184,11 +184,11 @@ const BlogSection = () => {
                       </div>
                     </div>
                     
-                    <h3 className="font-bold text-foreground text-base sm:text-xl mb-2 sm:mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    <h3 className="font-bold text-foreground text-sm sm:text-xl mb-1.5 sm:mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-xs sm:text-base leading-relaxed line-clamp-3">
+                    <p className="text-muted-foreground text-xs sm:text-base leading-relaxed line-clamp-4">
                       {post.excerpt}
                     </p>
                   </div>
@@ -207,7 +207,7 @@ const BlogSection = () => {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[380px] sm:h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[350px] sm:h-[420px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
