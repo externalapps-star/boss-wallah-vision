@@ -81,7 +81,7 @@ const Footer = () => {
             {/* Quick Links */}
             <div className="text-left px-4 sm:px-0">
               <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Quick Links</h4>
-              <ul className="space-y-3">
+              <ul className="space-y-3 -mb-2">
                 {quickLinks.map((link, index) => <li key={index}>
                     <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">
                       {link.name}
