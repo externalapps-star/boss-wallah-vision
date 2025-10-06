@@ -105,7 +105,7 @@ const FloatingMenu = ({ isOpen, onClose, onOpen }: FloatingMenuProps) => {
         <div className="pt-6 px-4 md:px-6 relative overflow-y-auto flex-1 pb-6">
           {/* Header with Menu text and Close button */}
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl md:text-2xl text-foreground">Menu</h2>
+            <h2 className="text-sm md:text-base text-foreground font-medium">Menu</h2>
             <button
               onClick={onClose}
               className="p-1 hover:scale-110 transition-all duration-200"
