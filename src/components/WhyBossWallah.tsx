@@ -37,7 +37,7 @@ const WhyBossWallah = () => {
                 
                 {/* Icon Container */}
                 <div className="relative mb-3 md:mb-6">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-primary/30 p-2">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-primary/30 p-2">
                     {feature.icon}
                   </div>
                 </div>
