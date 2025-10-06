@@ -63,19 +63,19 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
-              {/* Decorative Graphics - Only 3 elements */}
+              {/* Decorative Graphics - Only 3 elements, non-overlapping */}
               {/* Top left - Plant in white space */}
               <div className="hidden lg:block absolute -top-12 -left-28 w-32 h-32 z-40 animate-float">
                 <img src="/lovable-uploads/plant-pot.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
               
-              {/* Bottom left - Hand with pot, partially overlapping */}
-              <div className="hidden lg:block absolute bottom-12 -left-20 w-40 h-40 z-40 animate-float" style={{ animationDelay: '1.5s' }}>
+              {/* Bottom left - Hand with pot */}
+              <div className="hidden lg:block absolute bottom-4 -left-24 w-36 h-36 z-40 animate-float" style={{ animationDelay: '1.5s' }}>
                 <img src="/lovable-uploads/hand-pot.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
               
-              {/* Right side - Shop in white space */}
-              <div className="hidden lg:block absolute top-1/3 -right-32 w-40 h-40 z-10 animate-float" style={{ animationDelay: '0.8s' }}>
+              {/* Top right - Shop in white space */}
+              <div className="hidden lg:block absolute -top-8 -right-28 w-36 h-36 z-10 animate-float" style={{ animationDelay: '0.8s' }}>
                 <img src="/lovable-uploads/retail-shop.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
 
