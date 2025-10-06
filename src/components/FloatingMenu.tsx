@@ -102,16 +102,17 @@ const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
         )}
       >
         <div className="pt-6 px-4 md:px-6 relative overflow-y-auto flex-1 pb-6">
-          {/* Close button in top right */}
-          <button
-            onClick={onClose}
-            className="absolute top-2 right-4 p-1 hover:scale-110 transition-all duration-200"
-            aria-label="Close menu"
-          >
-            <X className="w-6 h-6 text-primary" />
-          </button>
-          
-          <h2 className="text-xl md:text-2xl text-foreground mb-6">Menu</h2>
+          {/* Header with Menu text and Close button */}
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl md:text-2xl text-foreground">Menu</h2>
+            <button
+              onClick={onClose}
+              className="p-1 hover:scale-110 transition-all duration-200"
+              aria-label="Close menu"
+            >
+              <X className="w-6 h-6 text-primary" />
+            </button>
+          </div>
           
           <nav className="space-y-1">
             {menuItems.map((item) => (
