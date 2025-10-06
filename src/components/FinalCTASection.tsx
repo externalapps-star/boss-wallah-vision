@@ -16,15 +16,15 @@ const FinalCTASection = () => {
 
           {/* Main Headline */}
           <div className="space-y-4 mb-8">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Ready to Be the <span className="text-accent-light">Boss?</span>
             </h2>
             
-            <p className="text-xl md:text-2xl font-medium leading-relaxed opacity-90 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl md:text-2xl font-medium leading-relaxed opacity-90 max-w-3xl mx-auto">
               Download the app and start your entrepreneurial journey today.
             </p>
 
-            <p className="text-lg md:text-xl leading-relaxed opacity-85 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed opacity-85 max-w-3xl mx-auto">
               Join thousands of entrepreneurs worldwide who trust Boss Wallah to turn their business dreams into reality.
             </p>
           </div>

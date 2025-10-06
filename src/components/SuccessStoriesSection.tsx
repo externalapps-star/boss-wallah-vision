@@ -69,10 +69,10 @@ const SuccessStoriesSection = () => {
             <Star className="w-5 h-5 text-primary fill-primary" />
             <span className="text-sm font-semibold text-primary">Real Entrepreneurs, Real Results</span>
           </div>
-          <h2 className="text-display font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Success <span className="text-gradient">Stories</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-sm sm:text-lg text-muted-foreground">
             Join thousands of entrepreneurs who transformed their dreams into thriving businesses
           </p>
         </div>
@@ -99,7 +99,7 @@ const SuccessStoriesSection = () => {
                 {/* Story content */}
                 <div className="relative">
                   {/* Quote text */}
-                  <blockquote className="text-foreground/90 text-lg leading-relaxed mb-8 pt-4 italic group-hover:text-foreground transition-colors duration-300">
+                  <blockquote className="text-foreground/90 text-sm sm:text-lg leading-relaxed mb-8 pt-4 italic group-hover:text-foreground transition-colors duration-300">
                     "{story.quote}"
                   </blockquote>
 
@@ -133,10 +133,10 @@ const SuccessStoriesSection = () => {
         {/* Bottom CTA */}
         <div className="mt-10 text-center">
           <div className="inline-block p-8 rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border-2 border-primary/20">
-            <p className="text-xl font-semibold text-foreground mb-2">
+            <p className="text-base sm:text-xl font-semibold text-foreground mb-2">
               Ready to Write Your Success Story?
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-xs sm:text-base text-muted-foreground mb-4">
               Join our community of successful entrepreneurs today
             </p>
           </div>

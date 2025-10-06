@@ -68,22 +68,22 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-4">
                 
                 <div>
-                  <h3 className="text-xl font-bold">BOSS WALLAH</h3>
-                  <p className="text-sm opacity-80">BE THE BOSS</p>
+                  <h3 className="text-base sm:text-xl font-bold">BOSS WALLAH</h3>
+                  <p className="text-xs sm:text-sm opacity-80">BE THE BOSS</p>
                 </div>
               </div>
               
-              <p className="text-primary-foreground/80 leading-relaxed text-sm">
+              <p className="text-primary-foreground/80 leading-relaxed text-xs sm:text-sm">
                 The only platform you need to launch your business. Transform your entrepreneurial vision into reality.
               </p>
             </div>
 
             {/* Quick Links */}
             <div className="text-left mx-auto">
-              <h4 className="font-semibold text-lg mb-5 text-accent">Quick Links</h4>
+              <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => <li key={index}>
-                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm inline-block focus:outline-none focus:text-accent focus:underline">
+                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">
                       {link.name}
                     </a>
                   </li>)}
@@ -92,16 +92,16 @@ const Footer = () => {
 
             {/* Legal & Contact */}
             <div className="text-left">
-              <h4 className="font-semibold text-lg mb-5 text-accent">Legal & Contact</h4>
+              <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Legal & Contact</h4>
               <ul className="space-y-3 mb-6">
                 {legal.map((link, index) => <li key={index}>
-                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-sm inline-block focus:outline-none focus:text-accent focus:underline">
+                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">
                       {link.name}
                     </a>
                   </li>)}
               </ul>
               
-              <div className="space-y-2 text-sm text-primary-foreground/70">
+              <div className="space-y-2 text-xs sm:text-sm text-primary-foreground/70">
                 <a href="mailto:support@bosswallah.com" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
                   <Mail className="w-4 h-4 text-accent" />
                   <span>support@bosswallah.com</span>
@@ -117,10 +117,10 @@ const Footer = () => {
             
             {/* Copyright */}
             <div className="text-center md:text-left">
-              <p className="text-sm text-primary-foreground/80">
+              <p className="text-xs sm:text-sm text-primary-foreground/80">
                 © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
               </p>
-              <p className="text-xs text-primary-foreground/60 mt-1">
+              <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-1">
                 Built for entrepreneurs, by entrepreneurs.
               </p>
             </div>

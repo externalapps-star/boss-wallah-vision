@@ -119,10 +119,10 @@ const FAQSection = () => {
             <MessageCircle className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Got Questions? We've Got Answers</span>
           </div>
-          <h2 className="text-display font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
             Find quick answers to common questions about Boss Wallah
           </p>
         </div>
@@ -207,7 +207,7 @@ const FAQSection = () => {
                       
                       <div className="flex-1 min-w-0">
                         {/* Question */}
-                        <h3 className="text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 pr-2">
+                        <h3 className="text-sm sm:text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 pr-2">
                           {faq.question}
                         </h3>
                         
@@ -231,7 +231,7 @@ const FAQSection = () => {
                     {isOpen && (
                       <div className="px-6 pb-6 animate-accordion-down">
                         <div className="border-t border-border/50 pt-4 pl-12">
-                          <p className="text-sm text-muted-foreground leading-relaxed">
+                          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                             {faq.answer}
                           </p>
                         </div>
@@ -262,10 +262,10 @@ const FAQSection = () => {
                 
                 {/* Middle - Content */}
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1">
                     Still Have Questions?
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                     Our expert support team is available to help you succeed
                   </p>
                 </div>

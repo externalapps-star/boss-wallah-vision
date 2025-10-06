@@ -40,15 +40,15 @@ const GlobalSolutionsSection = () => {
             <Network className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Global Reach</span>
           </div>
-          <h2 className="text-display font-bold text-foreground mb-6 whitespace-nowrap">
+          <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6 whitespace-normal sm:whitespace-nowrap">
             Global Business Launch <span className="text-gradient">Solutions</span>
           </h2>
-          <div className="inline-block bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl px-8 py-4 mb-6 border border-primary/20">
-            <p className="text-xl md:text-2xl font-semibold text-primary">
+          <div className="inline-block bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 mb-6 border border-primary/20">
+            <p className="text-base sm:text-xl md:text-2xl font-semibold text-primary">
               Wherever You Are, We're There
             </p>
           </div>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             Boss Wallah adapts to your local market conditions, regulations, and opportunities. Our business plans are customized based on your geographic location, ensuring relevance and accuracy for your specific market.
           </p>
         </div>
@@ -56,7 +56,7 @@ const GlobalSolutionsSection = () => {
         {/* Features Section */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6">
-            <h3 className="text-3xl font-bold text-foreground mb-2">
+            <h3 className="text-xl sm:text-3xl font-bold text-foreground mb-2">
               Growing Network of <span className="text-gradient">Support</span>
             </h3>
           </div>
@@ -78,10 +78,10 @@ const GlobalSolutionsSection = () => {
                   </div>
                   
                   {/* Content */}
-                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                  <h4 className="text-base sm:text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                     {feature.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </div>

@@ -56,10 +56,10 @@ const FeaturesSection = () => {
             <Rocket className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Powerful Tools</span>
           </div>
-          <h2 className="text-display font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Platform <span className="text-gradient">Features</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-sm sm:text-xl text-muted-foreground leading-relaxed">
             Powerful tools and AI-driven features designed to accelerate your entrepreneurial journey from idea to successful launch
           </p>
         </div>
@@ -80,14 +80,14 @@ const FeaturesSection = () => {
                     {feature.emoji}
                   </div>
                   <div className="flex-1 pt-2">
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-base sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {feature.title}
                     </h3>
                   </div>
                 </div>
                 
                 {/* Description */}
-                <p className="text-muted-foreground mb-6 leading-relaxed text-sm text-justify group-hover:text-foreground/90 transition-colors duration-300">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-xs sm:text-sm text-justify group-hover:text-foreground/90 transition-colors duration-300">
                   {feature.description}
                 </p>
                 

@@ -128,10 +128,10 @@ const BlogSection = () => {
             <Lightbulb className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">Knowledge Hub</span>
           </div>
-          <h2 className="text-display font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Latest <span className="text-gradient">Insights</span>
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
             Expert advice, success stories, and the latest trends in entrepreneurship
           </p>
         </div>
@@ -184,11 +184,11 @@ const BlogSection = () => {
                       </div>
                     </div>
                     
-                    <h3 className="font-bold text-foreground text-xl mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    <h3 className="font-bold text-foreground text-base sm:text-xl mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground leading-relaxed line-clamp-3">
+                    <p className="text-muted-foreground text-xs sm:text-base leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
                   </div>
@@ -236,11 +236,11 @@ const BlogSection = () => {
                       </div>
                     </div>
                     
-                    <h3 className="font-bold text-foreground text-lg mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    <h3 className="font-bold text-foreground text-sm sm:text-lg mb-2 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4 pb-5">
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-4 pb-5">
                       {post.excerpt}
                     </p>
                   </div>
@@ -274,8 +274,8 @@ const BlogSection = () => {
                       <Lightbulb className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <h3 className="text-lg sm:text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
+                      <p className="text-xs sm:text-base text-muted-foreground leading-relaxed">
                         Get the latest entrepreneurship insights and success stories delivered to your inbox
                       </p>
                     </div>
