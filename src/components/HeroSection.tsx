@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       
       <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen pt-20 sm:pt-24 pb-4 sm:pb-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-8 sm:pt-24 sm:pb-8">
           
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 animate-slide-up max-w-5xl overflow-visible">
