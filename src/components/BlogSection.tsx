@@ -131,7 +131,7 @@ const BlogSection = () => {
           <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Latest <span className="text-gradient">Insights</span>
           </h2>
-          <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-xs text-muted-foreground leading-relaxed">
             Expert advice, success stories, and the latest trends in entrepreneurship
           </p>
         </div>

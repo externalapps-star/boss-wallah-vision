@@ -122,7 +122,7 @@ const FAQSection = () => {
           <h2 className="text-2xl sm:text-display font-bold text-foreground mb-6">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
-          <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-xs text-muted-foreground leading-relaxed">
             Find quick answers to common questions about Boss Wallah
           </p>
         </div>
