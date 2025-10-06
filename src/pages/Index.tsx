@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import FloatingMenu from '@/components/FloatingMenu';
 import FloatingDownloadCTA from '@/components/FloatingDownloadCTA';
@@ -12,10 +13,12 @@ import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      <FloatingMenu />
+      <Navigation onMenuToggle={() => setIsMenuOpen(true)} />
+      <FloatingMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       <FloatingDownloadCTA />
       
       <main>

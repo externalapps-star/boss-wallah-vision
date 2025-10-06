@@ -14,8 +14,12 @@ const menuItems = [
   { id: 'download', label: 'Download App', href: '#download' },
 ];
 
-const FloatingMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface FloatingMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
@@ -47,7 +51,7 @@ const FloatingMenu = () => {
   }, []);
 
   const handleMenuClick = (href: string) => {
-    setIsOpen(false);
+    onClose();
     const element = document.querySelector(href);
     if (element) {
       const rect = element.getBoundingClientRect();
@@ -61,12 +65,12 @@ const FloatingMenu = () => {
 
   return (
     <>
-      {/* Floating Hamburger Button - only show when menu is closed */}
+      {/* Floating Hamburger Button - only show when menu is closed - Desktop/Tablet only */}
       {!isOpen && (
         <button
-          onClick={() => setIsOpen(true)}
+          onClick={onClose}
           className={cn(
-            "fixed left-4 top-1/2 transform -translate-y-1/2 z-50 p-2.5 rounded-full transition-all duration-300",
+            "hidden md:block fixed left-4 top-1/2 transform -translate-y-1/2 z-50 p-2.5 rounded-full transition-all duration-300",
             "bg-primary/10 border-2 border-primary/40 text-primary backdrop-blur-sm shadow-md",
             "hover:scale-110 hover:border-primary/60 hover:bg-primary/20 active:scale-95",
             "md:left-6 md:p-3"
@@ -81,7 +85,7 @@ const FloatingMenu = () => {
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300"
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
         />
       )}
 
@@ -96,7 +100,7 @@ const FloatingMenu = () => {
         <div className="pt-6 px-6 relative overflow-y-auto flex-1 pb-6">
           {/* Close button in top right */}
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={onClose}
             className="absolute top-2 right-4 p-1 hover:scale-110 transition-all duration-200"
             aria-label="Close menu"
           >

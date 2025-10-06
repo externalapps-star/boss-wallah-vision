@@ -1,12 +1,16 @@
-import { Rocket, Mail } from 'lucide-react';
+import { Rocket, Mail, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const Navigation = () => {
+interface NavigationProps {
+  onMenuToggle: () => void;
+}
+
+const Navigation = ({ onMenuToggle }: NavigationProps) => {
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-4 md:px-6">
         {/* Mobile: Two Row Layout */}
         <div className="md:hidden">
-          {/* First Row: Logo and Contact Button */}
+          {/* First Row: Logo and Buttons */}
           <div className="flex items-center justify-between h-14">
             <div className="flex items-center flex-shrink-0">
               <img 
@@ -16,14 +20,24 @@ const Navigation = () => {
               />
             </div>
             
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 text-xs px-2 h-8"
-              onClick={() => window.location.href = 'mailto:support@bosswallah.com'}
-            >
-              <Mail className="w-3 h-3" />
-            </Button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={onMenuToggle}
+                className="p-2 rounded-lg border-2 border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300"
+                aria-label="Toggle menu"
+              >
+                <Menu className="w-4 h-4" />
+              </button>
+              
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="border-2 border-primary/30 text-foreground hover:text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 text-xs px-2 h-8"
+                onClick={() => window.location.href = 'mailto:support@bosswallah.com'}
+              >
+                <Mail className="w-3 h-3" />
+              </Button>
+            </div>
           </div>
           
           {/* Second Row: Tagline */}
