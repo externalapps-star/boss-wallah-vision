@@ -49,7 +49,7 @@ const WhyBossWallah = () => {
                   <h3 className="text-sm sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-xs sm:text-base text-justify">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base text-justify">
                     {feature.description}
                   </p>
                 </div>
