@@ -66,13 +66,14 @@ const FloatingMenu = () => {
         <button
           onClick={() => setIsOpen(true)}
           className={cn(
-            "fixed left-4 sm:left-6 top-1/2 transform -translate-y-1/2 z-50 p-2 sm:p-3 rounded-full transition-all duration-300",
-            "bg-transparent border-2 border-primary/30 text-primary backdrop-blur-sm",
-            "hover:scale-110 hover:border-primary/50 hover:bg-primary/10 active:scale-95"
+            "fixed left-4 top-1/2 transform -translate-y-1/2 z-50 p-2.5 rounded-full transition-all duration-300",
+            "bg-primary/10 border-2 border-primary/40 text-primary backdrop-blur-sm shadow-md",
+            "hover:scale-110 hover:border-primary/60 hover:bg-primary/20 active:scale-95",
+            "md:left-6 md:p-3"
           )}
           aria-label="Toggle navigation menu"
         >
-          <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
+          <Menu className="w-5 h-5 md:w-6 md:h-6" />
         </button>
       )}
 
