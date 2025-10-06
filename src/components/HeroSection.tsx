@@ -34,11 +34,7 @@ const HeroSection = () => {
               <h1 className="font-bold leading-tight space-y-2 overflow-visible">
                 <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap w-max">Ready to be the Boss?</div>
                 <div className="text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap flex items-center gap-2">
-                  The <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span> for Launching Your 
-                  <span className="inline-flex items-center gap-1">
-                    Business
-                    <img src="/lovable-uploads/retail-shop.png" alt="" className="hidden lg:inline-block w-8 h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 object-contain drop-shadow-lg animate-float" />
-                  </span>
+                  The <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">#1 Platform</span> for Launching Your Business
                 </div>
               </h1>
               
@@ -70,7 +66,7 @@ const HeroSection = () => {
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float relative z-30">
                 {/* Crown on phone border */}
-                <div className="absolute -top-16 -right-12 w-32 h-32 z-40 opacity-60 rotate-[20deg]">
+                <div className="absolute -top-12 -right-8 w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 z-40 opacity-70 rotate-[20deg]">
                   <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
                 <div className="phone-screen">
