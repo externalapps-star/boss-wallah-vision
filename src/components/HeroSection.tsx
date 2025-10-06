@@ -44,7 +44,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="flex">
+            <div className="flex px-4 sm:px-0">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 font-semibold px-8 py-4 text-lg h-auto transition-all duration-300"
