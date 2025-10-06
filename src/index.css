@@ -255,6 +255,15 @@
     animation: fade-in 0.6s ease-out;
   }
   
+  @keyframes scroll-mobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-280px * 4 - 1rem * 4)); }
+  }
+  
+  .animate-scroll-mobile {
+    animation: scroll-mobile 20s linear infinite;
+  }
+  
   /* Responsive text sizes */
   .text-hero {
     @apply text-5xl sm:text-6xl lg:text-7xl xl:text-8xl;
