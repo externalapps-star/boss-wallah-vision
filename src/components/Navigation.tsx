@@ -43,7 +43,7 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
           {/* Second Row: Tagline */}
           <div className="flex items-center justify-center pb-2">
             <div className="flex items-center space-x-2">
-              <Rocket className="w-3 h-3 text-primary animate-pulse" />
+              <img src="/lovable-uploads/rocket-launch.png" alt="" className="w-3 h-3 object-contain animate-pulse" />
               <p className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-xs whitespace-nowrap">
                 AI-Powered Business Launch Platform
               </p>
@@ -65,7 +65,7 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
           {/* Center Show Stopper */}
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="flex items-center space-x-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-sm lg:text-base xl:text-lg whitespace-nowrap">
-              <Rocket className="w-4 h-4 lg:w-5 lg:h-5 text-primary animate-pulse" />
+              <img src="/lovable-uploads/rocket-launch.png" alt="" className="w-4 h-4 lg:w-5 lg:h-5 object-contain animate-pulse" />
               <span>AI-Powered Business Launch Platform</span>
             </div>
           </div>
