@@ -132,11 +132,11 @@ const SuccessStoriesSection = () => {
 
         {/* Bottom CTA */}
         <div className="mt-10 text-center">
-          <div className="inline-block p-8 rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border-2 border-primary/20">
-            <p className="text-base sm:text-xl font-semibold text-foreground mb-2">
+          <div className="inline-block p-4 sm:p-8 rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border-2 border-primary/20">
+            <p className="text-base sm:text-xl font-semibold text-foreground mb-1 sm:mb-2">
               Ready to Write Your Success Story?
             </p>
-            <p className="text-xs sm:text-base text-muted-foreground mb-4">
+            <p className="text-xs sm:text-base text-muted-foreground mb-0">
               Join our community of successful entrepreneurs today
             </p>
           </div>
