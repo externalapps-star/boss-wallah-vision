@@ -172,7 +172,7 @@ const BlogSection = () => {
                     )}
                   </div>
                   
-                  <div className="p-6 flex flex-col flex-1">
+                  <div className="px-6 pt-6 pb-3 sm:pb-6 flex flex-col flex-1">
                     <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
