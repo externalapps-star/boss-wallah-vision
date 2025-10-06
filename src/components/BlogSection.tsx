@@ -274,8 +274,8 @@ const BlogSection = () => {
                       <Lightbulb className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
-                      <p className="text-xs sm:text-base text-muted-foreground leading-relaxed">
+                      <h3 className="text-base sm:text-2xl font-bold text-foreground mb-2">Stay Updated</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                         Get the latest entrepreneurship insights and success stories delivered to your inbox
                       </p>
                     </div>
