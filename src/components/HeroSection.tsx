@@ -23,32 +23,6 @@ const HeroSection = () => {
       {/* Subtle Background Accents */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       
-      {/* Decorative Graphics - Positioned in white spaces */}
-      <img 
-        src="/lovable-uploads/logo-transparent.png" 
-        alt="" 
-        className="absolute top-20 right-[5%] w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 opacity-20 hidden md:block pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-      <img 
-        src="/lovable-uploads/plant-seedling.png" 
-        alt="" 
-        className="absolute bottom-32 left-[8%] w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 opacity-60 animate-float hidden lg:block pointer-events-none"
-        style={{ animationDelay: '1s', zIndex: 1 }}
-      />
-      <img 
-        src="/lovable-uploads/plant-branch.png" 
-        alt="" 
-        className="absolute top-[30%] left-[3%] w-20 h-20 sm:w-24 sm:h-24 opacity-50 animate-float hidden xl:block pointer-events-none"
-        style={{ animationDelay: '2s', zIndex: 1 }}
-      />
-      <img 
-        src="/lovable-uploads/policy-document.png" 
-        alt="" 
-        className="absolute top-[55%] right-[8%] w-16 h-16 sm:w-20 sm:h-20 opacity-40 animate-float hidden lg:block pointer-events-none"
-        style={{ animationDelay: '1.5s', zIndex: 1 }}
-      />
-      
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-8 sm:pt-24 sm:pb-8">
           
