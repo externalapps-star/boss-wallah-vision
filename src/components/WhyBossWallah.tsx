@@ -3,12 +3,12 @@ import { Target, Users, Zap } from 'lucide-react';
 const WhyBossWallah = () => {
   const features = [
     {
-      icon: <Target className="w-6 h-6" />,
+      icon: <img src="/lovable-uploads/world-on-tip-3d.png" alt="" className="w-full h-full object-contain" />,
       title: "One Platform. Complete Journey.",
       description: "Starting a business shouldn't feel overwhelming. Boss Wallah simplifies the complex process of launching your business by providing everything you need in one integrated platform—from initial idea exploration to successful launch and beyond."
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: <img src="/lovable-uploads/crown-3d.png" alt="" className="w-full h-full object-contain" />,
       title: "Built for Entrepreneurs, By Entrepreneurs",
       description: "Our platform is designed specifically for launching real-world, offline businesses. Whether you're opening a bakery, a salon, or a home-based business, we have the tools and expertise to guide your journey."
     }
@@ -37,10 +37,8 @@ const WhyBossWallah = () => {
                 
                 {/* Icon Container */}
                 <div className="relative mb-3 md:mb-6">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-primary/30">
-                    <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white">
-                      {feature.icon}
-                    </div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-primary/30 p-2">
+                    {feature.icon}
                   </div>
                 </div>
 
