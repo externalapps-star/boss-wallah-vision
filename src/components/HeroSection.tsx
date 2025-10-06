@@ -63,6 +63,27 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
+              {/* Decorative Graphics - Hidden on mobile */}
+              <div className="hidden lg:block absolute -top-12 -left-16 w-24 h-24 animate-float">
+                <img src="/lovable-uploads/growth-chart.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              
+              <div className="hidden lg:block absolute top-1/4 -left-20 w-20 h-20 animate-float" style={{ animationDelay: '1s' }}>
+                <img src="/lovable-uploads/plant-pot.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              
+              <div className="hidden lg:block absolute -bottom-8 -left-12 w-28 h-28 animate-float" style={{ animationDelay: '2s' }}>
+                <img src="/lovable-uploads/hand-pot.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              
+              <div className="hidden lg:block absolute top-8 -right-16 w-24 h-24 animate-float" style={{ animationDelay: '0.5s' }}>
+                <img src="/lovable-uploads/house.png" alt="" className="w-full h-full object-contain" />
+              </div>
+              
+              <div className="hidden lg:block absolute bottom-1/4 -right-20 w-28 h-28 animate-float" style={{ animationDelay: '1.5s' }}>
+                <img src="/lovable-uploads/retail-shop.png" alt="" className="w-full h-full object-contain" />
+              </div>
+
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float">
                 <div className="phone-screen">
