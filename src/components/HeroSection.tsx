@@ -68,8 +68,8 @@ const HeroSection = () => {
             <div className="relative scale-90 sm:scale-100">
               
               {/* Crown Background */}
-              <div className="absolute -top-8 -right-4 w-32 h-32 z-20 opacity-30 rotate-12">
-                <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-lg" />
+              <div className="absolute -top-12 right-0 w-40 h-40 z-20 opacity-50 rotate-[15deg]">
+                <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-2xl" />
               </div>
 
               {/* Phone Mockup */}
