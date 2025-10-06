@@ -92,12 +92,16 @@ const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
       {/* Sliding Menu */}
       <div
         className={cn(
-          "fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 sm:w-80 bg-background/95 backdrop-blur-lg border-r border-border z-40 overflow-hidden flex flex-col",
-          "transform transition-transform duration-300 ease-in-out shadow-strong",
-          isOpen ? "translate-x-0" : "-translate-x-full"
+          "fixed top-16 h-[calc(100vh-4rem)] bg-background/95 backdrop-blur-lg border-border z-40 overflow-hidden flex flex-col shadow-strong",
+          "transform transition-transform duration-300 ease-in-out",
+          // Mobile: slide from right, smaller width
+          "right-0 w-64 border-l md:left-0 md:w-80 md:border-r md:border-l-0",
+          isOpen 
+            ? "translate-x-0" 
+            : "translate-x-full md:-translate-x-full"
         )}
       >
-        <div className="pt-6 px-6 relative overflow-y-auto flex-1 pb-6">
+        <div className="pt-6 px-4 md:px-6 relative overflow-y-auto flex-1 pb-6">
           {/* Close button in top right */}
           <button
             onClick={onClose}
@@ -107,7 +111,7 @@ const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
             <X className="w-6 h-6 text-primary" />
           </button>
           
-          <h2 className="text-2xl text-foreground mb-6">Menu</h2>
+          <h2 className="text-xl md:text-2xl text-foreground mb-6">Menu</h2>
           
           <nav className="space-y-1">
             {menuItems.map((item) => (
@@ -115,7 +119,7 @@ const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
                 key={item.id}
                 onClick={() => handleMenuClick(item.href)}
                 className={cn(
-                  "w-full text-left px-4 py-2 rounded-lg font-medium transition-all duration-200",
+                  "w-full text-left px-3 md:px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm md:text-base",
                   activeSection === item.id
                     ? "bg-gradient-to-r from-primary to-accent text-white border-l-4 border-white shadow-lg font-bold scale-105 transform translate-x-1"
                     : "text-foreground hover:bg-muted hover:scale-105 hover:translate-x-2 hover:text-primary"
@@ -127,8 +131,8 @@ const FloatingMenu = ({ isOpen, onClose }: FloatingMenuProps) => {
           </nav>
 
           {/* Menu Footer */}
-          <div className="fixed bottom-0 left-0 w-72 sm:w-80 pt-6 pb-4 px-6 border-t border-border bg-background/95 backdrop-blur-lg">
-            <div className="text-sm text-muted-foreground">
+          <div className="fixed bottom-0 right-0 md:left-0 w-64 md:w-80 pt-6 pb-4 px-4 md:px-6 border-t border-border bg-background/95 backdrop-blur-lg">
+            <div className="text-xs md:text-sm text-muted-foreground">
               <div className="font-semibold text-gradient mb-2">Boss Wallah</div>
               <p>Your Business Launch Platform</p>
             </div>
