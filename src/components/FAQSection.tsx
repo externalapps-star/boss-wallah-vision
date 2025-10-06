@@ -207,7 +207,7 @@ const FAQSection = () => {
                       
                       <div className="flex-1 min-w-0">
                         {/* Question */}
-                        <h3 className="text-sm sm:text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 pr-1 sm:pr-2">
+                        <h3 className="text-sm sm:text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 pr-1 sm:pr-2 text-justify sm:text-left">
                           {faq.question}
                         </h3>
                         
@@ -231,7 +231,7 @@ const FAQSection = () => {
                     {isOpen && (
                       <div className="px-4 pb-4 sm:px-6 sm:pb-6 animate-accordion-down">
                         <div className="border-t border-border/50 pt-3 pl-8 sm:pt-4 sm:pl-12">
-                          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed text-justify sm:text-left">
                             {faq.answer}
                           </p>
                         </div>
