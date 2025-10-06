@@ -148,7 +148,7 @@ const BlogSection = () => {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
-                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[344px] sm:h-[414px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
+                <div className="relative bg-card border-2 border-primary/20 hover:border-primary/40 rounded-2xl overflow-hidden h-[338px] sm:h-[414px] hover:shadow-xl transition-all duration-500 group-hover:-translate-y-1 flex flex-col">
                   <div className="relative overflow-hidden flex-shrink-0">
                     <img 
                       src={post.image} 
