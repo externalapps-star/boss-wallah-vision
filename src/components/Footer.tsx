@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
 
             {/* Legal & Contact */}
-            <div className="text-left px-4 sm:px-0">
+            <div className="text-left -ml-2 sm:ml-0">
               <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Legal & Contact</h4>
               <ul className="space-y-3 mb-6">
                 {legal.map((link, index) => <li key={index}>
@@ -103,7 +103,7 @@ const Footer = () => {
               
               <div className="space-y-2 text-sm text-primary-foreground/70">
                 <a href="mailto:support@bosswallah.com" className="flex items-center justify-start space-x-2 hover:text-accent transition-colors focus:outline-none focus:text-accent">
-                  <Mail className="w-6 h-6 sm:w-4 sm:h-4 text-accent" />
+                  <Mail className="w-6 h-6 sm:w-4 sm:h-4 text-white sm:text-accent" />
                   <span>support@bosswallah.com</span>
                 </a>
               </div>
