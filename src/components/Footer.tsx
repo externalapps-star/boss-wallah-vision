@@ -61,10 +61,10 @@ const Footer = () => {
         <div className="py-6 border-b border-primary-foreground/10">
           
           {/* Top Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-6">
             
             {/* Brand Section */}
-            <div>
+            <div className="col-span-2 md:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 
                 <div>
