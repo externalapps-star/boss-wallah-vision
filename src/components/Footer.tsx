@@ -54,22 +54,10 @@ const Footer = () => {
     href: "#",
     name: "YouTube"
   }];
-  return <footer className="bg-gradient-dark text-primary-foreground relative overflow-hidden">
-      
-      {/* Subtle Background Graphics */}
-      <img 
-        src="/lovable-uploads/globe.png" 
-        alt="" 
-        className="absolute bottom-10 right-10 w-32 h-32 opacity-5 pointer-events-none hidden lg:block" 
-      />
-      <img 
-        src="/lovable-uploads/plant-seedling.png" 
-        alt="" 
-        className="absolute top-10 left-10 w-24 h-24 opacity-5 pointer-events-none hidden lg:block" 
-      />
+  return <footer className="bg-gradient-dark text-primary-foreground">
       
       {/* Main Footer Content */}
-      <div className="section-container relative z-10">
+      <div className="section-container">
         <div className="pt-6 pb-4 border-b border-primary-foreground/10">
           
           {/* Top Section */}

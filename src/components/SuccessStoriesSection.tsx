@@ -62,23 +62,6 @@ const SuccessStoriesSection = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
       
-      {/* Custom Graphics - Subtle Background */}
-      <img 
-        src="/lovable-uploads/medal.png" 
-        alt="" 
-        className="absolute top-20 right-20 w-16 h-16 opacity-10 pointer-events-none hidden lg:block" 
-      />
-      <img 
-        src="/lovable-uploads/crown.png" 
-        alt="" 
-        className="absolute top-40 left-20 w-20 h-20 opacity-10 pointer-events-none hidden lg:block" 
-      />
-      <img 
-        src="/lovable-uploads/confetti.png" 
-        alt="" 
-        className="absolute bottom-32 left-32 w-16 h-16 opacity-8 pointer-events-none hidden lg:block" 
-      />
-      
       <div className="section-container relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-6">
