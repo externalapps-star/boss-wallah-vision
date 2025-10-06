@@ -8,7 +8,7 @@ const WhyBossWallah = () => {
       description: "Starting a business shouldn't feel overwhelming. Boss Wallah simplifies the complex process of launching your business by providing everything you need in one integrated platform—from initial idea exploration to successful launch and beyond."
     },
     {
-      icon: <img src="/lovable-uploads/crown-3d.png" alt="" className="w-full h-full object-contain" />,
+      icon: <img src="/lovable-uploads/boss-seat-3d.png" alt="" className="w-full h-full object-contain" />,
       title: "Built for Entrepreneurs, By Entrepreneurs",
       description: "Our platform is designed specifically for launching real-world, offline businesses. Whether you're opening a bakery, a salon, or a home-based business, we have the tools and expertise to guide your journey."
     }
