@@ -198,21 +198,21 @@ const FAQSection = () => {
                     {/* Question Button */}
                     <button
                       onClick={() => toggleItem(index)}
-                      className="w-full p-6 text-left flex items-start gap-4 hover:bg-secondary/20 transition-colors duration-300 focus:outline-none"
+                      className="w-full p-4 sm:p-6 text-left flex items-start gap-2 sm:gap-4 hover:bg-secondary/20 transition-colors duration-300 focus:outline-none"
                     >
                       {/* Icon badge */}
-                      <div className={`flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r ${category?.color || 'from-primary/20 to-accent/20'} rounded-full px-3 py-1.5 border ${category?.borderColor || 'border-primary/30'}`}>
-                        <Icon className="w-3.5 h-3.5 text-primary" />
+                      <div className={`flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r ${category?.color || 'from-primary/20 to-accent/20'} rounded-full px-2 py-1 sm:px-3 sm:py-1.5 border ${category?.borderColor || 'border-primary/30'}`}>
+                        <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
                       </div>
                       
                       <div className="flex-1 min-w-0">
                         {/* Question */}
-                        <h3 className="text-sm sm:text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 pr-2">
+                        <h3 className="text-sm sm:text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 pr-1 sm:pr-2">
                           {faq.question}
                         </h3>
                         
                         {/* Category label */}
-                        <span className="text-xs font-semibold text-muted-foreground mt-1 block">
+                        <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground mt-0.5 sm:mt-1 block">
                           {category?.name}
                         </span>
                       </div>
@@ -229,8 +229,8 @@ const FAQSection = () => {
                     
                     {/* Answer - Expandable */}
                     {isOpen && (
-                      <div className="px-6 pb-6 animate-accordion-down">
-                        <div className="border-t border-border/50 pt-4 pl-12">
+                      <div className="px-4 pb-4 sm:px-6 sm:pb-6 animate-accordion-down">
+                        <div className="border-t border-border/50 pt-3 pl-8 sm:pt-4 sm:pl-12">
                           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                             {faq.answer}
                           </p>
