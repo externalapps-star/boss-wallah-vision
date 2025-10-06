@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
 
             {/* Quick Links */}
-            <div className="text-left mx-auto px-4 sm:px-0">
+            <div className="text-left mx-auto">
               <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => <li key={index}>
@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
 
             {/* Legal & Contact */}
-            <div className="text-left px-4 sm:px-0">
+            <div className="text-left">
               <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Legal & Contact</h4>
               <ul className="space-y-3 mb-6">
                 {legal.map((link, index) => <li key={index}>
