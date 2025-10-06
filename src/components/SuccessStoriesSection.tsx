@@ -89,7 +89,7 @@ const SuccessStoriesSection = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-700 animate-gradient"></div>
               
               {/* Main card */}
-              <div className="relative bg-card border border-border/40 rounded-3xl p-8 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_25px_70px_-20px_rgba(var(--primary-rgb),0.5)] transition-all duration-700 group-hover:-translate-y-2">
+              <div className="relative bg-card border border-border/40 rounded-3xl p-5 sm:p-8 h-full shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] hover:shadow-[0_25px_70px_-20px_rgba(var(--primary-rgb),0.5)] transition-all duration-700 group-hover:-translate-y-2">
                 
                 {/* Quote icon */}
                 <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg rotate-12 group-hover:rotate-0 transition-transform duration-500">
@@ -99,12 +99,12 @@ const SuccessStoriesSection = () => {
                 {/* Story content */}
                 <div className="relative">
                   {/* Quote text */}
-                  <blockquote className="text-foreground/90 text-sm sm:text-lg leading-relaxed mb-8 pt-4 italic group-hover:text-foreground transition-colors duration-300">
+                  <blockquote className="text-foreground/90 text-sm sm:text-lg leading-relaxed mb-6 sm:mb-8 pt-4 italic group-hover:text-foreground transition-colors duration-300">
                     "{story.quote}"
                   </blockquote>
 
                   {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3">
                     <div className="text-center p-3 rounded-xl bg-primary/5 border border-primary/10 group-hover:bg-primary/10 transition-colors duration-300">
                       <Clock className="w-4 h-4 text-primary mx-auto mb-1" />
                       <p className="text-xs font-semibold text-foreground">{story.timeToLaunch}</p>
