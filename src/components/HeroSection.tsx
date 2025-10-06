@@ -61,7 +61,7 @@ const HeroSection = () => {
 
           {/* Right Content - App Screenshots */}
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
-            <div className="relative scale-75 sm:scale-100">
+            <div className="relative scale-90 sm:scale-100">
               
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float">
