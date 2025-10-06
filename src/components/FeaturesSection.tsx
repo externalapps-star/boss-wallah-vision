@@ -94,7 +94,7 @@ const FeaturesSection = () => {
                 {/* Benefits Grid */}
                 <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-border/50 group-hover:border-primary/30 transition-colors duration-300">
                   {feature.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-start space-x-2 text-sm group/item">
+                    <div key={idx} className="flex items-start space-x-2 text-xs sm:text-sm group/item">
                       <div className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full mt-1.5 flex-shrink-0 group-hover/item:scale-150 group-hover:shadow-[0_0_8px_rgba(var(--primary-rgb),0.6)] transition-all duration-300"></div>
                       <span className="text-foreground/80 group-hover/item:text-foreground group-hover/item:font-medium transition-all duration-300">{benefit}</span>
                     </div>
