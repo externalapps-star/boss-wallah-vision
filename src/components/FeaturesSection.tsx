@@ -25,7 +25,7 @@ const FeaturesSection = () => {
     },
     {
       icon: <Target className="w-8 h-8" />,
-      emoji: <img src="/lovable-uploads/rocket-3d.png" alt="" className="w-full h-full object-contain" />,
+      emoji: <img src="/lovable-uploads/cloth-store-3d.png" alt="" className="w-full h-full object-contain" />,
       title: "AI Business Mentor",
       description: "Get instant answers from BB AI, your 24/7 business mentor trained on specialized knowledge across hundreds of business types. From regulatory questions to marketing strategies, get expert guidance whenever you need it.",
       benefits: ["24/7 availability", "Personalized advice", "Strategic guidance", "Motivational support"]
