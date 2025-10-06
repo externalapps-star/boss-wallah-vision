@@ -30,7 +30,7 @@ const Navigation = () => {
           <div className="flex items-center justify-center pb-2">
             <div className="flex items-center space-x-2">
               <Rocket className="w-3 h-3 text-primary animate-pulse" />
-              <p className="text-primary font-semibold text-xs whitespace-nowrap">
+              <p className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold text-xs whitespace-nowrap">
                 AI-Powered Business Launch Platform
               </p>
             </div>
