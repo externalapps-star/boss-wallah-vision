@@ -4,25 +4,25 @@ const GlobalSolutionsSection = () => {
   const features = [
     {
       icon: <Globe className="w-6 h-6" />,
-      emoji: "🌍",
+      emoji: <img src="/lovable-uploads/globe.png" alt="" className="w-full h-full object-contain" />,
       title: "Comprehensive coverage",
       description: "Full support ecosystem with expanding global reach"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      emoji: "📍",
+      emoji: <img src="/lovable-uploads/pin-on-map.png" alt="" className="w-full h-full object-contain" />,
       title: "Local expertise",
       description: "Region-specific guidance and resources"
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
-      emoji: "💰",
+      emoji: <img src="/lovable-uploads/bag-of-money.png" alt="" className="w-full h-full object-contain" />,
       title: "Funding opportunities",
       description: "Access to local funding sources"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      emoji: "🤝",
+      emoji: <img src="/lovable-uploads/trust.png" alt="" className="w-full h-full object-contain" />,
       title: "Service provider network",
       description: "Connections to trusted professionals near you"
     }
