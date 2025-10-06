@@ -25,13 +25,13 @@ const Footer = () => {
   }];
   const legal = [{
     name: "Privacy Policy",
-    href: "#"
+    href: "https://bosswallah.ai/privacy-policy"
   }, {
     name: "Terms of Service",
-    href: "#"
+    href: "https://bosswallah.ai/terms-of-use"
   }, {
     name: "Refund & Cancellation",
-    href: "#"
+    href: "https://bosswallah.ai/refund-cancellation-policy"
   }];
   const socialLinks = [{
     icon: <Facebook className="w-5 h-5" />,
