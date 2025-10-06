@@ -63,23 +63,6 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end mt-0 lg:mt-0">
             <div className="relative scale-90 sm:scale-100">
               
-              {/* Decorative Graphics with Solid Backgrounds */}
-              <div className="absolute -top-8 -left-8 w-20 h-20 bg-white rounded-2xl shadow-lg p-3 animate-float hidden lg:block">
-                <img src="/lovable-uploads/idea-bulb.png" alt="" className="w-full h-full object-contain" />
-              </div>
-              
-              <div className="absolute top-1/4 -right-12 w-24 h-24 bg-background rounded-2xl shadow-lg p-4 animate-float hidden lg:block" style={{ animationDelay: '0.5s' }}>
-                <img src="/lovable-uploads/compass.png" alt="" className="w-full h-full object-contain" />
-              </div>
-              
-              <div className="absolute -bottom-4 -left-12 w-28 h-28 bg-white rounded-2xl shadow-lg p-4 animate-float hidden lg:block" style={{ animationDelay: '1s' }}>
-                <img src="/lovable-uploads/growth-chart.png" alt="" className="w-full h-full object-contain" />
-              </div>
-              
-              <div className="absolute bottom-1/3 -right-8 w-20 h-20 bg-background rounded-2xl shadow-lg p-3 animate-float hidden lg:block" style={{ animationDelay: '1.5s' }}>
-                <img src="/lovable-uploads/plant-seedling.png" alt="" className="w-full h-full object-contain" />
-              </div>
-
               {/* Phone Mockup */}
               <div className="phone-mockup animate-float">
                 <div className="phone-screen">
