@@ -251,7 +251,7 @@ const BlogSection = () => {
         </div>
 
         {/* Read More Articles Button */}
-        <div className="text-center mt-6 mb-8">
+        <div className="text-center mt-6 mb-[37px]">
           <Button 
             size="lg"
             className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
