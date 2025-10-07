@@ -96,11 +96,11 @@ const AboutUs = () => {
                     <div className="relative p-6">
                       <div className="flex items-start gap-3 mb-3">
                         <div className="w-2 h-2 rounded-full bg-primary mt-2 group-hover:scale-150 transition-transform duration-300"></div>
-                        <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors flex-1">
+                        <h3 className="text-base md:text-xl font-bold text-foreground group-hover:text-primary transition-colors flex-1">
                           {value.title}
                         </h3>
                       </div>
-                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed pl-5">
+                      <p className="text-xs md:text-base text-muted-foreground leading-relaxed pl-5">
                         {value.description}
                       </p>
                     </div>
