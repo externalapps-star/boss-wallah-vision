@@ -59,11 +59,11 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="section-container py-10 md:py-14">
+        <div className="section-container py-10 md:py-14 px-6 md:px-0">
           {/* Mission Section */}
           <div className="mb-12">
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-5 text-base md:text-lg leading-relaxed text-justify">
+              <div className="space-y-5 text-sm md:text-lg leading-relaxed text-justify">
                 <p className="text-foreground/90">
                   Boss Wallah is the #1 platform for anyone looking to launch a business. This is a place to explore new business ideas, select from hundreds of detailed business plans, get the expert help you need, and then track your progress every step of the way. Boss Wallah was founded to explicitly support non-tech entrepreneurs looking to start a regular main street business like a bakery or a hair salon. Our view is that tech entrepreneurs have access to a vast amount of resources, information, funding options, and tools. Sadly, that is not true for the main street business. We intend to change that.
                 </p>
@@ -82,7 +82,7 @@ const AboutUs = () => {
                 <h2 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Our Values
                 </h2>
-                <p className="text-muted-foreground text-base md:text-lg">
+                <p className="text-muted-foreground text-sm md:text-lg">
                   The principles that guide everything we do
                 </p>
               </div>
@@ -116,7 +116,7 @@ const AboutUs = () => {
                 <h2 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Leadership
                 </h2>
-                <p className="text-muted-foreground text-base md:text-lg">
+                <p className="text-muted-foreground text-sm md:text-lg">
                 Meet the visionary behind Boss Wallah
               </p>
             </div>
@@ -145,7 +145,7 @@ const AboutUs = () => {
                   </p>
                 </div>
 
-                <div className="space-y-3 text-sm md:text-base text-foreground/80 leading-relaxed text-justify">
+                <div className="space-y-3 text-xs md:text-base text-foreground/80 leading-relaxed text-justify">
                   <p>
                     Sashi Reddi is the founder and CEO of Boss Wallah.
                   </p>
