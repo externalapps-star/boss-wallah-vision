@@ -5,6 +5,9 @@ const Footer = () => {
     name: "Home",
     href: "#hero"
   }, {
+    name: "About Us",
+    href: "#about-us"
+  }, {
     name: "Why Us?",
     href: "#why-boss-wallah"
   }, {
