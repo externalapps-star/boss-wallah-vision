@@ -289,12 +289,13 @@ const BlogSection = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
-                        className="flex-1 px-4 h-12 md:h-[52px] rounded-lg md:rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
+                        className="flex-1 px-4 h-11 rounded-lg md:rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
                       />
                       <Button 
                         onClick={handleSubscribe}
                         disabled={isSubmitting}
-                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed h-12 md:h-[52px] px-8 rounded-md"
+                        size="lg"
+                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? "Subscribing..." : "Subscribe"}
                       </Button>
