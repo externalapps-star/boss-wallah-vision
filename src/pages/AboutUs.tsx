@@ -49,7 +49,7 @@ const AboutUs = () => {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
           <div className="section-container relative z-10">
             <div className="text-center max-w-4xl mx-auto pt-4 translate-y-[15px] md:translate-y-0">
-              <h1 className="text-3xl md:text-5xl font-bold mb-3 text-white">
+              <h1 className="text-3xl md:text-5xl font-bold mb-3 text-white translate-y-[5px] md:translate-y-0">
                 About Boss Wallah
               </h1>
               <p className="text-base md:text-xl leading-relaxed text-white/90">
