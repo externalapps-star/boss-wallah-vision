@@ -294,7 +294,7 @@ const BlogSection = () => {
                       <Button 
                         onClick={handleSubscribe}
                         disabled={isSubmitting}
-                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-[52px] disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-10 md:h-[52px] disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? "Subscribing..." : "Subscribe"}
                         <ArrowRight className="w-4 h-4 ml-2" />
