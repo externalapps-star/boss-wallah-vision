@@ -282,20 +282,19 @@ const BlogSection = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 w-full md:w-auto md:min-w-[350px]">
-                  <div className="flex flex-col md:flex-row gap-3 items-stretch">
+                  <div className="flex flex-col md:flex-row gap-3">
                       <input 
                         type="email" 
                         placeholder="Enter your email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
-                        className="flex-1 px-4 h-11 md:h-auto rounded-lg md:rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
+                        className="flex-1 px-4 h-[44px] md:h-[52px] rounded-lg md:rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
                       />
                       <Button 
                         onClick={handleSubscribe}
                         disabled={isSubmitting}
-                        size="lg"
-                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed md:h-auto"
+                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed h-[44px] md:h-[52px] px-8 rounded-md"
                       >
                         {isSubmitting ? "Subscribing..." : "Subscribe"}
                       </Button>
