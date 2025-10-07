@@ -49,10 +49,10 @@ const AboutUs = () => {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
           <div className="section-container relative z-10">
             <div className="text-center max-w-4xl mx-auto pt-4">
-              <h1 className="text-4xl md:text-5xl font-bold mb-3 text-white">
+              <h1 className="text-3xl md:text-5xl font-bold mb-3 text-white">
                 About Boss Wallah
               </h1>
-              <p className="text-white/90 text-lg md:text-xl leading-relaxed">
+              <p className="text-base md:text-xl leading-relaxed text-white/90">
                 Empowering entrepreneurs to launch and grow their businesses
               </p>
             </div>
@@ -63,7 +63,7 @@ const AboutUs = () => {
           {/* Mission Section */}
           <div className="mb-12">
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-5 text-lg leading-relaxed text-justify">
+              <div className="space-y-5 text-base md:text-lg leading-relaxed text-justify">
                 <p className="text-foreground/90">
                   Boss Wallah is the #1 platform for anyone looking to launch a business. This is a place to explore new business ideas, select from hundreds of detailed business plans, get the expert help you need, and then track your progress every step of the way. Boss Wallah was founded to explicitly support non-tech entrepreneurs looking to start a regular main street business like a bakery or a hair salon. Our view is that tech entrepreneurs have access to a vast amount of resources, information, funding options, and tools. Sadly, that is not true for the main street business. We intend to change that.
                 </p>
@@ -79,10 +79,10 @@ const AboutUs = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl -z-10"></div>
             <div className="py-12 px-4">
               <div className="text-center mb-10">
-                <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <h2 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Our Values
                 </h2>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-base md:text-lg">
                   The principles that guide everything we do
                 </p>
               </div>
@@ -96,11 +96,11 @@ const AboutUs = () => {
                     <div className="relative p-6">
                       <div className="flex items-start gap-3 mb-3">
                         <div className="w-2 h-2 rounded-full bg-primary mt-2 group-hover:scale-150 transition-transform duration-300"></div>
-                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors flex-1">
+                        <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors flex-1">
                           {value.title}
                         </h3>
                       </div>
-                      <p className="text-muted-foreground leading-relaxed pl-5">
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed pl-5">
                         {value.description}
                       </p>
                     </div>
@@ -113,10 +113,10 @@ const AboutUs = () => {
           {/* Management Section */}
           <div>
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Leadership
-              </h2>
-              <p className="text-muted-foreground text-lg">
+                <h2 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Leadership
+                </h2>
+                <p className="text-muted-foreground text-base md:text-lg">
                 Meet the visionary behind Boss Wallah
               </p>
             </div>
@@ -134,18 +134,18 @@ const AboutUs = () => {
                       />
                     </div>
                   </div>
-                  <h3 className="text-3xl font-bold text-foreground mb-2">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                     Sashi Reddi
                   </h3>
-                  <p className="text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                  <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
                     Founder & CEO
                   </p>
-                  <p className="text-muted-foreground font-medium text-lg">
+                  <p className="text-muted-foreground font-medium text-base md:text-lg">
                     4X Entrepreneur
                   </p>
                 </div>
 
-                <div className="space-y-3 text-foreground/80 leading-relaxed text-justify">
+                <div className="space-y-3 text-sm md:text-base text-foreground/80 leading-relaxed text-justify">
                   <p>
                     Sashi Reddi is the founder and CEO of Boss Wallah.
                   </p>
