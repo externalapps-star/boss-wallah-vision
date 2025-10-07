@@ -20,7 +20,7 @@ const Footer = () => {
     name: "Success Stories",
     href: "#success-stories"
   }, {
-    name: "FAQ",
+    name: "FAQs",
     href: "#faq"
   }, {
     name: "Blog",
