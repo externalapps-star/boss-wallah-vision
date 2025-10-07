@@ -289,7 +289,7 @@ const BlogSection = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         onKeyPress={(e) => e.key === 'Enter' && handleSubscribe()}
-                        className="flex-1 px-4 h-11 md:h-[52px] rounded-lg md:rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
+                        className="flex-1 px-4 py-2.5 md:py-3 h-11 md:h-[52px] rounded-lg md:rounded-xl bg-card border border-border/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
                       />
                       <Button 
                         onClick={handleSubscribe}
