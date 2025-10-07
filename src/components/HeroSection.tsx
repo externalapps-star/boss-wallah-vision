@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Download, Star, Users, Briefcase } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import appStoreBadge from '@/assets/app-store-badge.png';
-import googlePlayBadge from '@/assets/google-play-badge.png';
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -54,9 +52,6 @@ const HeroSection = () => {
                 Download Now
               </Button>
             </div>
-
-            {/* Trust Indicators */}
-            
           </div>
 
           {/* Right Content - App Screenshots */}

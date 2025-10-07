@@ -1,4 +1,4 @@
-import { Target, Users, Zap } from 'lucide-react';
+
 
 const WhyBossWallah = () => {
   const features = [

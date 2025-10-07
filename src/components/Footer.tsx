@@ -1,5 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Mail } from 'lucide-react';
 const Footer = () => {
   const quickLinks = [{
     name: "Home",
@@ -35,27 +34,6 @@ const Footer = () => {
   }, {
     name: "Refund & Cancellation",
     href: "https://bosswallah.ai/refund-cancellation-policy"
-  }];
-  const socialLinks = [{
-    icon: <Facebook className="w-5 h-5" />,
-    href: "#",
-    name: "Facebook"
-  }, {
-    icon: <Twitter className="w-5 h-5" />,
-    href: "#",
-    name: "Twitter"
-  }, {
-    icon: <Instagram className="w-5 h-5" />,
-    href: "#",
-    name: "Instagram"
-  }, {
-    icon: <Linkedin className="w-5 h-5" />,
-    href: "#",
-    name: "LinkedIn"
-  }, {
-    icon: <Youtube className="w-5 h-5" />,
-    href: "#",
-    name: "YouTube"
   }];
   return <footer className="bg-gradient-dark text-primary-foreground">
       

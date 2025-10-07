@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import appStoreBadge from '@/assets/app-store-badge.png';
 import googlePlayBadge from '@/assets/google-play-badge.png';
 const FinalCTASection = () => {
@@ -41,9 +40,6 @@ const FinalCTASection = () => {
                 <img src={appStoreBadge} alt="Download on the App Store" className="relative h-14 md:h-16 hover:scale-105 transition-transform duration-300 filter drop-shadow-2xl" />
               </a>
             </div>
-
-            {/* Action Buttons */}
-            
           </div>
         </div>
       </div>
