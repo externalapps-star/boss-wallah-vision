@@ -45,7 +45,7 @@ const AboutUs = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <div className="relative bg-gradient-to-br from-primary via-primary/90 to-accent py-12 md:py-16 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-primary via-primary/90 to-accent py-16 md:py-20 overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
           <div className="section-container relative z-10">
             <div className="text-center max-w-4xl mx-auto">
