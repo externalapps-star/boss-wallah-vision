@@ -48,7 +48,7 @@ const AboutUs = () => {
         <div className="relative bg-gradient-to-br from-primary via-primary/90 to-accent pt-16 pb-8 md:pt-20 md:pb-12 overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
           <div className="section-container relative z-10">
-            <div className="text-center max-w-4xl mx-auto pt-[26px] md:pt-4">
+            <div className="text-center max-w-4xl mx-auto pt-4 translate-y-[10px] md:translate-y-0">
               <h1 className="text-3xl md:text-5xl font-bold mb-3 text-white">
                 About Boss Wallah
               </h1>
