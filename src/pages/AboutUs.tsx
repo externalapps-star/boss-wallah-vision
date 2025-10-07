@@ -134,13 +134,13 @@ const AboutUs = () => {
                       />
                     </div>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  <h3 className="text-xl md:text-3xl font-bold text-foreground mb-2">
                     Sashi Reddi
                   </h3>
-                  <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                  <p className="text-base md:text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
                     Founder & CEO
                   </p>
-                  <p className="text-muted-foreground font-medium text-base md:text-lg">
+                  <p className="text-muted-foreground font-medium text-sm md:text-lg">
                     4X Entrepreneur
                   </p>
                 </div>
