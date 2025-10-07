@@ -79,10 +79,10 @@ const AboutUs = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl -z-10"></div>
             <div className="py-12 px-4">
               <div className="text-center mb-10">
-                <h2 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <h2 className="text-xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Our Values
                 </h2>
-                <p className="text-muted-foreground text-sm md:text-lg">
+                <p className="text-muted-foreground text-xs md:text-lg">
                   The principles that guide everything we do
                 </p>
               </div>
@@ -113,10 +113,10 @@ const AboutUs = () => {
           {/* Management Section */}
           <div>
             <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <h2 className="text-xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Leadership
                 </h2>
-                <p className="text-muted-foreground text-sm md:text-lg">
+                <p className="text-muted-foreground text-xs md:text-lg">
                 Meet the visionary behind Boss Wallah
               </p>
             </div>
