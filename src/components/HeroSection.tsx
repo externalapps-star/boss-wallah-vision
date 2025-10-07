@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const appImages = [
-    '/lovable-uploads/0a198c2f-6e45-49a3-9fa0-08d99bf8fa98.png',
+    '/lovable-uploads/Screenshot_20251007-174801.png',
     '/lovable-uploads/9896e543-40e7-4d89-b24b-8e6dad8980d0.png',
     '/lovable-uploads/Screenshot_20251003-190308.png',
     '/lovable-uploads/app-bb-ai-summary-DKnAkXL3.png',
