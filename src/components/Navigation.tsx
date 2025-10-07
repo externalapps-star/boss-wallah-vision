@@ -1,5 +1,6 @@
 import { Rocket, Mail, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 interface NavigationProps {
   onMenuToggle: () => void;
@@ -12,13 +13,13 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
         <div className="md:hidden">
           {/* First Row: Logo and Buttons */}
           <div className="flex items-center justify-between h-14">
-          <a href="/" className="flex items-center flex-shrink-0 cursor-pointer">
+          <Link to="/" className="flex items-center flex-shrink-0 cursor-pointer">
             <img 
               src="/lovable-uploads/logo-transparent.png" 
               alt="Boss Wallah Logo" 
               className="h-12 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" 
             />
-          </a>
+          </Link>
             
             <div className="flex items-center gap-2">
               <Button 
@@ -54,13 +55,13 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
         {/* Desktop & Tablet: Single Row Layout */}
         <div className="hidden md:flex items-center justify-between h-16 relative">
           {/* Logo - Left */}
-          <a href="/" className="flex items-center flex-shrink-0 cursor-pointer">
+          <Link to="/" className="flex items-center flex-shrink-0 cursor-pointer">
             <img 
               src="/lovable-uploads/logo-transparent.png" 
               alt="Boss Wallah Logo" 
               className="h-14 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" 
             />
-          </a>
+          </Link>
 
           {/* Center Show Stopper */}
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
