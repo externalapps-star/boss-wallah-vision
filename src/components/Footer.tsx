@@ -6,7 +6,7 @@ const Footer = () => {
     href: "#hero"
   }, {
     name: "About Us",
-    href: "#about-us"
+    href: "/about-us"
   }, {
     name: "Why Us?",
     href: "#why-boss-wallah"
