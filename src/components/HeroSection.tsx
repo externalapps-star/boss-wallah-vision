@@ -9,6 +9,7 @@ const HeroSection = () => {
     '/lovable-uploads/9896e543-40e7-4d89-b24b-8e6dad8980d0.png',
     '/lovable-uploads/Screenshot_20251003-190308.png',
     '/lovable-uploads/app-bb-ai-summary-DKnAkXL3.png',
+    '/lovable-uploads/Screenshot_20251007-174901.png',
     '/lovable-uploads/app-research-learning-fzKOg9GF.png'
   ];
   useEffect(() => {
