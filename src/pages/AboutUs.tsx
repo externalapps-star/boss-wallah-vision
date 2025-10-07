@@ -75,28 +75,38 @@ const AboutUs = () => {
           </div>
 
           {/* Values Section */}
-          <div className="mb-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Our Values
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                The principles that guide everything we do
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-              {values.map((value, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-accent/20 hover:border-accent/40 bg-gradient-to-br from-background to-accent/5">
-                  <CardContent className="p-5">
-                    <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
-                      {value.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+          <div className="mb-12 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl -z-10"></div>
+            <div className="py-12 px-4">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Our Values
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  The principles that guide everything we do
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {values.map((value, index) => (
+                  <div 
+                    key={index} 
+                    className="group relative overflow-hidden rounded-xl bg-card border border-accent/20 hover:border-accent/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative p-6">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2 group-hover:scale-150 transition-transform duration-300"></div>
+                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors flex-1">
+                          {value.title}
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed pl-5">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
