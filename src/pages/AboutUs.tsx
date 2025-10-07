@@ -63,7 +63,7 @@ const AboutUs = () => {
           {/* Mission Section */}
           <div className="mb-12">
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-5 text-lg leading-relaxed">
+              <div className="space-y-5 text-lg leading-relaxed text-justify">
                 <p className="text-foreground/90">
                   Boss Wallah is the #1 platform for anyone looking to launch a business. This is a place to explore new business ideas, select from hundreds of detailed business plans, get the expert help you need, and then track your progress every step of the way. Boss Wallah was founded to explicitly support non-tech entrepreneurs looking to start a regular main street business like a bakery or a hair salon. Our view is that tech entrepreneurs have access to a vast amount of resources, information, funding options, and tools. Sadly, that is not true for the main street business. We intend to change that.
                 </p>
