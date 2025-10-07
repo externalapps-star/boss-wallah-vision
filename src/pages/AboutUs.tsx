@@ -145,7 +145,7 @@ const AboutUs = () => {
                   </p>
                 </div>
 
-                <div className="space-y-3 text-foreground/80 leading-relaxed">
+                <div className="space-y-3 text-foreground/80 leading-relaxed text-justify">
                   <p>
                     Sashi Reddi is the founder and CEO of Boss Wallah.
                   </p>
