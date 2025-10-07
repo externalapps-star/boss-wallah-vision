@@ -148,7 +148,7 @@ const FAQSection = () => {
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           <button
             onClick={() => setSelectedCategory(null)}
-            className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${
+            className={`px-6 py-2.5 rounded-full font-semibold text-xs md:text-sm transition-all duration-300 ${
               selectedCategory === null
                 ? 'bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg scale-105'
                 : 'bg-card border border-border/40 text-muted-foreground hover:border-primary/40 hover:text-foreground'
@@ -162,7 +162,7 @@ const FAQSection = () => {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 flex items-center gap-2 ${
+                className={`px-6 py-2.5 rounded-full font-semibold text-xs md:text-sm transition-all duration-300 flex items-center gap-2 ${
                   selectedCategory === cat.id
                     ? `bg-gradient-to-r ${cat.color} border ${cat.borderColor} text-foreground shadow-lg scale-105`
                     : 'bg-card border border-border/40 text-muted-foreground hover:border-primary/40 hover:text-foreground'
