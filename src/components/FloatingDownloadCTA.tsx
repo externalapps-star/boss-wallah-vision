@@ -32,7 +32,7 @@ const FloatingDownloadCTA = () => {
               <a href="https://play.google.com/store/apps/details?id=com.wealthdoctor" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
                 <img src={googlePlayBadge} alt="Get it on Google Play" className="h-12 w-auto mx-auto" />
               </a>
-              <a href="https://apps.apple.com/us/app/boss-wallah-be-the-boss/id1445018395" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+              <a href="https://apps.apple.com/in/app/boss-wallah-be-the-boss/id1445018395" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
                 <img src={appStoreBadge} alt="Download on the App Store" className="h-12 w-auto mx-auto" />
               </a>
             </div>
