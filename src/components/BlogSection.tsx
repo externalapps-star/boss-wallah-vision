@@ -266,7 +266,7 @@ const BlogSection = () => {
         <div id="newsletter" className="max-w-4xl mx-auto">
           <div className="relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-30"></div>
-            <div className="relative bg-background/60 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 hover:shadow-md hover:border-primary/30 transition-all duration-300">
+            <div className="relative bg-background/60 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 hover:shadow-sm hover:border-primary/30 transition-all duration-300">
               {!isSubscribed ? (
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="flex items-start gap-4 flex-1">
