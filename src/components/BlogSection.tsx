@@ -282,7 +282,7 @@ const BlogSection = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 w-full md:w-auto md:min-w-[350px]">
-                  <div className="flex flex-col md:flex-row gap-3">
+                  <div className="flex flex-col md:flex-row gap-3 items-stretch">
                       <input 
                         type="email" 
                         placeholder="Enter your email"
@@ -295,7 +295,7 @@ const BlogSection = () => {
                         onClick={handleSubscribe}
                         disabled={isSubmitting}
                         size="lg"
-                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed md:h-auto"
                       >
                         {isSubmitting ? "Subscribing..." : "Subscribe"}
                       </Button>
