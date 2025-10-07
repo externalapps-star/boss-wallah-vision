@@ -138,7 +138,7 @@ const FAQSection = () => {
                 placeholder="Search questions..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-card border border-border/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground placeholder:text-muted-foreground transition-all duration-300"
+                className="w-full pl-12 pr-4 py-4 bg-card border border-border/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm md:text-base text-foreground placeholder:text-muted-foreground transition-all duration-300"
               />
             </div>
           </div>
