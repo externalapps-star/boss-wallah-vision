@@ -43,84 +43,99 @@ const AboutUs = () => {
         onOpen={() => setIsMenuOpen(true)}
       />
       
-      <main className="flex-1 bg-gradient-to-b from-background to-accent/5">
-        <div className="section-container py-12 md:py-20">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              About Boss Wallah
-            </h1>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Empowering entrepreneurs to launch and grow their businesses
-            </p>
-          </div>
-
-          {/* About Section */}
-          <Card className="mb-12 shadow-lg border-accent/20">
-            <CardContent className="p-8 md:p-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">
+      <main className="flex-1">
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-primary via-primary/90 to-accent py-20 md:py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+          <div className="section-container relative z-10">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                 About Boss Wallah
-              </h2>
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
+              </h1>
+              <p className="text-white/90 text-lg md:text-xl leading-relaxed">
+                Empowering entrepreneurs to launch and grow their businesses
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="section-container py-16 md:py-24">
+          {/* Mission Section */}
+          <div className="mb-20">
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-6 text-lg leading-relaxed">
+                <p className="text-foreground/90">
                   Boss Wallah is the #1 platform for anyone looking to launch a business. This is a place to explore new business ideas, select from hundreds of detailed business plans, get the expert help you need, and then track your progress every step of the way. Boss Wallah was founded to explicitly support non-tech entrepreneurs looking to start a regular main street business like a bakery or a hair salon. Our view is that tech entrepreneurs have access to a vast amount of resources, information, funding options, and tools. Sadly, that is not true for the main street business. We intend to change that.
                 </p>
-                <p>
+                <p className="text-foreground/90">
                   While our customers may not be clued into the latest AI and SaaS tools, fortunately we are. Our platform leverages the latest advances in AI, where we work with the latest models, finetune them for our purposes and embed this intelligence into our platform so that our users get access to the very best tech there is to help them build their business. Our AI chat is trained on business domains that are of interest to our users. We search the internet to identify the best service providers who can help solve specific problems for our users. Our moonshot dream is to enable a million (yes, that's right!) entrepreneurs to launch their own business and realize their own dream.
                 </p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Values Section */}
-          <Card className="mb-12 shadow-lg border-accent/20">
-            <CardContent className="p-8 md:p-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-foreground">
-                Values
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Our Values
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {values.map((value, index) => (
-                  <div key={index} className="p-6 rounded-lg bg-accent/5 border border-accent/10 hover:border-accent/30 transition-colors">
-                    <h3 className="text-lg font-semibold mb-2 text-foreground">
+              <p className="text-muted-foreground text-lg">
+                The principles that guide everything we do
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {values.map((value, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-accent/20 hover:border-accent/40 bg-gradient-to-br from-background to-accent/5">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
                       {value.title}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground leading-relaxed">
                       {value.description}
                     </p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
 
           {/* Management Section */}
-          <Card className="shadow-lg border-accent/20">
-            <CardContent className="p-8 md:p-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-foreground text-center">
-                Management
+          <div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Leadership
               </h2>
-              
-              <div className="max-w-4xl mx-auto">
-                <div className="flex flex-col items-center mb-8">
-                  <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-accent/20 shadow-xl">
-                    <img 
-                      src={sashiReddiImage} 
-                      alt="Sashi Reddi - Founder & CEO" 
-                      className="w-full h-full object-cover"
-                    />
+              <p className="text-muted-foreground text-lg">
+                Meet the visionary behind Boss Wallah
+              </p>
+            </div>
+            
+            <Card className="max-w-4xl mx-auto shadow-xl border-accent/20 overflow-hidden">
+              <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 md:p-12">
+                <div className="flex flex-col items-center text-center mb-8">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-xl opacity-30"></div>
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                      <img 
+                        src={sashiReddiImage} 
+                        alt="Sashi Reddi - Founder & CEO" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-3xl font-bold text-foreground mb-2">
                     Sashi Reddi
                   </h3>
-                  <p className="text-lg text-accent font-semibold mb-1">
+                  <p className="text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
                     Founder & CEO
                   </p>
-                  <p className="text-muted-foreground font-medium">
+                  <p className="text-muted-foreground font-medium text-lg">
                     4X Entrepreneur
                   </p>
                 </div>
 
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="space-y-4 text-foreground/80 leading-relaxed">
                   <p>
                     Sashi Reddi is the founder and CEO of Boss Wallah.
                   </p>
@@ -141,8 +156,8 @@ const AboutUs = () => {
                   </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </Card>
+          </div>
         </div>
       </main>
 
