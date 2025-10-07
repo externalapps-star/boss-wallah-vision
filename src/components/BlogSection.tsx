@@ -297,7 +297,6 @@ const BlogSection = () => {
                         className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex-shrink-0 h-10 md:h-[52px] w-36 mx-auto md:w-auto md:mx-0 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? "Subscribing..." : "Subscribe"}
-                        <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
                     <p className="text-xs text-muted-foreground/70 text-center md:text-left">
