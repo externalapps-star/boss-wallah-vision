@@ -87,16 +87,25 @@ const HeroSection = () => {
                 <div className="absolute -top-[54px] left-1/2 translate-x-[calc(-50%+140px)] w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 z-40 opacity-90 rotate-[25deg]">
                   <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-xl" />
                 </div>
-                <div className="phone-screen">
+                <div className="phone-screen bg-gradient-to-br from-primary/20 to-accent/20">
                   {!imagesLoaded ? (
-                    <Skeleton className="w-full h-full" />
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10">
+                      <Skeleton className="w-full h-full bg-muted/50" />
+                    </div>
                   ) : (
-                    <img 
-                      src={appImages[currentImage]} 
-                      alt="Boss Wallah App Screenshot" 
-                      className="w-full h-full object-cover transition-opacity duration-500"
-                      loading="eager"
-                    />
+                    <>
+                      {appImages.map((src, index) => (
+                        <img 
+                          key={src}
+                          src={src} 
+                          alt="Boss Wallah App Screenshot" 
+                          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                            index === currentImage ? 'opacity-100' : 'opacity-0'
+                          }`}
+                          loading="eager"
+                        />
+                      ))}
+                    </>
                   )}
                 </div>
               </div>
