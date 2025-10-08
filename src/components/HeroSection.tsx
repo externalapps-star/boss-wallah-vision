@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const appImages = [
     '/lovable-uploads/Screenshot_20251007-174801.png',
     '/lovable-uploads/9896e543-40e7-4d89-b24b-8e6dad8980d0.png',
@@ -12,12 +14,32 @@ const HeroSection = () => {
     '/lovable-uploads/Screenshot_20251007-174901.png',
     '/lovable-uploads/app-research-learning-fzKOg9GF.png'
   ];
+
+  // Preload all images
   useEffect(() => {
+    let loadedCount = 0;
+    const totalImages = appImages.length;
+    
+    appImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!imagesLoaded) return;
+    
     const interval = setInterval(() => {
       setCurrentImage(prev => (prev + 1) % appImages.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [imagesLoaded]);
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Subtle Background Accents */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
@@ -66,7 +88,16 @@ const HeroSection = () => {
                   <img src="/lovable-uploads/crown.png" alt="" className="w-full h-full object-contain drop-shadow-xl" />
                 </div>
                 <div className="phone-screen">
-                  <img src={appImages[currentImage]} alt="Boss Wallah App Screenshot" className="w-full h-full object-cover transition-opacity duration-1000" />
+                  {!imagesLoaded ? (
+                    <Skeleton className="w-full h-full" />
+                  ) : (
+                    <img 
+                      src={appImages[currentImage]} 
+                      alt="Boss Wallah App Screenshot" 
+                      className="w-full h-full object-cover transition-opacity duration-500"
+                      loading="eager"
+                    />
+                  )}
                 </div>
               </div>
 
