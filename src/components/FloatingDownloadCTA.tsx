@@ -29,11 +29,29 @@ const FloatingDownloadCTA = () => {
           <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-xl p-2 min-w-[240px]">
             <p className="text-xs font-medium text-foreground mb-2 text-center">Download from:</p>
             <div className="flex flex-col gap-2">
-              <a href="https://play.google.com/store/apps/details?id=com.wealthdoctor" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-12 w-auto mx-auto" />
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.wealthdoctor" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-105"
+              >
+                <img 
+                  src={googlePlayBadge} 
+                  alt="Get it on Google Play" 
+                  className="h-12 w-auto mx-auto"
+                />
               </a>
-              <a href="https://apps.apple.com/in/app/boss-wallah-be-the-boss/id1445018395" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                <img src={appStoreBadge} alt="Download on the App Store" className="h-12 w-auto mx-auto" />
+              <a 
+                href="https://apps.apple.com/in/app/boss-wallah-be-the-boss/id1445018395" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-105"
+              >
+                <img 
+                  src={appStoreBadge} 
+                  alt="Download on the App Store" 
+                  className="h-12 w-auto mx-auto"
+                />
               </a>
             </div>
           </div>

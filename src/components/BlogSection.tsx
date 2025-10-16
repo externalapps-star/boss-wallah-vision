@@ -61,56 +61,109 @@ const BlogSection = () => {
     }, 1000);
   };
 
+  // const blogPosts = [
+  //   {
+  //     title: "How to grow Instagram from zero followers ( Step-by-step Guide)",
+  //     excerpt: "A comprehensive step-by-step guide to growing your Instagram account from zero followers to thousands. Learn proven strategies, content creation tips, and engagement techniques that actually work.",
+  //     author: "Boss Wallah Team",
+  //     date: "Sep 2", 
+  //     readTime: "8 min",
+  //     image: "https://bosswallah.com/assets/blog-instagram-zero-followers-BLr3JTbz.png",
+  //     popular: true,
+  //     url: "https://blog.bosswallah.com/how-to-grow-instagram-from-zero-followers-step-by-step-guide/"
+  //   },
+  //   {
+  //     title: "How to Grow Your Instagram Business Account: A Proven Strategy for 2025",
+  //     excerpt: "Transform your Instagram business account with proven strategies for 2025. Learn about business profile optimization, content formats, posting consistency, and engagement techniques to boost your brand's reach.",
+  //     author: "Boss Wallah Team",
+  //     date: "Sep 7",
+  //     readTime: "7 min", 
+  //     image: "https://bosswallah.com/assets/blog-instagram-business-account-wIL92XWd.png",
+  //     popular: true,
+  //     url: "https://blog.bosswallah.com/how-to-grow-your-instagram-business-account-a-proven-strategy-for-2025/"
+  //   },
+  //   {
+  //     title: "Financial Planning for Beginners: A Simple Guide to Start in 2025", 
+  //     excerpt: "Master the basics of financial planning with this comprehensive beginner's guide. Learn about setting financial goals, creating budgets, building emergency funds, and making smart investment decisions for a secure financial future.",
+  //     author: "Boss Wallah Team",
+  //     date: "Jul 28",
+  //     readTime: "9 min",
+  //     image: "https://bosswallah.com/assets/blog-financial-planning-guide-CI186fCo.png",
+  //     popular: true,
+  //     url: "https://blog.bosswallah.com/financial-planning-for-beginners/"
+  //   },
+  //   {
+  //     title: "How to Save Money Daily in India: Proven Techniques That Anyone Can Follow",
+  //     excerpt: "Discover practical money-saving techniques that work in the Indian context. From daily spending habits to smart financial decisions, learn proven methods to build wealth consistently.",
+  //     author: "Boss Wallah Team",
+  //     date: "Aug 28",
+  //     readTime: "6 min",
+  //     image: "https://bosswallah.com/assets/blog-save-money-daily-tips-DY8EPwyT.png",
+  //     popular: false,
+  //     url: "https://blog.bosswallah.com/how-to-save-money-daily-in-india-proven-techniques-that-anyone-can-follow/"
+  //   },
+  //   {
+  //     title: "Top 10 Agri Startup Ideas for Entrepreneurs in 2025",
+  //     excerpt: "Explore profitable agriculture startup opportunities in 2025. From tech-driven solutions to modern farming business models, discover ideas with high ROI potential and scalability in India's evolving agricultural sector.",
+  //     author: "Boss Wallah Team",
+  //     date: "Jul 28",
+  //     readTime: "8 min",
+  //     image: "https://bosswallah.com/assets/blog-agriculture-business-ideas-CZIb7zrq.png",
+  //     popular: false,
+  //     url: "https://blog.bosswallah.com/agri-startups/"
+  //   }
+  // ];
+
   const blogPosts = [
     {
-      title: "How to grow Instagram from zero followers ( Step-by-step Guide)",
-      excerpt: "A comprehensive step-by-step guide to growing your Instagram account from zero followers to thousands. Learn proven strategies, content creation tips, and engagement techniques that actually work.",
+      title: "100 Small Business Ideas with Zero Investment for 2025",
+      excerpt: "Discover 100 small business ideas with zero investment for 2025! This guide provides actionable, easy-to-understand opportunities.",
+   date: "Jun 19",
       author: "Boss Wallah Team",
-      date: "Sep 2", 
-      readTime: "8 min",
-      image: "https://bosswallah.com/assets/blog-instagram-zero-followers-BLr3JTbz.png",
+      readTime: "7 min",
+      image: "https://bosswallah.ai/blog/wp-content/uploads/2025/06/1280x720-small-business.webp",
       popular: true,
-      url: "https://blog.bosswallah.com/how-to-grow-instagram-from-zero-followers-step-by-step-guide/"
+      url: "https://bosswallah.ai/blog/local-business/small-business/"
     },
     {
-      title: "How to Grow Your Instagram Business Account: A Proven Strategy for 2025",
-      excerpt: "Transform your Instagram business account with proven strategies for 2025. Learn about business profile optimization, content formats, posting consistency, and engagement techniques to boost your brand's reach.",
+      title: "How to Start a Franchise Business in India? – Step-by-Step Guide (2025)",
+      excerpt: "How to start a franchise business in India — step-by-step 2025 guide with costs, legal steps, funding tips, & FAQs to launch and grow your franchise.",
       author: "Boss Wallah Team",
-      date: "Sep 7",
-      readTime: "7 min", 
-      image: "https://bosswallah.com/assets/blog-instagram-business-account-wIL92XWd.png",
+      date: "Sep 19",
+      readTime: "7 min",
+      image: "https://bosswallah.ai/blog/wp-content/uploads/2025/09/How-to-start-a-franchise-business-in-India-1-1024x576.jpg",
       popular: true,
-      url: "https://blog.bosswallah.com/how-to-grow-your-instagram-business-account-a-proven-strategy-for-2025/"
+      url: "https://bosswallah.ai/blog/local-business/how-to-start-a-franchise-business-in-india-step-by-step-guide-2025/"
     },
     {
-      title: "Financial Planning for Beginners: A Simple Guide to Start in 2025", 
-      excerpt: "Master the basics of financial planning with this comprehensive beginner's guide. Learn about setting financial goals, creating budgets, building emergency funds, and making smart investment decisions for a secure financial future.",
+      title: "6 Best Government Subsidy Loans for Business",
+      excerpt: "Looking for a government subsidy loan for your business in India? Discover the 6 best schemes like PMMY, CGTMSE, PMEGP, and more, offering financial support for startups and SMEs. Learn about eligibility, benefits, and how to apply.",
       author: "Boss Wallah Team",
-      date: "Jul 28",
+      date: "Sep 12",
       readTime: "9 min",
-      image: "https://bosswallah.com/assets/blog-financial-planning-guide-CI186fCo.png",
+      image: "https://bosswallah.ai/blog/wp-content/uploads/2025/05/1280x720-government-loan-money.webp",
       popular: true,
-      url: "https://blog.bosswallah.com/financial-planning-for-beginners/"
+      url: "https://bosswallah.ai/blog/startup-guide/government-schemes/government-subsidy-loan-for-business/"
     },
     {
-      title: "How to Save Money Daily in India: Proven Techniques That Anyone Can Follow",
-      excerpt: "Discover practical money-saving techniques that work in the Indian context. From daily spending habits to smart financial decisions, learn proven methods to build wealth consistently.",
+      title: "Best Bank Loans for Small Businesses in India (2025)",
+      excerpt: "Explore the best bank loans for small businesses in India. Quick approval, low interest rates & minimal documents explained step-by-step",
       author: "Boss Wallah Team",
-      date: "Aug 28",
+      date: "July 4",
       readTime: "6 min",
-      image: "https://bosswallah.com/assets/blog-save-money-daily-tips-DY8EPwyT.png",
+      image: "https://bosswallah.ai/blog/wp-content/uploads/2025/07/small-business-loan-5.jpg",
       popular: false,
-      url: "https://blog.bosswallah.com/how-to-save-money-daily-in-india-proven-techniques-that-anyone-can-follow/"
+      url: "https://bosswallah.ai/blog/startup-guide/funding/small-business-loan-2/"
     },
     {
-      title: "Top 10 Agri Startup Ideas for Entrepreneurs in 2025",
+      title: "AI in Marketing 2025: 7 Practical Tools Every Founder Should Use in India",
       excerpt: "Explore profitable agriculture startup opportunities in 2025. From tech-driven solutions to modern farming business models, discover ideas with high ROI potential and scalability in India's evolving agricultural sector.",
       author: "Boss Wallah Team",
-      date: "Jul 28",
+      date: "Sep 8",
       readTime: "8 min",
-      image: "https://bosswallah.com/assets/blog-agriculture-business-ideas-CZIb7zrq.png",
+      image: "https://bosswallah.ai/blog/wp-content/uploads/2025/09/ai-in-marketing-1.jpg",
       popular: false,
-      url: "https://blog.bosswallah.com/agri-startups/"
+      url: "https://bosswallah.ai/blog/ai/ai-in-marketing-2025/"
     }
   ];
 

@@ -1,0 +1,16 @@
+.flag-dropdown {
+    width: 70px !important;
+    border: 1px solid #d8d8d8 !important;
+    background-color: #fff !important;
+}
+
+.react-tel-input .selected-flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80% !important;
+}
+
+.MuiFormHelperText-root {
+    font-weight: 600 !important;
+}

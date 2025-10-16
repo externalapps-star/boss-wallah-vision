@@ -1,12 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
-import FloatingMenu from "@/components/FloatingMenu";
-import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+// import Navigation from "@/components/Navigation";
+// import FloatingMenu from "@/components/FloatingMenu";
+// import Footer from "@/components/Footer";
 import sashiReddiImage from "@/assets/sashi-reddi.png";
 
 const AboutUs = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const values = [
     {
       title: "Social impact",
@@ -36,12 +40,12 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation onMenuToggle={() => setIsMenuOpen(true)} />
+      {/* <Navigation onMenuToggle={() => setIsMenuOpen(true)} />
       <FloatingMenu 
         isOpen={isMenuOpen} 
         onClose={() => setIsMenuOpen(false)}
         onOpen={() => setIsMenuOpen(true)}
-      />
+      /> */}
       
       <main className="flex-1">
         {/* Hero Section */}
@@ -60,6 +64,18 @@ const AboutUs = () => {
         </div>
 
         <div className="section-container py-10 md:py-14 px-6 md:px-0">
+          {/* Back Button */}
+          <div className="mb-8">
+            <Button
+              variant="ghost"
+              onClick={() => navigate('/')}
+              className="mb-6 flex items-center gap-2"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back
+            </Button>
+          </div>
+
           {/* Mission Section */}
           <div className="mb-12">
             <div className="max-w-4xl mx-auto">
@@ -171,7 +187,7 @@ const AboutUs = () => {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

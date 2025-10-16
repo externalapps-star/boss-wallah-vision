@@ -1,0 +1,13 @@
+.sectionContent ol {
+    list-style: lower-roman;
+    margin-left: 40px;
+}
+
+.sectionContent ul {
+    list-style: disc;
+    margin-left: 40px;
+}
+
+.sectionContent h5 {
+    font-weight: bold;
+}

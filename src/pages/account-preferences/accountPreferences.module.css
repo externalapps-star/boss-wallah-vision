@@ -1,0 +1,165 @@
+/* account Preference css */
+.accountPreference {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+/* Use higher specificity to ensure styles are applied */
+.accountPreference .frAccountPreferenceBtn {
+  background-color: #1d1d1e;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.accountPreference .accountPreferenceHeading {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 46px;
+  color: #1d1d1e;
+}
+
+.accountPreference .accountPreferenceContent {
+  margin-bottom: 1.5rem;
+}
+
+.accountPreference .accountPreferenceBody1 {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 1.5rem;
+}
+
+.accountPreference .accountPreferenceBody2 {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.accountPreference .preferenceDivider {
+  border: 0.2px solid #1d1d1e34;
+  opacity: 1;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.accountPreference .preferenceSection1 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 40%;
+}
+
+.accountPreference .preferencesInput {
+  padding: 13px 16px;
+  border: 1px solid #1d1d1e;
+}
+
+.accountPreference .preferencesDel {
+  color: #ffffff;
+  font-size: 18px;
+  background-color: #1d1d1e;
+  width: 40%;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.accountPreference .otpHelpText {
+  padding-bottom: 16px;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+/* Phone Input Container */
+.accountPreference .phoneInputContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Error Icon */
+.accountPreference .errorIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #D24B3D;
+  font-size: 20px;
+}
+
+/* Error Message */
+.accountPreference .errorMessage {
+  position: absolute;
+  color: #D24B3D;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.accountPreference button {
+  font-weight: 600 !important;
+}
+
+/* Responsive styles */
+@media (max-width: 1023px) {
+  .accountPreference {
+    padding: 40px auto;
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  .accountPreference .frAccountPreferenceBtn {
+    font-size: 15px;
+  }
+  
+  .accountPreference .accountPreferenceHeading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .accountPreference .accountPreferenceContent {
+    margin-bottom: 0.6rem;
+  }
+  
+  .accountPreference .accountPreferenceBody1 {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 0.6rem;
+  }
+
+  .accountPreference .accountPreferenceBody2 {
+    font-size: 14px;
+    line-height: 23px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .accountPreference .preferenceDivider {
+    border: 0.2px solid #1d1d1e34;
+    opacity: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .accountPreference .preferenceSection1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .accountPreference .preferencesDel {
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #1d1d1e;
+    width: 100%;
+    text-transform: capitalize;
+  }
+
+  .accountPreference .otpHelpText {
+    padding-bottom: 16px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
