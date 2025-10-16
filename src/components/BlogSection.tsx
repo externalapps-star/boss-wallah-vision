@@ -197,7 +197,7 @@ const BlogSection = () => {
               <div 
                 key={index}
                 className="group relative cursor-pointer"
-                onClick={() => window.open(post.url || 'https://bosswallah.com/', '_blank')}
+                onClick={() => window.open(post.url || 'https://bosswallah.ai/', '_blank')}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
@@ -256,7 +256,7 @@ const BlogSection = () => {
               <div 
                 key={index + 2}
                 className="group relative cursor-pointer"
-                onClick={() => window.open(post.url || 'https://bosswallah.com/', '_blank')}
+                onClick={() => window.open(post.url || 'https://bosswallah.ai/', '_blank')}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
                 
@@ -308,7 +308,7 @@ const BlogSection = () => {
           <Button 
             size="lg"
             className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-            onClick={() => window.open('https://blog.bosswallah.com/', '_blank')}
+            onClick={() => window.open('https://bosswallah.ai/blog/', '_blank')}
           >
             Read More Articles
             <ArrowRight className="w-4 h-4 ml-2" />
