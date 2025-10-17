@@ -102,7 +102,7 @@ const Footer = () => {
                 © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
               </p>
               <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-1">
-                Built for entrepreneurs, by entrepreneurs.
+                Business Launch Platform
               </p>
             </div>
           </div>
