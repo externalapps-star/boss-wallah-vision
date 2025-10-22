@@ -15,7 +15,7 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
           <div className="flex items-center justify-between h-14">
           <Link to="/" className="flex items-center flex-shrink-0 cursor-pointer">
             <img 
-              src="/lovable-uploads/logo-transparent.png" 
+              src="/lovable-uploads/logo-new.png" 
               alt="Boss Wallah Logo" 
               className="h-12 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" 
             />
@@ -57,7 +57,7 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
           {/* Logo - Left */}
           <Link to="/" className="flex items-center flex-shrink-0 cursor-pointer">
             <img 
-              src="/lovable-uploads/logo-transparent.png" 
+              src="/lovable-uploads/logo-new.png" 
               alt="Boss Wallah Logo" 
               className="h-14 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" 
             />
