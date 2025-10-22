@@ -9,7 +9,7 @@ const FeaturesSection = () => {
       benefits: ["Market analysis & research", "Financial projections", "Risk assessment", "Growth strategies"]
     },
     {
-      emoji: <img src="/lovable-uploads/wrench-3d.png" alt="" className="w-full h-full object-contain" />,
+      emoji: <img src="/lovable-uploads/govt-building-3d.png" alt="" className="w-full h-full object-contain" />,
       title: "Government Schemes Assistance",
       description: "Access tailored government support for your business with expert help at every step. Discover eligible schemes, prepare documentation, and create detailed project reports—all through one platform. Simplify the process and unlock the benefits you deserve.",
       benefits: ["Scheme discovery & eligibility check", "Expert document preparation", "Project report & plan creation", "Application tracking & assistance"]
