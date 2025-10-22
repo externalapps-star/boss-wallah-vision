@@ -255,7 +255,7 @@ const BlogSection = () => {
           <Button 
             size="lg"
             className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-            onClick={() => window.open('https://blog.bosswallah.com/', '_blank')}
+            onClick={() => window.open('https://bosswallah.ai/blog/', '_blank')}
           >
             Read More Articles
             <ArrowRight className="w-4 h-4 ml-2" />
