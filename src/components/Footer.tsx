@@ -101,9 +101,7 @@ const Footer = () => {
               <p className="text-xs sm:text-sm text-primary-foreground/80">
                 © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
               </p>
-              <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-1">
-                Built for entrepreneurs, by entrepreneurs.
-              </p>
+              <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-1">Business Launch Platform</p>
             </div>
           </div>
         </div>
