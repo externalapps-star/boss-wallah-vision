@@ -81,23 +81,63 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Rotating Text Line */}
-            <div className="px-4 sm:px-0 h-8 sm:h-10 overflow-hidden">
-              <div className="relative h-full">
-                {rotatingTexts.map((text, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 flex items-center transition-all duration-700 ${
-                      index === currentTextIndex 
-                        ? 'opacity-100 translate-y-0' 
-                        : 'opacity-0 translate-y-4'
-                    }`}
-                  >
-                    <p className="text-sm sm:text-base lg:text-lg font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      ✨ {text}
-                    </p>
+            {/* Airport Runway Style Display */}
+            <div className="px-4 sm:px-0 mt-6">
+              <div className="relative bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-xl border border-primary/20 backdrop-blur-sm overflow-hidden">
+                {/* Animated runway lines */}
+                <div className="absolute inset-0 flex items-center gap-2 opacity-20">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse"></div>
+                </div>
+                
+                {/* Moving dots animation */}
+                <div className="absolute inset-0 flex items-center justify-between px-4">
+                  <div className="w-2 h-2 rounded-full bg-primary/40 animate-ping"></div>
+                  <div className="w-2 h-2 rounded-full bg-accent/40 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="w-2 h-2 rounded-full bg-primary/40 animate-ping" style={{ animationDelay: '1s' }}></div>
+                </div>
+
+                {/* Text content with flip animation */}
+                <div className="relative h-16 sm:h-20 overflow-hidden px-6 sm:px-8">
+                  <div className="absolute inset-0 flex items-center">
+                    {rotatingTexts.map((text, index) => (
+                      <div
+                        key={index}
+                        className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${
+                          index === currentTextIndex 
+                            ? 'opacity-100 translate-y-0 scale-100' 
+                            : index < currentTextIndex 
+                            ? 'opacity-0 -translate-y-full scale-95'
+                            : 'opacity-0 translate-y-full scale-95'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 sm:gap-4">
+                          {/* Departure/Arrival style indicator */}
+                          <div className="flex flex-col items-center gap-0.5 flex-shrink-0">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                          </div>
+                          
+                          <p className="text-xs sm:text-base lg:text-lg font-bold tracking-wide text-center bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent uppercase">
+                            {text}
+                          </p>
+                          
+                          {/* Arrow indicator */}
+                          <div className="flex gap-1 flex-shrink-0">
+                            <div className="w-2 h-0.5 bg-gradient-to-r from-primary to-transparent animate-pulse"></div>
+                            <div className="w-2 h-0.5 bg-gradient-to-r from-primary to-transparent animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-0.5 bg-gradient-to-r from-primary to-transparent animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Bottom runway stripe */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary animate-[slide-in-right_2s_ease-in-out_infinite]"></div>
+                </div>
               </div>
             </div>
           </div>
