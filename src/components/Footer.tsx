@@ -50,7 +50,7 @@ const Footer = () => {
                 
                 <div>
                   <h3 className="text-base sm:text-xl font-bold">BOSS WALLAH</h3>
-                  <p className="text-xs sm:text-sm opacity-80">BE THE BOSS</p>
+                  <p className="text-xs sm:text-sm opacity-80">BUSINESS LAUNCH PLATFORM</p>
                 </div>
               </div>
               
