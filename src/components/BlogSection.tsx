@@ -70,7 +70,7 @@ const BlogSection = () => {
       readTime: "7 min",
       image: "https://bosswallah.ai/blog/wp-content/uploads/2025/06/1280x720-small-business.webp",
       popular: true,
-      url: "https://blog.bosswallah.com/100-small-business-ideas-with-zero-investment-for-2025/"
+      url: "https://bosswallah.ai/blog/local-business/small-business/"
     },
     {
       title: "How to Start a Franchise Business in India? – Step-by-Step Guide (2025)",
@@ -80,7 +80,7 @@ const BlogSection = () => {
       readTime: "7 min", 
       image: "https://bosswallah.ai/blog/wp-content/uploads/2025/09/How-to-start-a-franchise-business-in-India-1-1024x576.jpg",
       popular: true,
-      url: "https://blog.bosswallah.com/how-to-start-a-franchise-business-in-india-step-by-step-guide-2025/"
+      url: "https://bosswallah.ai/blog/local-business/how-to-start-a-franchise-business-in-india-step-by-step-guide-2025/"
     },
     {
       title: "6 Best Government Subsidy Loans for Business", 
@@ -90,7 +90,7 @@ const BlogSection = () => {
       readTime: "9 min",
       image: "https://bosswallah.ai/blog/wp-content/uploads/2025/05/1280x720-government-loan-money.webp",
       popular: true,
-      url: "https://blog.bosswallah.com/6-best-government-subsidy-loans-for-business/"
+      url: "https://bosswallah.ai/blog/startup-guide/government-schemes/government-subsidy-loan-for-business/"
     },
     {
       title: "Best Bank Loans for Small Businesses in India (2025)",
@@ -100,7 +100,7 @@ const BlogSection = () => {
       readTime: "6 min",
       image: "https://bosswallah.ai/blog/wp-content/uploads/2025/07/small-business-loan-5.jpg",
       popular: false,
-      url: "https://blog.bosswallah.com/best-bank-loans-for-small-businesses-in-india-2025/"
+      url: "https://bosswallah.ai/blog/startup-guide/funding/small-business-loan-2/"
     },
     {
       title: "AI in Marketing 2025: 7 Practical Tools Every Founder Should Use in India",
@@ -110,7 +110,7 @@ const BlogSection = () => {
       readTime: "8 min",
       image: "https://bosswallah.ai/blog/wp-content/uploads/2025/09/ai-in-marketing-1.jpg",
       popular: false,
-      url: "https://blog.bosswallah.com/ai-in-marketing-2025-7-practical-tools-every-founder-should-use-in-india/"
+      url: "https://bosswallah.ai/blog/ai/ai-in-marketing-2025/"
     }
   ];
 
