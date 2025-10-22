@@ -10,9 +10,9 @@ const FeaturesSection = () => {
     },
     {
       emoji: <img src="/lovable-uploads/wrench-3d.png" alt="" className="w-full h-full object-contain" />,
-      title: "Specialist AI Agents",
-      description: "Deploy your digital workforce of AI specialists trained for specific business tasks. Need market research for your restaurant location? Want competitor analysis for your retail store? Our AI agents handle the routine work so you can focus on what matters most.",
-      benefits: ["Marketing expert AI", "Finance advisor AI", "Legal consultant AI", "Operations specialist AI"]
+      title: "Government Schemes Assistance",
+      description: "Access tailored government support for your business with expert help at every step. Discover eligible schemes, prepare documentation, and create detailed project reports—all through one platform. Simplify the process and unlock the benefits you deserve.",
+      benefits: ["Scheme discovery & eligibility check", "Expert document preparation", "Project report & plan creation", "Application tracking & assistance"]
     },
     {
       emoji: <img src="/lovable-uploads/growth-chart-3d.png" alt="" className="w-full h-full object-contain" />,
