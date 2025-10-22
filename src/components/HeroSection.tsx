@@ -81,15 +81,21 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Continuous Ticker Animation */}
-            <div className="relative overflow-hidden py-4 px-4 sm:px-0">
-              <div className="flex animate-[slide-in-right_25s_linear_infinite] whitespace-nowrap">
-                {[...rotatingTexts, ...rotatingTexts].map((text, index) => (
-                  <div key={index} className="inline-flex items-center mx-8 sm:mx-12">
-                    <span className="text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                      {text}
-                    </span>
-                    <span className="mx-6 sm:mx-8 text-primary/40">•</span>
+            {/* Rotating Text Line */}
+            <div className="px-4 sm:px-0 h-8 sm:h-10 overflow-hidden">
+              <div className="relative h-full">
+                {rotatingTexts.map((text, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 flex items-center transition-all duration-700 ${
+                      index === currentTextIndex 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 translate-y-4'
+                    }`}
+                  >
+                    <p className="text-sm sm:text-base lg:text-lg font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      ✨ {text}
+                    </p>
                   </div>
                 ))}
               </div>
