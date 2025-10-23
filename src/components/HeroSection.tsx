@@ -81,23 +81,57 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Rotating Text Line */}
-            <div className="px-4 sm:px-0 h-8 sm:h-10 overflow-hidden">
-              <div className="relative h-full">
-                {rotatingTexts.map((text, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 flex items-center transition-all duration-700 ${
-                      index === currentTextIndex 
-                        ? 'opacity-100 translate-y-0' 
-                        : 'opacity-0 translate-y-4'
-                    }`}
-                  >
-                    <p className="text-sm sm:text-base lg:text-lg font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      ✨ {text}
-                    </p>
+            {/* Airport-Style Dynamic Line */}
+            <div className="px-4 sm:px-0 relative">
+              {/* Runway Line with Lights */}
+              <div className="relative flex items-center gap-2 py-4">
+                {/* Left Runway Lights */}
+                <div className="flex gap-1">
+                  {[0, 1, 2].map((i) => (
+                    <div
+                      key={`left-${i}`}
+                      className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse"
+                      style={{ animationDelay: `${i * 200}ms` }}
+                    />
+                  ))}
+                </div>
+
+                {/* Center Line with Text */}
+                <div className="flex-1 relative h-10 overflow-hidden border-t border-b border-primary/30">
+                  {/* Moving Background Indicator */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" />
+                  
+                  {/* Rotating Text */}
+                  <div className="relative h-full">
+                    {rotatingTexts.map((text, index) => (
+                      <div
+                        key={index}
+                        className={`absolute inset-0 flex items-center pl-4 transition-all duration-1000 ease-out ${
+                          index === currentTextIndex 
+                            ? 'opacity-100 translate-x-0' 
+                            : index < currentTextIndex
+                            ? 'opacity-0 -translate-x-8'
+                            : 'opacity-0 translate-x-8'
+                        }`}
+                      >
+                        <p className="text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
+                          {text}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Right Runway Lights */}
+                <div className="flex gap-1">
+                  {[0, 1, 2].map((i) => (
+                    <div
+                      key={`right-${i}`}
+                      className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-accent to-primary animate-pulse"
+                      style={{ animationDelay: `${i * 200}ms` }}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
