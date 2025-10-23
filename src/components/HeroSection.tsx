@@ -83,21 +83,10 @@ const HeroSection = () => {
 
             {/* Airport-Style Dynamic Line */}
             <div className="px-4 sm:px-0 relative">
-              {/* Runway Line with Lights */}
-              <div className="relative flex items-center gap-2 py-4">
-                {/* Left Runway Lights */}
-                <div className="flex gap-1">
-                  {[0, 1, 2].map((i) => (
-                    <div
-                      key={`left-${i}`}
-                      className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse"
-                      style={{ animationDelay: `${i * 200}ms` }}
-                    />
-                  ))}
-                </div>
-
+              {/* Runway Line with Text */}
+              <div className="relative py-4">
                 {/* Center Line with Text */}
-                <div className="flex-1 relative h-10 overflow-hidden border-t border-b border-primary/30">
+                <div className="relative h-10 overflow-hidden border-t border-b border-primary/30">
                   {/* Moving Background Indicator */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" />
                   
@@ -106,7 +95,7 @@ const HeroSection = () => {
                     {rotatingTexts.map((text, index) => (
                       <div
                         key={index}
-                        className={`absolute inset-0 flex items-center pl-4 transition-all duration-1000 ease-out ${
+                        className={`absolute inset-0 flex items-center pl-0 transition-all duration-1000 ease-out ${
                           index === currentTextIndex 
                             ? 'opacity-100 translate-x-0' 
                             : index < currentTextIndex
@@ -120,17 +109,6 @@ const HeroSection = () => {
                       </div>
                     ))}
                   </div>
-                </div>
-
-                {/* Right Runway Lights */}
-                <div className="flex gap-1">
-                  {[0, 1, 2].map((i) => (
-                    <div
-                      key={`right-${i}`}
-                      className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-accent to-primary animate-pulse"
-                      style={{ animationDelay: `${i * 200}ms` }}
-                    />
-                  ))}
                 </div>
               </div>
             </div>
