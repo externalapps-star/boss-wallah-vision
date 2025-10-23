@@ -81,51 +81,23 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Rotating Text Line with Runway */}
-            <div className="px-4 sm:px-0 relative">
-              {/* Text Container */}
-              <div className="h-8 sm:h-10 overflow-hidden relative">
-                <div className="relative h-full">
-                  {rotatingTexts.map((text, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 flex items-center transition-all duration-1000 ease-out ${
-                        index === currentTextIndex 
-                          ? 'opacity-100 translate-y-0 blur-0' 
-                          : index === (currentTextIndex - 1 + rotatingTexts.length) % rotatingTexts.length
-                          ? 'opacity-0 -translate-y-4 blur-sm'
-                          : 'opacity-0 translate-y-4 blur-sm'
-                      }`}
-                    >
-                      <p className="text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                        ✨ {text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Airport Runway Line */}
-              <div className="relative mt-2 h-1 w-full">
-                {/* Main runway line */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/30 to-transparent rounded-full"></div>
-                
-                {/* Animated runway lights */}
-                <div className="absolute inset-0 flex items-center justify-between px-2">
-                  {[...Array(8)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-1 h-1 rounded-full bg-primary/60 animate-pulse"
-                      style={{
-                        animationDelay: `${i * 0.2}s`,
-                        animationDuration: '2s'
-                      }}
-                    />
-                  ))}
-                </div>
-                
-                {/* Moving indicator */}
-                <div className="absolute top-1/2 -translate-y-1/2 w-12 h-1 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full animate-[slide-in-right_3s_ease-in-out_infinite]"></div>
+            {/* Rotating Text Line */}
+            <div className="px-4 sm:px-0 h-8 sm:h-10 overflow-hidden">
+              <div className="relative h-full">
+                {rotatingTexts.map((text, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 flex items-center transition-all duration-700 ${
+                      index === currentTextIndex 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 translate-y-4'
+                    }`}
+                  >
+                    <p className="text-sm sm:text-base lg:text-lg font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      ✨ {text}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
