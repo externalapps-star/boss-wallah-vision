@@ -86,7 +86,7 @@ const HeroSection = () => {
               {/* Runway Line with Text */}
               <div className="relative py-4">
                 {/* Center Line with Text */}
-                <div className="relative h-10 overflow-hidden border-t border-b border-primary/30">
+                <div className="relative h-20 sm:h-10 overflow-hidden border-t border-b border-primary/30">
                   {/* Moving Background Indicator */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" />
                   
@@ -95,7 +95,7 @@ const HeroSection = () => {
                     {rotatingTexts.map((text, index) => (
                       <div
                         key={index}
-                        className={`absolute inset-0 flex items-center pl-0 transition-all duration-1000 ease-out ${
+                        className={`absolute inset-0 flex items-center justify-start pl-0 transition-all duration-1000 ease-out ${
                           index === currentTextIndex 
                             ? 'opacity-100 translate-x-0' 
                             : index < currentTextIndex
@@ -103,7 +103,7 @@ const HeroSection = () => {
                             : 'opacity-0 translate-x-8'
                         }`}
                       >
-                        <p className="text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
+                        <p className="text-xs leading-tight sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent sm:whitespace-nowrap px-2 sm:px-0">
                           {text}
                         </p>
                       </div>
