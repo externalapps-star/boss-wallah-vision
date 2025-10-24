@@ -56,7 +56,7 @@ const Footer = () => {
                 
                 <div>
                   <h3 className="text-base sm:text-xl font-bold">BOSS WALLAH</h3>
-                  <p className="text-xs sm:text-sm opacity-80">BE THE BOSS</p>
+                  <p className="text-xs sm:text-sm opacity-80">BUSINESS LAUNCH PLATFORM</p>
                 </div>
               </div>
               
@@ -108,7 +108,7 @@ const Footer = () => {
                 © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
               </p>
               <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-1">
-                Built for entrepreneurs, by entrepreneurs.
+                Business Launch Platform
               </p>
             </div>
           </div>
