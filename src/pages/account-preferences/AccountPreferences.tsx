@@ -318,14 +318,14 @@ const AccountPreferences = () => {
 
   return (
     <Container id="account-preference" className={styles.accountPreference}>
-      {/* Back Button */}
+      {/* Home Button */}
       <ButtonUI
         variant="ghost"
         onClick={() => navigate('/privacy-policy')}
         className="mb-6 flex items-center gap-2"
       >
         <ArrowLeft className="h-4 w-4" />
-        Back
+        Home
       </ButtonUI>
       
       <Typography

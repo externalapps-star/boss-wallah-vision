@@ -1,0 +1,14 @@
+/* Purchase Details CSS Module */
+
+.couponButton {
+  text-transform: none;
+  font-size: 14px;
+  border: 1px solid #828298;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 5px 10px;
+}

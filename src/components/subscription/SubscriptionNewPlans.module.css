@@ -1,0 +1,283 @@
+/* SubscriptionNewPlans CSS Module */
+
+.subsNewPlans {
+  /* margin-top: 80px; */
+}
+
+.primeAccessImage {
+  width: 300px;
+  height: auto;
+}
+
+.subsNewPlans .subsNewPlanHeading {
+  color: #f1dd80;
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 21.718px;
+  letter-spacing: 2.222px;
+}
+
+.subscriptionLine {
+  margin: 2.5px auto;
+  width: 18rem;
+  height: 0.09rem;
+  background: linear-gradient(
+    90deg,
+    #a78027 40.21%,
+    #f1dd80 53.42%,
+    #b28d33 100%
+  );
+}
+
+.postSubscriptionLine {
+  width: 17rem;
+  height: 0.09rem;
+  background: #ffe3a8;
+}
+
+.subsNewPlans .subsNewPlanTxt {
+  font-size: 20px;
+  color: #1d1d1e;
+}
+
+.subsNewPlanCards {
+  gap: 19px;
+}
+
+.subsPlanOne {
+  border-radius: 18.545px;
+  width: 100%;
+  max-width: 278px;
+}
+
+.subPlanTopTxt {
+  gap: 2px;
+}
+
+.subsPlanTwo {
+  border-radius: 18.545px;
+  max-width: 278px;
+  width: 100%;
+  border: 1.545px solid var(--Brand-1-Variation-600, #128586);
+}
+
+.subPlanOneHeader {
+  position: relative;
+  height: 90px;
+  border-radius: 15.545px 15.545px 0px 0px;
+  background: var(--Brand-1-Variation-600, #f15f22);
+  gap: 2px;
+}
+
+.subPlanTwoHeader {
+  position: relative;
+  height: 90px;
+  border-radius: 15.545px 15.545px 0px 0px;
+  background: var(--Brand-1-Variation-600, #f15f22);
+  gap: 2px;
+}
+
+.nonTickMark,
+.tickMark {
+  position: absolute;
+  right: 3%;
+  top: 7.15%;
+}
+
+.subPlanOneHeader .subPlanOneDiscount {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-decoration-line: line-through;
+  color: #fff;
+}
+
+.subPlanTwoHeaderTxt {
+  gap: 8px;
+}
+
+.subPlanTwoHeader .subPlanTwoPrice {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #1d1d1e;
+}
+
+.subsPlanImgTxt {
+  gap: 8px;
+}
+
+.subsPlanImgTxt .subPlanBenefits {
+  font-size: 12px !important;
+  text-align: left;
+}
+
+.subPlanOneHeader .subPlanOnePrice {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.subPlanOneHeader .subPlanOneDuration {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #fff;
+}
+
+.subPlanTwoHeader .subPlanTwoDuration {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #1d1d1e;
+}
+
+.subsPlanOne .subPlanOneBuy {
+  bottom: 0;
+  display: flex;
+  width: 238px;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--Brand-1-Variation-500, #1d1d1e);
+  text-transform: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+}
+
+.subsPlanTwo {
+  color: #fff;
+}
+
+.subsPlanTwo .subPlanTwoBuy {
+  bottom: 0;
+  display: flex;
+  width: 238px;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--Brand-1-Variation-500, #1d1d1e);
+  text-transform: none;
+  color: #1d1d1e;
+}
+
+.subsPlanTwoImgTxt .subPlanTwoBenefits {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.subsNewPlans .subPlanAvail {
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1d1d1e;
+}
+
+.postSubInfo .postSubText {
+  font-size: 20px;
+  color: #1d1d1e;
+}
+
+.postSubImg {
+  width: 432px;
+}
+
+.postSubBanner {
+  position: relative;
+}
+
+.postSubTxt {
+  position: absolute;
+  color: var(--Brand-2, #2e2e54);
+}
+
+.postSubscriptionLine {
+  height: 1.319px;
+}
+
+.postSubTxt .postTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.postSubTxt .postPlanDuration {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.postSubTxt .postPlanExpire {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.postSubInfo .postSubUpgrade {
+  color: #1d1d1e;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+
+.subPlanTwoHeaderTxt {
+  gap: 2px;
+}
+
+@media (max-width: 576px) {
+  .postSubImg {
+    max-width: 328px;
+  }
+
+  .subsNewPlans .subsNewPlanHeading {
+    font-size: 24px;
+  }
+
+  .subscriptionLine {
+    width: 214.351px;
+  }
+
+  .subsNewPlans .subsNewPlanTxt {
+    font-size: 18px;
+  }
+
+  .postSubInfo .postSubText {
+    font-size: 14px;
+  }
+
+  .postSubInfo .postSubUpgrade {
+    font-size: 16px;
+  }
+
+  .subPlanOneHeader .subPlanOnePrice {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .subPlanOneHeader .subPlanOneDuration {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .subPlanTwoHeader .subPlanTwoPrice {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .subPlanOneHeader .subPlanOneDiscount {
+    font-size: 14px;
+  }
+
+  .subPlanOneHeader .subPlanOneHeaderTxt {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .subsNewPlans {
+    margin-bottom: 60px;
+  }
+}

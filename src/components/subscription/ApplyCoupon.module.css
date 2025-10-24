@@ -1,0 +1,33 @@
+/* ApplyCoupon CSS Module */
+
+.ffCouponIcon {
+  background-color: #fff;
+  border-radius: 100%;
+  padding: 6px;
+}
+
+.ffCouponItems {
+  gap: 8px;
+}
+
+.ffCouponItems .ffCouponTxt {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--Neutral-White, #1d1d1e);
+}
+
+.couponInfo .couponTxt {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.couponInfo .couponSubTxt {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.couponCodes .couponSelect {
+  font-size: 14px;
+  font-weight: 600;
+}

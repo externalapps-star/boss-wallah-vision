@@ -64,7 +64,7 @@ const AboutUs = () => {
         </div>
 
         <div className="section-container py-10 md:py-14 px-6 md:px-0">
-          {/* Back Button */}
+          {/* Home Button */}
           <div className="mb-8">
             <Button
               variant="ghost"
@@ -72,7 +72,7 @@ const AboutUs = () => {
               className="mb-6 flex items-center gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back
+              Home
             </Button>
           </div>
 

@@ -1,6 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 import accountPreferencesReducer from './slices/accountPreferencesSlice'
 import languageReducer from './slices/languageSlice'
+import loginReducer from './slices/loginDetailsSlice'
+import paymentReducer from './slices/PaymentSlice'
+import packageReducer from './slices/packageSlice'
 
 // Function to create the store
 export const makeStore = () =>
@@ -8,6 +11,9 @@ export const makeStore = () =>
     reducer: {
       accountPreferences: accountPreferencesReducer,
       language: languageReducer,
+      login: loginReducer,
+      payment: paymentReducer,
+      package: packageReducer,
     },
   })
 

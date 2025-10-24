@@ -1,0 +1,154 @@
+/* BannerContent CSS Module */
+
+.bannerContainer {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+@media (min-width: 600px) {
+  .bannerContainer {
+    height: 100%;
+    padding: 16px;
+  }
+}
+
+.crownIconContainer {
+  color: #f1dd80;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #1d1d1e;
+  text-align: center;
+}
+
+.title {
+  letter-spacing: 1.8px;
+  border-bottom: 1.5px solid #1d1d1e;
+  font-size: 18px;
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: 20px !important;
+  }
+}
+
+.bannerBackground {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .bannerBackground {
+    padding-left: 52px;
+    padding-right: 52px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 85px;
+  }
+}
+
+.bannerTitle {
+  position: relative;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1d1d1e;
+}
+
+@media (max-width: 1023px) {
+  .bannerTitle {
+    font-weight: bold;
+    font-size: 20px !important;
+    text-align: center;
+  }
+}
+
+.bannerSubtitle {
+  color: #2e2e54;
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px !important;
+}
+
+@media (min-width: 600px) {
+  .bannerSubtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.featuresList {
+  margin-top: 6px;
+  font-size: 12px;
+  padding: 8px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .featuresList {
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconButton {
+  background: #f1dd80;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.icon {
+  color: #2e2e54;
+  font-size: 16px;
+}
+
+@media (min-width: 600px) {
+  .icon {
+    font-size: 20px;
+  }
+}
+
+.disclaimer {
+  font-size: 10px;
+  font-style: italic;
+  color: #1d1d1e;
+  margin-top: 8px;
+}
+
+@media (min-width: 600px) {
+  .disclaimer {
+    font-size: 12px;
+    font-style: italic;
+    color: #1d1d1e;
+  }
+}

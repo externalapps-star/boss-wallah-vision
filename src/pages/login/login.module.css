@@ -1,0 +1,10 @@
+/* Login Page CSS */
+
+.circularImage {
+  border-radius: 50%;
+}
+
+.loginImage {
+  object-fit: contain;
+  width: 90%;
+}

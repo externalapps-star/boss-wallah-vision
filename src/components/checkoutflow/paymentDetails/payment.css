@@ -1,0 +1,56 @@
+.razorpay-backdrop {
+  background: none !important;
+}
+
+.razorpay-container iframe {
+  width: 355px !important;
+  margin: auto !important;
+  border-radius: 10px !important;
+}
+
+.razorpay-container {
+  height: 450px !important;
+  top: 15% !important;
+  left: 30% !important;
+}
+
+iframe {
+  position: absolute !important;
+  top: 59% !important;
+  left: 35% !important;
+  transform: translateY(-50%) !important;
+  height: auto !important;
+}
+
+iframe.bosswallah-iframe{
+  position: relative !important;
+  top: 0% !important;
+  left: 0% !important;
+  transform: translateY(0%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (max-width: 776px) {
+  iframe {
+    position: fixed !important;
+    top: 0% !important;
+    left: 0% !important;
+    transform: translateY(0%) !important;
+    height: 100% !important;
+  }
+  .razorpay-container {
+    height: 100% !important;
+    top: 0% !important;
+    left: 0% !important;
+    width: 100% !important;
+  }
+
+  .razorpay-container iframe {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+}

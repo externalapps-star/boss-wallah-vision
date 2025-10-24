@@ -1,0 +1,192 @@
+/* Email and Mobile Details CSS Module */
+
+.formContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.fieldLabel {
+  color: #1d1d1e;
+  font-weight: 500;
+  font-size: 12.11px;
+  line-height: 18.17px;
+  letter-spacing: 0%;
+  margin-bottom: 5px;
+}
+
+.fieldLabelMobile {
+  margin-top: 20px;
+}
+
+.fieldLabelMobileOtp {
+  margin-top: 0;
+}
+
+.requiredAsterisk {
+  color: red;
+}
+
+.requiredAsteriskDisabled {
+  color: #949494;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+}
+
+.otpContainer {
+  margin-top: 32px;
+  margin: 8px -8px;
+}
+
+.otpLabel {
+  color: #1d1d1e;
+  font-weight: 500;
+  font-size: 12.11px;
+  line-height: 18.17px;
+  letter-spacing: 0%;
+  margin-bottom: 5px;
+}
+
+.otpLabelMobile {
+  margin-left: 10px;
+}
+
+.otpInput {
+  width: 25%;
+  height: 2.8rem;
+  margin: 0 0.5rem;
+  border: 1px solid #1d1d1e;
+  outline: none;
+  border-radius: 12px;
+  background-color: #fff;
+  color: black;
+}
+
+.otpInputDesktop {
+  width: 2.8rem;
+}
+
+.otpResendContainer {
+  text-align: right;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.otpResendContainerMobile {
+  margin-top: 10px;
+}
+
+.didNotReceiveText {
+  font-weight: 600;
+  color: #1d1d1e;
+}
+
+.spamFolderText {
+  color: #1d1d1e;
+  font-weight: 500;
+  font-size: 12.11px;
+  line-height: 18.17px;
+  letter-spacing: 0%;
+  margin-bottom: 5px;
+}
+
+.changeContactText {
+  color: #1d1d1e;
+  cursor: pointer;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.getOtpButton {
+  text-transform: none;
+  background: #1d1d1e;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.getOtpButtonMobile {
+  height: 40px;
+  margin-top: 16px;
+}
+
+.getOtpButtonDesktop {
+  height: 48px;
+}
+
+.submitButton {
+  text-transform: none;
+  background: #1d1d1e;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.submitButtonMobile {
+  height: 40px;
+  margin-top: 16px;
+}
+
+.submitButtonDesktop {
+  height: 48px;
+}
+
+.submitButtonDisabled {
+  background-color: #1d1d1e;
+}
+
+.termsContainer {
+  font-size: 13px;
+  margin-top: 16px;
+  color: #1d1d1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.termsContainerMobile {
+  flex-direction: column;
+}
+
+.termsContainerDesktop {
+  flex-direction: row;
+}
+
+.termsLink {
+  color: #1d1d1e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.editIcon {
+  color: #735290;
+}
+
+/* Phone input specific styles */
+.searchEmoji {
+  display: none !important;
+}
+
+.btnSub {
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.54);
+  display: flex;
+  border-radius: 50%;
+}

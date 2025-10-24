@@ -1,12 +1,14 @@
 import { Rocket, Mail, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import UserMenu from './UserMenu';
 
 interface NavigationProps {
   onMenuToggle: () => void;
 }
 
 const Navigation = ({ onMenuToggle }: NavigationProps) => {
+
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-border">
       <div className="max-w-none px-4 md:px-6">
         {/* Mobile: Two Row Layout */}
@@ -30,6 +32,8 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
               >
                 <Mail className="w-3 h-3" />
               </Button>
+              
+              <UserMenu />
               
               <button
                 onClick={onMenuToggle}
@@ -82,6 +86,8 @@ const Navigation = ({ onMenuToggle }: NavigationProps) => {
               <Mail className="w-4 h-4 mr-2" />
               Contact Us
             </Button>
+            
+            <UserMenu />
           </div>
         </div>
       </div>

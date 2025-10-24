@@ -1,0 +1,35 @@
+/* FrequentQuestions CSS Module */
+
+.ffFaqHeading {
+  color: var(--Neutral-100, #F2F2F2);
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.ffFaq .ffFaqQa {
+  border-radius: 8px;
+  background: #EFEFEF;
+  color: #1d1d1e;
+  box-shadow: none;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  outline: none;
+}
+
+@media (max-width: 576px) {
+  .ffFaq .ffFaqHeading {
+    font-size: 18px;
+  }
+  
+  .ffFaq .ffQues {
+    font-size: 12px;
+  }
+  
+  .ffFaq .ffFaqAns {
+    font-size: 12px;
+  }
+}

@@ -7,6 +7,9 @@ const Footer = () => {
     name: "About Us",
     href: "/about-us"
   }, {
+    name: "Subscription Plans",
+    href: "/subscription"
+  }, {
     name: "Why Us?",
     href: "#why-boss-wallah"
   }, {
@@ -24,6 +27,9 @@ const Footer = () => {
   }, {
     name: "Blog",
     href: "#blog"
+  }, {
+    name: "Newsletter",
+    href: "#newsletter"
   }];
   const legal = [{
     name: "Privacy Policy",

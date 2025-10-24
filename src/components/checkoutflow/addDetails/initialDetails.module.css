@@ -1,0 +1,38 @@
+/* Initial Details CSS Module */
+
+.formContainer {
+  height: 100%;
+  padding: 2;
+}
+
+.loadingContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.fieldLabel {
+  color: #1d1d1e;
+  font-weight: 500;
+  font-size: 12.11px;
+  line-height: 18.17px;
+  letter-spacing: 0%;
+  margin-bottom: 5px;
+}
+
+.requiredAsterisk {
+  color: red;
+  left: 0;
+  top: 0;
+}
+
+.requiredAsteriskSimple {
+  color: red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+}

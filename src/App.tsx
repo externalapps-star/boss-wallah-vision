@@ -12,6 +12,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import AccountPreferences from "./pages/account-preferences/AccountPreferences";
+import Login from "./pages/login/Login";
+import Subscription from "./pages/Subscription";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +37,8 @@ const App = () => (
               <Route path="/terms-of-use" element={<TermsOfUse />} />
               <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
               <Route path="/account-preferences" element={<AccountPreferences />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/subscription" element={<Subscription />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

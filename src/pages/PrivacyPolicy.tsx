@@ -89,14 +89,14 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      {/* Back Button */}
+      {/* Home Button */}
       <Button
         variant="ghost"
         onClick={() => navigate('/')}
         className="mb-6 flex items-center gap-2"
       >
         <ArrowLeft className="h-4 w-4" />
-        Back
+        Home
       </Button>
 
       {/* Header */}
