@@ -95,12 +95,12 @@ const HeroSection = () => {
                     {rotatingTexts.map((text, index) => (
                       <div
                         key={index}
-                        className={`absolute inset-0 flex items-center justify-start pl-0 transition-all duration-1000 ease-out ${
+                        className={`absolute inset-0 flex items-center justify-start pl-0 transition-all duration-700 ease-in-out ${
                           index === currentTextIndex 
-                            ? 'opacity-100 translate-x-0' 
+                            ? 'opacity-100 translate-y-0' 
                             : index < currentTextIndex
-                            ? 'opacity-0 -translate-x-8'
-                            : 'opacity-0 translate-x-8'
+                            ? 'opacity-0 -translate-y-full'
+                            : 'opacity-0 translate-y-full'
                         }`}
                       >
                         <p className="text-[11px] leading-snug sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap px-1 sm:px-0">
