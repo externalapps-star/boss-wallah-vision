@@ -516,7 +516,7 @@ export default function LoginEmailAndMobile({
                         inputProps={{
                           name: 'Mobile Number',
                           required: true,
-                          autoFocus: true,
+                          autoFocus: false,
                         }}
                         inputStyle={{
                           width: '100%',
