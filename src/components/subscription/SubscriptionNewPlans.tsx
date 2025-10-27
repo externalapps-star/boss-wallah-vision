@@ -41,6 +41,7 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
   const selectedPackageId = useSelector((state: RootState) => state.package.selectedPackageId)
 
   const primeAccessDetail = packages.data
+  console.log(primeAccessDetail, 'primeAccessDetail')
 
   const handlePlanClick = (packagedetails: PackageDetails) => {
     dispatch(setSelectedPackageId(packagedetails.package_id))
@@ -247,15 +248,15 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
                     <Box className={`flex p-3 items-center ${styles.subPlanOneHeader}`}>
                       <Box className={styles.subPlanOneHeaderTxt}>
                         <Typography className="flex items-center">
-                          <span className={styles.subPlanOneDiscount}>
+                          {/* <span className={styles.subPlanOneDiscount}>
                             {packagedetails.stripe_text}
-                          </span>
+                          </span> */}
                           <span className={`ml-1 ${styles.subPlanOnePrice}`}>
                             {packagedetails.price_text}{' '}
                           </span>
                         </Typography>
                         <Typography className={`flex items-center ${styles.subPlanOneDuration}`}>
-                          {packagedetails.sub_title}
+                          {packagedetails.sub_title} {packagedetails.subscription_type === 'yearly' ? '(2 Months Free)' : ''}
                         </Typography>
                       </Box>
                       <Box

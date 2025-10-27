@@ -122,11 +122,13 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
 
       if (res?.data?.show_payment_screen) {
         dispatch(setPaymentScreenDetails(res?.data?.payment_screen_details))
-        handlePage('Payment', 2)
+        // handlePage('Payment', 2)
+        handlePage('Payment', 1)
       } else {
         if (res?.data?.show_start_learning) {
           dispatch(setStartLearningDetails(res?.data?.start_learning_details))
-          handlePage('Start Learning Now', 3)
+          // handlePage('Start Learning Now', 3)
+          handlePage('Start Learning Now', 2)
         }
       }
     } catch (error: any) {
@@ -409,7 +411,8 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
               size="small"
               onClick={handleSubmit((data) => {
                 dispatch(setUserName(data.name))
-                handlePage('Mobile', 1)
+                // handlePage('Mobile', 1)
+                handlePage('Mobile', 0)
                 dispatch(setLoginType(1))
               })}
               sx={{
@@ -436,7 +439,8 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
               size="small"
               onClick={handleSubmit((data) => {
                 dispatch(setUserName(data.name))
-                handlePage('Email', 1)
+                // handlePage('Email', 1)
+                handlePage('Email', 0)
                 dispatch(setLoginType(2))
               })}
               sx={{

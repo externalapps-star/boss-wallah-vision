@@ -38,11 +38,13 @@ const CheckOutModal: React.FC<CheckOutModalProps> = ({
 }) => {
   const dispatch = useAppDispatch()
   const [activeStep, setActiveStep] = useState(0)
-  const [currentPage, setCurrentPage] = useState('Purchase')
+  // const [currentPage, setCurrentPage] = useState('Purchase')
+  const [currentPage, setCurrentPage] = useState('Initial Details')
   const [discountPercentage, setDiscountPercentage] = useState('')
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const steps = ['Confirm purchase', 'Add details', 'Complete payment']
+  // const steps = ['Confirm purchase', 'Add details', 'Complete payment']
+  const steps = ['Add details', 'Complete payment']
   const { loading } = useSelector((state: RootState) => state.payment)
 
   const toggleDrawer = (open: boolean): (() => void) => {

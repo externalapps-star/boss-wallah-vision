@@ -73,7 +73,8 @@ function PaymentFailed({
         onClick={(e) => {
           // handleCheckoutModal(false)
           // onRetryPayment()
-          handlePage('Payment', 2)
+          // handlePage('Payment', 2)
+          handlePage('Payment', 1)
         }}
         sx={{
           width: '80%',

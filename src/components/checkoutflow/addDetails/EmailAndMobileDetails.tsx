@@ -211,11 +211,13 @@ export default function EmailAndMobileDetails({
 
       if (res?.data?.show_payment_screen) {
         dispatch(setPaymentScreenDetails(res?.data?.payment_screen_details))
-        handlePage('Payment', 2)
+        // handlePage('Payment', 2)
+        handlePage('Payment', 1)
       } else {
         if (res?.data?.show_start_learning) {
           dispatch(setStartLearningDetails(res?.data?.start_learning_details))
-          handlePage('Start Learning Now', 3)
+          // handlePage('Start Learning Now', 3)
+          handlePage('Start Learning Now', 2)
         }
       }
     } catch (error: any) {
@@ -330,7 +332,8 @@ export default function EmailAndMobileDetails({
           className="back-icon"
           onClick={() => {
             if (showOTPFields === false) {
-              handlePage('Initial Details', 1)
+              // handlePage('Initial Details', 1)
+              handlePage('Initial Details', 0)
             } else {
               setIsLoading(false)
               setShowOTPFields(false)

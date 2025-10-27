@@ -25,7 +25,8 @@ function PaymentForm({ handlePage }: any) {
   const loading = useSelector((state: RootState) => state.payment.loading)
 
   const paymentFailed = (response: any, rzp1: any) => {
-    handlePage('Payment Failed', 3)
+    // handlePage('Payment Failed', 3)
+    handlePage('Payment Failed', 2)
   }
 
   const [domLoaded, setDomLoaded] = useState(false)
@@ -91,9 +92,11 @@ function PaymentForm({ handlePage }: any) {
 
       if (res?.data?.show_start_learning) {
         dispatch(setStartLearningDetails(res?.data?.start_learning_details))
-        handlePage('Start Learning Now', 3)
+        // handlePage('Start Learning Now', 3)
+        handlePage('Start Learning Now', 2)
       } else if (res?.data?.show_payment_failed) {
-        handlePage('Payment Failed', 2)
+        // handlePage('Payment Failed', 2)
+        handlePage('Payment Failed', 1)
       }
 
     } catch (error) {
@@ -101,7 +104,8 @@ function PaymentForm({ handlePage }: any) {
       if (rzp1) {
         rzp1.close()
       }
-      handlePage('Payment Failed', 2)
+      // handlePage('Payment Failed', 2)
+      handlePage('Payment Failed', 1)
     } finally {
       dispatch(setLoading(false))
     }
@@ -126,7 +130,8 @@ function PaymentForm({ handlePage }: any) {
         if (response?.razorpay_payment_id) {
               handlePaymentResponse(response)
         } else {
-          handlePage('Payment Failed', 2)
+          // handlePage('Payment Failed', 2)
+          handlePage('Payment Failed', 1)
         }
       },
     }
@@ -141,7 +146,8 @@ function PaymentForm({ handlePage }: any) {
           }
           parent.postMessage(responseData, '*')
           rzp1.close()
-          handlePage('Payment Failed', 3)
+          // handlePage('Payment Failed', 3)
+          handlePage('Payment Failed', 2)
         },
         escape: false,
         backdropclose: false,
@@ -152,7 +158,8 @@ function PaymentForm({ handlePage }: any) {
     if (isIOS) {
       options.modal.animation = false
       options.modal.ondismiss = function () {
-        handlePage('Payment Failed', 3)
+        // handlePage('Payment Failed', 3)
+        handlePage('Payment Failed', 2)
       }
     }
 
