@@ -41,7 +41,6 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
   const selectedPackageId = useSelector((state: RootState) => state.package.selectedPackageId)
 
   const primeAccessDetail = packages.data
-  console.log(primeAccessDetail, 'primeAccessDetail')
 
   const handlePlanClick = (packagedetails: PackageDetails) => {
     dispatch(setSelectedPackageId(packagedetails.package_id))
@@ -415,12 +414,12 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
           </Typography>
 
           {/* Coupon Section */}
-            {primeaccessinfo.active_package_details.length > 0 &&
+            {/* {primeaccessinfo.active_package_details.length > 0 &&
             primeaccessinfo.active_package_details[0].subscription_type === 'yearly' ? (
               ''
             ) : (
               <ApplyCoupon data={primeaccessinfo.coupon_details} />
-            )}
+            )} */}
 
           {/* FAQ Section */}
           <FrequentQuestions faqs={faqs} />
