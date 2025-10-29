@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import SubscriptionNewPlans from '@/components/subscription/SubscriptionNewPlans'
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import app from '@/services/firebase/firebase.init'
 
 const Subscription: React.FC = () => {
   const navigate = useNavigate()
@@ -13,25 +15,41 @@ const Subscription: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const fetchSubscriptionData = async () => {
+    const auth = getAuth(app)
+    
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       try {
         setLoading(true)
         
+        // Get Firebase auth token if user is signed in
+        let idToken = null
+        if (user) {
+          idToken = await user.getIdToken(true)
+        }
         // Get mem_id from cookies (same logic as website_new)
-        const mem_id = Cookies.get('mem_id') || '0'
+        // const mem_id = Cookies.get('mem_id') || '0'
+        
+        // Prepare headers
+        const headers: Record<string, string> = {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        }
+        
+        // Add Authorization header only if token is available
+        if (idToken) {
+          headers['Authorization'] = `Bearer ${idToken}`
+        }
         
         // Fetch packages
         const packagesResponse = await fetch(
-          `${import.meta.env.VITE_API_URL}/subscription/get_active_packages`,
+          // `${import.meta.env.VITE_API_URL}/subscription/get_active_packages`,
+          `${import.meta.env.VITE_API_URL}/subscription/get_active_packages_v1`,
           {
             method: 'POST',
             body: new URLSearchParams({
               lang_id: '24', // English
-              mem_id: String(mem_id),
+              // mem_id: String(mem_id), // Commented out as per v1 endpoint pattern
             }),
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-            },
+            headers,
           }
         )
 
@@ -69,9 +87,10 @@ const Subscription: React.FC = () => {
       } finally {
         setLoading(false)
       }
-    }
+    })
 
-    fetchSubscriptionData()
+    // Cleanup subscription on unmount
+    return () => unsubscribe()
   }, [])
 
   if (loading) {
