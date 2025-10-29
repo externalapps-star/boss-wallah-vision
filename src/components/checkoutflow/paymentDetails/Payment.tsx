@@ -54,7 +54,7 @@ function PaymentForm({ handlePage }: any) {
     try {
       const idToken = await auth.currentUser?.getIdToken(true)
       const response = await fetch(
-        `${import.meta.env.VITE_PAYMENT_API_URL}/api/v1/purchase/fetch_prime_order_status_v2`,
+        `https://bw-purchase-service-prod-262620024912.asia-south1.run.app/api/v1/purchase/fetch_prime_order_status_v2`,
         {
           method: 'POST',
           body: new URLSearchParams({

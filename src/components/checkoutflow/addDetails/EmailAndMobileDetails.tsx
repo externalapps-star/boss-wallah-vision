@@ -264,7 +264,7 @@ export default function EmailAndMobileDetails({
         formData.append('fcm_code', loginResponse.firebase_token.toString())
 
         const response = await fetch(
-          `${import.meta.env.VITE_AUTH_API_URL}/dashboard/sync_user_auth_data`,
+          `https://ffa.ffreedom.com/dashboard/sync_user_auth_data`,
           {
             method: 'POST',
             body: formData,

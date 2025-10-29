@@ -33,8 +33,8 @@ export const fetchCreateOrderData = async (
   try {
     const response = await fetch(
       package_id == '67'
-        ? `${import.meta.env.VITE_PAYMENT_API_URL}/api/v1/purchase/checkout_subscription_payment`
-        : `${import.meta.env.VITE_PAYMENT_API_URL}/api/v1/purchase/checkout_prime_payment`,
+        ? `https://bw-purchase-service-prod-262620024912.asia-south1.run.app/api/v1/purchase/checkout_subscription_payment`
+        : `https://bw-purchase-service-prod-262620024912.asia-south1.run.app/api/v1/purchase/checkout_prime_payment`,
       {
         method: 'POST',
         body: new URLSearchParams({
@@ -64,7 +64,7 @@ export const fetchCreateOrderData = async (
 
 export const fetchBannerText = async (lang_id: number) => {
   const response = await fetch(
-    `${import.meta.env.VITE_API_URL}/home/get_banner_text`,
+    `https://website-api-prod-262620024912.asia-south1.run.app/home/get_banner_text`,
     {
       method: 'POST',
       body: new URLSearchParams({

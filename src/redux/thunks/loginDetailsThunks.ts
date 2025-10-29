@@ -35,7 +35,7 @@ export const fetchSendOtp = (payload: any) => async (dispatch: AppDispatch) => {
     )
     dispatch(setLoginType(payload.loginType))
     const response = await fetch(
-      `${import.meta.env.VITE_LOGIN_API_URL}/auth/get_otp`,
+      `https://auth-service-fastapi-prod-262620024912.asia-south1.run.app/auth/get_otp`,
       {
         method: 'POST',
         body: new URLSearchParams({
@@ -64,7 +64,7 @@ export const fetchSendOtp = (payload: any) => async (dispatch: AppDispatch) => {
 export const fetchLoginDetails =
   (payload: any) => async (dispatch: AppDispatch) => {
     const response = await fetch(
-      `${import.meta.env.VITE_LOGIN_API_URL}/auth/login`,
+      `https://auth-service-fastapi-prod-262620024912.asia-south1.run.app/auth/login`,
       {
         method: 'POST',
         body: new URLSearchParams({
@@ -132,8 +132,8 @@ export const fetchCreateOrderData =
   async (dispatch: AppDispatch) => {
     const response = await fetch(
       package_id == '67'
-        ? `${import.meta.env.VITE_PAYMENT_API_URL}/api/v1/purchase/checkout_subscription_payment`
-        : `${import.meta.env.VITE_PAYMENT_API_URL}/api/v1/purchase/checkout_prime_payment`,
+        ? `https://bw-purchase-service-prod-262620024912.asia-south1.run.app/api/v1/purchase/checkout_subscription_payment`
+        : `https://bw-purchase-service-prod-262620024912.asia-south1.run.app/api/v1/purchase/checkout_prime_payment`,
       {
         method: 'POST',
         body: new URLSearchParams({
@@ -167,7 +167,7 @@ export const fetchUserData =
   (id_token: string, memId: number) => async (dispatch: AppDispatch) => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/user/customer_info_v2`,
+        `https://website-api-prod-262620024912.asia-south1.run.app/user/customer_info_v2`,
         {
           method: 'POST',
           headers: {

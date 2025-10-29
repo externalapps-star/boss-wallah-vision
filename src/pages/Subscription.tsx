@@ -41,8 +41,8 @@ const Subscription: React.FC = () => {
         
         // Fetch packages
         const packagesResponse = await fetch(
-          // `${import.meta.env.VITE_API_URL}/subscription/get_active_packages`,
-          `${import.meta.env.VITE_API_URL}/subscription/get_active_packages_v1`,
+          // `https://website-api-prod-262620024912.asia-south1.run.app/subscription/get_active_packages`,
+          `https://website-api-prod-262620024912.asia-south1.run.app/subscription/get_active_packages_v1`,
           {
             method: 'POST',
             body: new URLSearchParams({
@@ -61,7 +61,7 @@ const Subscription: React.FC = () => {
 
         // Fetch FAQs
         const faqResponse = await fetch(
-          `${import.meta.env.VITE_API_URL}/subscription/get_faq`,
+          `https://website-api-prod-262620024912.asia-south1.run.app/subscription/get_faq`,
           {
             method: 'POST',
             body: new URLSearchParams({

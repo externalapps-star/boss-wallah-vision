@@ -14,7 +14,7 @@ export const fetchExploreCourseDetails =
     try {
       dispatch(setLoading(true))
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/courses/get_course_info`,
+        `https://website-api-prod-262620024912.asia-south1.run.app/courses/get_course_info`,
         {
           method: 'POST',
           body: new URLSearchParams({
@@ -46,7 +46,7 @@ export const fetchExploreCourseReviewTipsDetails =
     try {
       dispatch(setLoading(true))
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/courses/course_reviews_expert_tips`,
+        `https://website-api-prod-262620024912.asia-south1.run.app/courses/course_reviews_expert_tips`,
         {
           method: 'POST',
           body: new URLSearchParams({
@@ -73,7 +73,7 @@ export const fetchExploreCourseMyMentorDetails =
     try {
       dispatch(setLoading(true))
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/courses/get_meet_your_instructor`,
+        `https://website-api-prod-262620024912.asia-south1.run.app/courses/get_meet_your_instructor`,
         {
           method: 'POST',
           body: new URLSearchParams({
@@ -100,7 +100,7 @@ export const fetchExploreCourseRelatedCoursesDetails =
     try {
       dispatch(setLoading(true))
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/courses/related_courses`,
+        `https://website-api-prod-262620024912.asia-south1.run.app/courses/related_courses`,
         {
           method: 'POST',
           body: new URLSearchParams({
@@ -126,7 +126,7 @@ export const fetchActiveStatus =
     try {
       dispatch(setLoading(true))
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/subscription/get_active_packages_v1`,
+        `https://website-api-prod-262620024912.asia-south1.run.app/subscription/get_active_packages_v1`,
         {
           method: 'POST',
           body: new URLSearchParams({

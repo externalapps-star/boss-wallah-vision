@@ -125,7 +125,7 @@ const ApplyCoupon = ({ handlePage, applyCouponCallBack }: ApplyCouponProps) => {
     const getApplyCouponDetails = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/coupon/apply_coupon`,
+          `https://website-api-prod-262620024912.asia-south1.run.app/coupon/apply_coupon`,
           {
             method: 'POST',
             headers: {

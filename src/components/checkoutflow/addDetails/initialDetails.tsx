@@ -149,7 +149,7 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
       try {
         const ip = await getUserIP()
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/subscription/get_state_list`,
+          `https://website-api-prod-262620024912.asia-south1.run.app/subscription/get_state_list`,
           {
             method: 'POST',
             headers: {

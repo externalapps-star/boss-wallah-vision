@@ -276,7 +276,7 @@ export default function LoginEmailAndMobile({
         formData.append('fcm_code', loginResponse.firebase_token.toString())
 
         const response = await fetch(
-          `${import.meta.env.VITE_AUTH_API_URL}/custom_api/sync_user_auth_data`,
+          `https://ffa.ffreedom.com/custom_api/sync_user_auth_data`,
           {
             method: 'POST',
             body: formData,
