@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
 
             {/* Our Network */}
-            <div className="text-left -ml-2 sm:ml-0">
+            <div className="text-left px-4 sm:px-0">
               <h4 className="font-bold text-base sm:text-lg mb-5 text-accent">Our Network</h4>
               <ul className="space-y-3">
                 <li>
