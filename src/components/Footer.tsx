@@ -88,6 +88,18 @@ const Footer = () => {
                   <span>support@bosswallah.com</span>
                 </a>
               </div>
+              
+              <div className="mt-6">
+                <h5 className="font-semibold text-sm mb-2 text-accent">Our Network</h5>
+                <ul className="space-y-2 text-xs sm:text-sm text-primary-foreground/70">
+                  <li>
+                    <a href="https://bosswallah.com" className="hover:text-accent transition-colors">Bosswallah.com</a>
+                  </li>
+                  <li>
+                    <a href="https://funnl.ai" className="hover:text-accent transition-colors">FunnL.ai</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -102,9 +114,6 @@ const Footer = () => {
                 © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
               </p>
               <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-1">Business Launch Platform</p>
-              <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-2">
-                Our Network: <a href="https://bosswallah.com" className="hover:text-accent transition-colors">Bosswallah.com</a>, <a href="https://funnl.ai" className="hover:text-accent transition-colors">FunnL.ai</a>
-              </p>
             </div>
           </div>
         </div>
