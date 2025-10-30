@@ -118,8 +118,8 @@ const BlogSection = () => {
     {
       title: "100 Small Business Ideas with Zero Investment for 2025",
       excerpt: "Discover 100 small business ideas with zero investment for 2025! This guide provides actionable, easy-to-understand opportunities.",
-   date: "Oct 17",
       author: "Boss Wallah Team",
+      date: "Oct 17", 
       readTime: "7 min",
       image: "https://bosswallah.ai/blog/wp-content/uploads/2025/06/1280x720-small-business.webp",
       popular: true,
@@ -130,13 +130,13 @@ const BlogSection = () => {
       excerpt: "How to start a franchise business in India — step-by-step 2025 guide with costs, legal steps, funding tips, & FAQs to launch and grow your franchise.",
       author: "Boss Wallah Team",
       date: "Oct 16",
-      readTime: "7 min",
+      readTime: "7 min", 
       image: "https://bosswallah.ai/blog/wp-content/uploads/2025/09/How-to-start-a-franchise-business-in-India-1-1024x576.jpg",
       popular: true,
       url: "https://bosswallah.ai/blog/local-business/how-to-start-a-franchise-business-in-india-step-by-step-guide-2025/"
     },
     {
-      title: "6 Best Government Subsidy Loans for Business",
+      title: "6 Best Government Subsidy Loans for Business", 
       excerpt: "Looking for a government subsidy loan for your business in India? Discover the 6 best schemes like PMMY, CGTMSE, PMEGP, and more, offering financial support for startups and SMEs. Learn about eligibility, benefits, and how to apply.",
       author: "Boss Wallah Team",
       date: "Oct 15",
@@ -157,7 +157,7 @@ const BlogSection = () => {
     },
     {
       title: "AI in Marketing 2025: 7 Practical Tools Every Founder Should Use in India",
-      excerpt: "Explore profitable agriculture startup opportunities in 2025. From tech-driven solutions to modern farming business models, discover ideas with high ROI potential and scalability in India's evolving agricultural sector.",
+      excerpt: "Discover 7 practical AI marketing tools every founder in India should use in 2025. From automation to content creation, these tools will help you scale your marketing efforts efficiently.",
       author: "Boss Wallah Team",
       date: "Oct 14",
       readTime: "8 min",

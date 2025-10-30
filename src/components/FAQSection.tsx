@@ -61,8 +61,8 @@ const FAQSection = () => {
     },
     {
       category: 'features',
-      question: "What kind of AI agents are available and how do they help?",
-      answer: "We have specialist AI agents for different business functions: Marketing AI, Finance AI, Legal AI, and Operations AI. Each agent is trained on specific domain expertise to provide targeted advice for branding, budgeting, compliance, and scaling.",
+      question: "Can Boss Wallah help me find government schemes and subsidies?",
+      answer: "Yes! Boss Wallah provides information on various government schemes, subsidies, and loans available for entrepreneurs in India. From PMMY and CGTMSE to PMEGP and industry-specific schemes, we help you discover funding opportunities and guide you through eligibility requirements and application processes.",
       icon: Sparkles
     },
     {

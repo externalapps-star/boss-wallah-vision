@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  
   const appImages = [
     '/lovable-uploads/Screenshot_20251007-174801.png',
     '/lovable-uploads/9896e543-40e7-4d89-b24b-8e6dad8980d0.png',
@@ -11,6 +13,15 @@ const HeroSection = () => {
     '/lovable-uploads/app-bb-ai-summary-DKnAkXL3.png',
     '/lovable-uploads/Screenshot_20251007-174901.png',
     '/lovable-uploads/app-research-learning-fzKOg9GF.png'
+  ];
+
+  const rotatingTexts = [
+    "Join 50,000+ entrepreneurs launching their dreams",
+    "Access ₹10L+ in government subsidies & schemes",
+    "Get funded in 30 days with AI-powered guidance",
+    "From idea to launch in 90 days",
+    "Free business planning tools & expert mentorship",
+    "Discover loans with 0% interest from govt schemes"
   ];
 
   // Preload images in background (non-blocking)
@@ -25,6 +36,13 @@ const HeroSection = () => {
     const interval = setInterval(() => {
       setCurrentImage(prev => (prev + 1) % appImages.length);
     }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex(prev => (prev + 1) % rotatingTexts.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -62,6 +80,35 @@ const HeroSection = () => {
                 Download Now
               </Button>
             </div>
+
+            {/* Airport-Style Dynamic Line - HIDDEN (uncomment to bring back)
+            <div className="px-4 sm:px-0 relative">
+              <div className="relative py-4">
+                <div className="relative h-12 sm:h-10 overflow-hidden border-t border-b border-primary/30">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" />
+                  
+                  <div className="relative h-full">
+                    {rotatingTexts.map((text, index) => (
+                      <div
+                        key={index}
+                        className={`absolute inset-0 flex items-center justify-start pl-0 transition-all duration-700 ease-in-out ${
+                          index === currentTextIndex 
+                            ? 'opacity-100 translate-y-0' 
+                            : index < currentTextIndex
+                            ? 'opacity-0 -translate-y-full'
+                            : 'opacity-0 translate-y-full'
+                        }`}
+                      >
+                        <p className="text-[11px] leading-snug sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent whitespace-nowrap px-1 sm:px-0">
+                          {text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            */}
           </div>
 
           {/* Right Content - App Screenshots */}

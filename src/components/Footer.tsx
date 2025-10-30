@@ -48,7 +48,7 @@ const Footer = () => {
         <div className="pt-6 pb-4 border-b border-primary-foreground/10">
           
           {/* Top Section */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-6">
             
             {/* Brand Section */}
             <div className="col-span-2 md:col-span-1 px-4 sm:px-0">
@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
               </div>
               
-              <p className="text-primary-foreground/80 leading-relaxed text-xs sm:text-sm">
+              <p className="text-primary-foreground/80 leading-relaxed text-xs sm:text-sm text-justify">
                 The only platform you need to launch your business. Transform your entrepreneurial vision into reality.
               </p>
             </div>
@@ -94,6 +94,19 @@ const Footer = () => {
                   <span>support@bosswallah.com</span>
                 </a>
               </div>
+            </div>
+
+            {/* Our Network */}
+            <div className="text-left px-4 sm:px-0">
+              <h4 className="font-bold text-base sm:text-lg mb-5 text-accent">Our Network</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="https://bosswallah.com" className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">Bosswallah.com</a>
+                </li>
+                <li>
+                  <a href="https://funnl.ai" className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">FunnL.ai</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
