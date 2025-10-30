@@ -102,6 +102,9 @@ const Footer = () => {
                 © {new Date().getFullYear()} Boss Wallah Technologies. All rights reserved.
               </p>
               <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-1">Business Launch Platform</p>
+              <p className="text-[10px] sm:text-xs text-primary-foreground/60 mt-2">
+                Our Network: <a href="https://bosswallah.com" className="hover:text-accent transition-colors">Bosswallah.com</a>, <a href="https://funnl.ai" className="hover:text-accent transition-colors">FunnL.ai</a>
+              </p>
             </div>
           </div>
         </div>
