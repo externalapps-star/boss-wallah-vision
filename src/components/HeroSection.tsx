@@ -81,16 +81,12 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Airport-Style Dynamic Line */}
+            {/* Airport-Style Dynamic Line - HIDDEN (uncomment to bring back)
             <div className="px-4 sm:px-0 relative">
-              {/* Runway Line with Text */}
               <div className="relative py-4">
-                {/* Center Line with Text */}
                 <div className="relative h-12 sm:h-10 overflow-hidden border-t border-b border-primary/30">
-                  {/* Moving Background Indicator */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" />
                   
-                  {/* Rotating Text */}
                   <div className="relative h-full">
                     {rotatingTexts.map((text, index) => (
                       <div
@@ -112,6 +108,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
+            */}
           </div>
 
           {/* Right Content - App Screenshots */}
