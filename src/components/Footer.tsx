@@ -90,7 +90,7 @@ const Footer = () => {
               </div>
               
               <div className="mt-6">
-                <h5 className="font-semibold text-sm mb-2 text-accent">Our Network</h5>
+                <h5 className="font-bold text-base sm:text-lg mb-5 text-accent">Our Network</h5>
                 <ul className="space-y-2 text-xs sm:text-sm text-primary-foreground/70">
                   <li>
                     <a href="https://bosswallah.com" className="hover:text-accent transition-colors">Bosswallah.com</a>
