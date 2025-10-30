@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
               </div>
               
-              <p className="text-primary-foreground/80 leading-relaxed text-xs sm:text-sm">
+              <p className="text-primary-foreground/80 leading-relaxed text-xs sm:text-sm text-justify">
                 The only platform you need to launch your business. Transform your entrepreneurial vision into reality.
               </p>
             </div>
