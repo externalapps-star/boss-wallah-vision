@@ -1,4 +1,5 @@
 import { Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   const quickLinks = [{
     name: "Home",
@@ -70,9 +71,15 @@ const Footer = () => {
               <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Quick Links</h4>
               <ul className="space-y-3 -mb-2">
                 {quickLinks.map((link, index) => <li key={index}>
+                  {link.href.startsWith('/') ? (
+                    <Link to={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">
+                      {link.name}
+                    </Link>
+                  ) : (
                     <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">
                       {link.name}
                     </a>
+                  )}
                   </li>)}
               </ul>
             </div>
@@ -82,9 +89,9 @@ const Footer = () => {
               <h4 className="font-semibold text-base sm:text-lg mb-5 text-accent">Legal & Contact</h4>
               <ul className="space-y-3 mb-6">
                 {legal.map((link, index) => <li key={index}>
-                    <a href={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">
+                    <Link to={link.href} className="text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm inline-block focus:outline-none focus:text-accent focus:underline">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>)}
               </ul>
               
