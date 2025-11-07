@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from '../../redux/hooks'
 import { RootState } from '../../redux/store'
-import { setSelectedPackageId, setPackagePrice, setBenefitDetails, setSubscriptionType, setOriginalPrice } from '../../redux/slices/packageSlice'
+import { setSelectedPackageId, setPackagePrice, setBenefitDetails, setSubscriptionType, setOriginalPrice, resetCouponState } from '../../redux/slices/packageSlice'
 import ApplyCoupon from './ApplyCoupon'
 import FrequentQuestions from './FrequentQuestions'
 import CheckOutModal from '../checkoutflow/checkoutModal'
@@ -37,6 +37,7 @@ interface SubscriptionPackages {
 const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }) => {
   const dispatch = useAppDispatch()
   const [buyNow, setBuyNow] = useState(false)
+  const checkoutWasOpenRef = useRef(false)
   
   const selectedPackageId = useSelector((state: RootState) => state.package.selectedPackageId)
   const couponState = useSelector((state: RootState) => state.package.coupon)
@@ -60,6 +61,8 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
 
   useEffect(() => {
     if (buyNow) {
+      // Track that checkout was opened
+      checkoutWasOpenRef.current = true
       // Store current scroll position
       const scrollY = window.scrollY
       document.body.style.overflow = 'hidden'
@@ -97,6 +100,20 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
       dispatch(setSelectedPackageId(defaultPackageId.toString()))
     }
   }, [primeAccessDetail])
+
+  // Clear coupon state only when component unmounts AND checkout was never opened
+  // Preserve state when coming back from checkout flow
+  useEffect(() => {
+    return () => {
+      // Only clear coupon state if checkout was never opened (user navigated away without checkout)
+      // If checkout was opened, preserve state for when user comes back
+      if (!checkoutWasOpenRef.current) {
+        dispatch(resetCouponState())
+      }
+      // Reset the ref for next mount
+      checkoutWasOpenRef.current = false
+    }
+  }, [dispatch])
 
   return (
     <>
@@ -384,7 +401,7 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
                                   />
                                 </Box>
                                 <Typography className={styles.subPlanBenefits}>
-                                  {benefits.title} byeeee
+                                  {benefits.title}
                                 </Typography>
                               </Box>
                             ),

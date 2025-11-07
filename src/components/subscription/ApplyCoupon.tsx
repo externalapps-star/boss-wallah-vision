@@ -6,19 +6,35 @@ import {
   Typography,
   CircularProgress,
 } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
 import { setCouponState, setSelectedPackageId, resetCouponState } from '../../redux/slices/packageSlice'
 import styles from './ApplyCoupon.module.css'
 
 const ApplyCoupon = (props: { data: any }) => {
-  const [couponCode, setCouponCode] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [errorMessage, setErrorMessage] = useState('')
   const dispatch = useDispatch()
   const selectedPackageId = useSelector((state: RootState) => state.package.selectedPackageId)
   const couponState = useSelector((state: RootState) => state.package.coupon)
+  
+  // Initialize local state from Redux if coupon is already applied
+  const [couponCode, setCouponCode] = useState(
+    couponState.couponApplied && couponState.couponValid && couponState.couponCode 
+      ? couponState.couponCode 
+      : ''
+  )
+  const [loading, setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
+  
+  // Sync local couponCode state with Redux state when coupon is applied
+  useEffect(() => {
+    if (couponState.couponApplied && couponState.couponValid && couponState.couponCode) {
+      setCouponCode(couponState.couponCode)
+    } else if (!couponState.couponApplied) {
+      // Clear local state if coupon is reset
+      setCouponCode('')
+    }
+  }, [couponState.couponApplied, couponState.couponValid, couponState.couponCode])
   
   const handleResetMessages = () => {
     setErrorMessage('')
