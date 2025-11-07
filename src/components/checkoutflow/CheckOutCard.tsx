@@ -8,6 +8,8 @@ import {
   useTheme,
   useMediaQuery,
 } from '@mui/material'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux/store'
 
 import ApplyCoupon from './couponflow/PurchaseDetails'
 import Cookies from 'js-cookie'
@@ -16,15 +18,21 @@ interface CheckOutCardProps {
   children: React.ReactNode
   handlePage: (page: string, activeStepper: number) => boolean
   currentPage: string
+  hasActivePackage?: boolean
 }
 const CheckOutCard: React.FC<CheckOutCardProps> = ({
   children,
   handlePage,
   currentPage,
+  hasActivePackage = false,
 }) => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const memId = Cookies.get('mem_id') || ''
+  const couponState = useSelector((state: RootState) => state.package.coupon)
+  // Ignore coupon state if user has active package (upgrade scenario)
+  const shouldHideRazorpay = !hasActivePackage && couponState.couponApplied && couponState.couponValid
+  
   return (
     <>
       <Box
@@ -88,34 +96,36 @@ const CheckOutCard: React.FC<CheckOutCardProps> = ({
             </Button>
           )}
         </Card>
-        <Typography
-          variant="body1"
-          sx={{
-            textAlign: 'center',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 1,
-            color: '#1d1d1e',
-            fontSize: {
-              xs: '12px',
-              md: '14px',
-            },
-            fontWeight: 300,
-            margin: {
-              xs: '10px',
-              md: '0',
-            },
-          }}
-        >
-          <img
-            src="/icons/razorpay-shield.svg"
-            alt="chevron Icon"
-            width={isMobile ? 18 : 24}
-            height={isMobile ? 18 : 24}
-          />
-          All payments secured by RazorPay
-        </Typography>
+        {!shouldHideRazorpay && (
+          <Typography
+            variant="body1"
+            sx={{
+              textAlign: 'center',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 1,
+              color: '#1d1d1e',
+              fontSize: {
+                xs: '12px',
+                md: '14px',
+              },
+              fontWeight: 300,
+              margin: {
+                xs: '10px',
+                md: '0',
+              },
+            }}
+          >
+            <img
+              src="/icons/razorpay-shield.svg"
+              alt="chevron Icon"
+              width={isMobile ? 18 : 24}
+              height={isMobile ? 18 : 24}
+            />
+            All payments secured by RazorPay
+          </Typography>
+        )}
       </Box>
       {currentPage === 'Purchase' && (
         <Box

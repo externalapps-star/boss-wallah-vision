@@ -15,6 +15,7 @@ import {
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded'
 import CallRoundedIcon from '@mui/icons-material/CallRounded'
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded'
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
 import {
@@ -52,9 +53,10 @@ interface StateData {
 }
 interface InitialDetailsProps {
   handlePage: (page: string, activeStepper: number) => boolean
+  hasActivePackage?: boolean
 }
 
-const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
+const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage, hasActivePackage = false }) => {
   const [stateList, setStateList] = useState<StateData[]>([])
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -105,6 +107,9 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
   const firebaseToken = useSelector(
     (state: RootState) => state.login.firebaseToken,
   )
+  const couponState = useSelector(
+    (state: RootState) => state.package.coupon,
+  )
 
   const FirebaseToken = async (memID: string, dispatch: AppDispatch) => {
     try {
@@ -136,9 +141,61 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
     }
   }
 
+  const redeemCoupon = async (couponCode: string, memID: string) => {
+    try {
+      setCouponError(null)
+      const response = await fetch(
+        'https://bw-purchase-service-prod-262620024912.asia-south1.run.app/api/v1/purchase/redeem_coupon_code',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams({
+            coupon_code: couponCode,
+            mem_id: memID,
+          }).toString(),
+        }
+      )
+
+      const data = await response.json()
+
+      if (data.status && data.data) {
+        // Success - redirect to subscription page
+        setIsLoading(false)
+        const successData = data.data as any
+        dispatch(setStartLearningDetails({
+          transaction_id: successData.transaction_id || '',
+          package_id: successData.package_id || '',
+          package_name: successData.package_name || '',
+          subscription_expiry: successData.subscription_expiry || '',
+          subscription_status: successData.subscription_status || '',
+        }))
+        // Reload page to show updated subscription status
+        window.location.reload()
+      } else {
+        // Error - show error message
+        setCouponError(data.data?.message || 'Invalid or expired coupon code.')
+        setIsLoading(false)
+      }
+    } catch (error) {
+      console.error('Error redeeming coupon:', error)
+      setCouponError('An error occurred while redeeming the coupon. Please try again.')
+      setIsLoading(false)
+    }
+  }
+
   const fetchData = async () => {
     setIsLoading(true)
     const memID = Cookies.get('mem_id') || '0'
+    
+    // Check if coupon is applied and user doesn't have active package - if so, redeem coupon instead of payment flow
+    // If user has active package (upgrade scenario), use normal payment flow
+    if (!hasActivePackage && couponState.couponApplied && couponState.couponValid && couponState.couponCode && memID !== '0') {
+      await redeemCoupon(couponState.couponCode, memID)
+      return
+    }
+    
     if (memID !== '0') {
       await FirebaseToken(memID, dispatch)
     }
@@ -186,6 +243,7 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
   }
 
   const [isLoading, setIsLoading] = useState(false)
+  const [couponError, setCouponError] = useState<string | null>(null)
 
   return isLoading ? (
     <Box className={styles.loadingContainer}>
@@ -365,6 +423,34 @@ const InitialDetails: React.FC<InitialDetailsProps> = ({ handlePage }) => {
               <p className={styles.errorMessage}>State is required</p>
             )}
           </Box>
+          
+          {/* Coupon Error Message */}
+          {couponError && (
+            <Box
+              sx={{
+                mb: 2,
+                p: 1.5,
+                borderRadius: 2,
+                backgroundColor: '#FFF3E0',
+                border: '1px solid #FF9800',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <ErrorOutlineIcon sx={{ color: '#FF9800', fontSize: 20, flexShrink: 0 }} />
+              <Typography
+                sx={{
+                  color: '#E65100',
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  fontFamily: '"Fira Sans", sans-serif',
+                }}
+              >
+                {couponError}
+              </Typography>
+            </Box>
+          )}
         </Box>
 
         {/* Buttons */}

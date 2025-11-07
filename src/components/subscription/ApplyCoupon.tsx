@@ -1,123 +1,208 @@
 import {
-  Backdrop,
   Box,
   Button,
-  Fade,
-  IconButton,
   InputAdornment,
-  Modal,
   TextField,
   Typography,
+  CircularProgress,
 } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../redux/store'
+import { setCouponState, setSelectedPackageId, resetCouponState } from '../../redux/slices/packageSlice'
 import styles from './ApplyCoupon.module.css'
 
 const ApplyCoupon = (props: { data: any }) => {
-  const [open, setOpen] = React.useState(false)
-  const handleOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
-  return (
-    <>
-      <Box
-        className={`flex px-3 py-1 mt-4 ${styles.ffCouponItems}`}
-        onClick={handleOpen}
-        sx={{
-          width: '100%',
-          maxWidth: '800px',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          borderRadius: '8px',
-          border: '1px solid var(--Brand-2-Variation-300, #828298)',
-        }}
-      >
-        <Box className="flex items-center">
-          <Typography
-            sx={{
-              backgroundColor: '#fff',
-              borderRadius: '100%',
-            }}
-            className={styles.ffCouponIcon}
-          >
-            <img
-              className="ff_coupon_img"
-              src="/icons/coupon.svg"
-              alt="coupon"
-              width={23}
-              height={20}
-            />
-          </Typography>
-          <Typography className={`px-2 ${styles.ffCouponTxt}`}>
-            Apply Coupon Code
-          </Typography>
-        </Box>
-        <Box className="flex items-center ff_coupon_arrow">
-          <img 
-            src="/icons/sidearrow.svg" 
-            alt="Apply coupon form arrow" 
-            width={25}
-            height={25}
-          />
-        </Box>
-      </Box>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: { xs: '100%', md: '636px' },
-            bgcolor: 'background.paper',
-            boxShadow: 24,
-            maxHeight: '80vh',
-            borderRadius: '24px',
-          }}
-        >
-          <Box
-            className={`flex p-2 items-center ${styles.couponCodes}`}
-            sx={{
-              position: 'sticky',
-              top: 0,
-              zIndex: 2,
-              borderBottom: '1px solid #ddd',
-            }}
-          >
-            <Box onClick={handleClose}>
-              <img
-                src="/icons/close-1.svg"
-                alt="close"
-                width={24}
-                height={24}
-              />
-            </Box>
-            <Typography className={`p-2 ${styles.couponSelect}`} component="h2">
-              Select coupon code
-            </Typography>
-          </Box>
+  const [couponCode, setCouponCode] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
+  const dispatch = useDispatch()
+  const selectedPackageId = useSelector((state: RootState) => state.package.selectedPackageId)
+  const couponState = useSelector((state: RootState) => state.package.coupon)
+  
+  const handleResetMessages = () => {
+    setErrorMessage('')
+  }
+  
+  const handleResetCoupon = () => {
+    dispatch(resetCouponState())
+    setCouponCode('')
+    setErrorMessage('')
+  }
+  
+  const handleApplyCoupon = async () => {
+    if (!couponCode.trim()) {
+      setErrorMessage('Please enter a coupon code')
+      return
+    }
+    
+    setLoading(true)
+    setErrorMessage('')
+    
+    try {
+      const response = await fetch(
+        'https://bw-purchase-service-prod-262620024912.asia-south1.run.app/api/v1/purchase/apply_coupon_code',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams({
+            coupon_code: couponCode.trim(),
+          }).toString(),
+        }
+      )
+      
+      const data = await response.json()
 
-          <Box
-            className="p-2"
-            sx={{
-              overFlowY: 'auto',
-            }}
-          >
-            <Box className="flex items-center">
+      if (data.status && data.data) {
+        if (data.data.coupon_valid) {
+          // Valid coupon - update Redux state
+          dispatch(setCouponState({
+            couponCode: data.data.coupon_code,
+            couponApplied: true,
+            couponValid: true,
+            congratsMessage: data.data.congrats_message || '🎉 Congratulations',
+            congratsSubMessage: data.data.congrats_sub_message || 'Your coupon code has been successfully applied.',
+            couponPackageId: data.data.package_id || '',
+          }))
+          
+          // If package_id is provided and different from selected, update selected package
+          if (data.data.package_id && data.data.package_id !== selectedPackageId) {
+            dispatch(setSelectedPackageId(data.data.package_id))
+          }
+          
+          setErrorMessage('')
+        } else {
+          // Invalid coupon
+          dispatch(setCouponState({
+            couponCode: data.data.coupon_code || couponCode,
+            couponApplied: false,
+            couponValid: false,
+            congratsMessage: '',
+            congratsSubMessage: '',
+            couponPackageId: '',
+          }))
+          setErrorMessage(data.data.message || 'Invalid or expired coupon code.')
+        }
+      } else {
+        setErrorMessage('Failed to apply coupon. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error applying coupon:', error)
+      setErrorMessage('An error occurred while applying the coupon. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+  return (
+    <Box
+      sx={{
+        width: '100%',
+        maxWidth: '800px',
+        p: 0,
+        m: 0,
+        border: 'none',
+        background: 'transparent',
+        mt: 2,
+      }}
+    >
+      {/* Header with icon and title */}
+      <Box className="flex items-center" sx={{ mb: 1 }}>
+        <Typography
+          sx={{
+            backgroundColor: '#fff',
+            borderRadius: '100%',
+          }}
+          className={styles.ffCouponIcon}
+        >
+          <img
+            className="ff_coupon_img"
+            src="/icons/coupon.svg"
+            alt="coupon"
+            width={23}
+            height={20}
+          />
+        </Typography>
+        <Typography className={`px-2 ${styles.ffCouponTxt}`}>
+          Apply Coupon Code
+        </Typography>
+      </Box>
+
+            {/* Success Message */}
+            {couponState.couponApplied && couponState.couponValid && (
+              <Box
+                sx={{
+                  mb: 2,
+                  p: 2,
+                  borderRadius: 2,
+                  backgroundColor: '#E8F5E9',
+                  border: '1px solid #4CAF50',
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: '18px',
+                    fontWeight: 600,
+                    color: '#2E7D32',
+                    mb: 1,
+                  }}
+                >
+                  {couponState.congratsMessage}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: '14px',
+                    color: '#2E7D32',
+                  }}
+                >
+                  {couponState.congratsSubMessage}
+                </Typography>
+              </Box>
+            )}
+            
+          <Box className="flex items-center">
               <TextField
                 fullWidth
                 placeholder="Enter coupon code"
+                value={couponCode}
+                onChange={(e) => {
+                  setCouponCode(e.target.value)
+                handleResetMessages()
+                }}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter' && !loading) {
+                    handleApplyCoupon()
+                  }
+                }}
+                disabled={couponState.couponApplied && couponState.couponValid}
+                error={!!errorMessage}
                 slotProps={{
                   input: {
                     endAdornment: (
                       <InputAdornment position="end">
                         <Button
-                          sx={{ textTransform: 'none', color: '#696969', fontWeight: 600 }}
+                        disableRipple
+                          onClick={couponState.couponApplied && couponState.couponValid ? handleResetCoupon : handleApplyCoupon}
+                          disabled={loading}
+                          sx={{
+                            textTransform: 'none',
+                          color: '#696969',
+                            fontWeight: 600,
+                            minWidth: '60px',
+                          backgroundColor: 'transparent',
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                          },
+                          }}
                         >
-                          Apply
+                          {loading ? (
+                            <CircularProgress size={20} sx={{ color: '#696969' }} />
+                          ) : couponState.couponApplied && couponState.couponValid ? (
+                            'Reset'
+                          ) : (
+                            'Apply'
+                          )}
                         </Button>
                       </InputAdornment>
                     ),
@@ -126,24 +211,21 @@ const ApplyCoupon = (props: { data: any }) => {
                 size="small"
               />
             </Box>
-            <Box className={`flex flex-col mt-5 mb-5 items-center justify-center ${styles.couponInfo}`}>
-              <img
-                src="/icons/no-coupons-state.svg" 
-                alt="No coupons available illustration" 
-                width={157}
-                height={157}
-              />
-              <Typography className={`mt-2 ${styles.couponTxt}`}>
-                No coupon codes to select
+            
+            {/* Error Message */}
+            {errorMessage && (
+              <Typography
+                sx={{
+                  color: '#d32f2f',
+                  fontSize: '12px',
+                  mt: 1,
+                  ml: 1,
+                }}
+              >
+                {errorMessage}
               </Typography>
-              <Typography className={`mt-2 ${styles.couponSubTxt}`}>
-                If you have a coupon code, please type it above and tap apply
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
-      </Modal>
-    </>
+            )}
+    </Box>
   )
 }
 

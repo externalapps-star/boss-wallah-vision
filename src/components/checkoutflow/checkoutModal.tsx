@@ -30,11 +30,13 @@ import { RootState } from '@/redux/store'
 interface CheckOutModalProps {
   isOpen: boolean
   handleCheckoutModal: (open: boolean) => void
+  hasActivePackage?: boolean
 }
 
 const CheckOutModal: React.FC<CheckOutModalProps> = ({
   isOpen,
   handleCheckoutModal,
+  hasActivePackage = false,
 }) => {
   const dispatch = useAppDispatch()
   const [activeStep, setActiveStep] = useState(0)
@@ -46,6 +48,9 @@ const CheckOutModal: React.FC<CheckOutModalProps> = ({
   // const steps = ['Confirm purchase', 'Add details', 'Complete payment']
   const steps = ['Add details', 'Complete payment']
   const { loading } = useSelector((state: RootState) => state.payment)
+  const couponState = useSelector((state: RootState) => state.package.coupon)
+  // Ignore coupon state if user has active package (upgrade scenario)
+  const shouldHideStepper = !hasActivePackage && couponState.couponApplied && couponState.couponValid
 
   const toggleDrawer = (open: boolean): (() => void) => {
     return async () => {
@@ -169,18 +174,47 @@ const CheckOutModal: React.FC<CheckOutModalProps> = ({
                   : 'Buy course'}
               </Typography>
             </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                fontSize: 10,
-                color: '#fff',
-                width: isMobile ? '90%' : '60%',
-                padding: isMobile ? '10px 0' : '',
-              }}
-            >
-              <CustomizedSteppers steps={steps} activeStep={activeStep} />
-            </Box>
+            {shouldHideStepper ? (
+              // Show "Add details" text on mobile when coupon is applied
+              isMobile && (
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    fontSize: 10,
+                    color: '#fff',
+                    width: '90%',
+                    padding: '10px 0',
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontFamily: '"Fira Sans", sans-serif',
+                      fontWeight: 500,
+                      fontSize: '16px',
+                      lineHeight: '26px',
+                      letterSpacing: 0,
+                      color: '#1d1d1e',
+                    }}
+                  >
+                    Add details
+                  </Typography>
+                </Box>
+              )
+            ) : (
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  fontSize: 10,
+                  color: '#fff',
+                  width: isMobile ? '90%' : '60%',
+                  padding: isMobile ? '10px 0' : '',
+                }}
+              >
+                <CustomizedSteppers steps={steps} activeStep={activeStep} />
+              </Box>
+            )}
           </Box>
 
           {/* Content */}
@@ -206,7 +240,7 @@ const CheckOutModal: React.FC<CheckOutModalProps> = ({
 
             {/* Apply Coupon Card*/}
             {currentPage === 'Purchase' && (
-              <CheckOutCard handlePage={handlePage} currentPage={currentPage}>
+              <CheckOutCard handlePage={handlePage} currentPage={currentPage} hasActivePackage={hasActivePackage}>
                 <PurchaseDetails
                   toggleDrawer={toggleDrawer}
                   handlePage={handlePage}
@@ -217,14 +251,14 @@ const CheckOutModal: React.FC<CheckOutModalProps> = ({
 
             {/* Grab Details (Name and State) redirect to login via email or mobile number */}
             {currentPage === 'Initial Details' && (
-              <CheckOutCard handlePage={handlePage} currentPage={currentPage}>
-                <InitialDetails handlePage={handlePage} />
+              <CheckOutCard handlePage={handlePage} currentPage={currentPage} hasActivePackage={hasActivePackage}>
+                <InitialDetails handlePage={handlePage} hasActivePackage={hasActivePackage} />
               </CheckOutCard>
             )}
 
             {/* Login Via Email and Mobile */}
             {(currentPage === 'Email' || currentPage === 'Mobile') && (
-              <CheckOutCard handlePage={handlePage} currentPage={currentPage}>
+              <CheckOutCard handlePage={handlePage} currentPage={currentPage} hasActivePackage={hasActivePackage}>
                 <EmailAndMobileDetails
                   handlePage={handlePage}
                   loginTypeFE={currentPage}
@@ -234,7 +268,7 @@ const CheckOutModal: React.FC<CheckOutModalProps> = ({
 
             {/* Apply Coupon*/}
             {currentPage === 'Apply Coupon' && (
-              <CheckOutCard handlePage={handlePage} currentPage={currentPage}>
+              <CheckOutCard handlePage={handlePage} currentPage={currentPage} hasActivePackage={hasActivePackage}>
                 <ApplyCoupon
                   handlePage={handlePage}
                   applyCouponCallBack={applyCouponCallBack}
@@ -244,7 +278,7 @@ const CheckOutModal: React.FC<CheckOutModalProps> = ({
 
             {/* Payment */}
             {currentPage === 'Payment' && (
-              <CheckOutCard handlePage={handlePage} currentPage={currentPage}>
+              <CheckOutCard handlePage={handlePage} currentPage={currentPage} hasActivePackage={hasActivePackage}>
                 <Payment handlePage={handlePage} />
               </CheckOutCard>
             )}

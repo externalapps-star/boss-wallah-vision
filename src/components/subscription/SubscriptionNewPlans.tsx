@@ -39,6 +39,10 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
   const [buyNow, setBuyNow] = useState(false)
   
   const selectedPackageId = useSelector((state: RootState) => state.package.selectedPackageId)
+  const couponState = useSelector((state: RootState) => state.package.coupon)
+  
+  // Check if coupon is applied and valid
+  const isCouponValid = couponState.couponApplied && couponState.couponValid
 
   const primeAccessDetail = packages.data
 
@@ -221,26 +225,61 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
             >
               {primeaccessinfo.package_details &&
                 primeaccessinfo.package_details.map(
-                  (packagedetails: PackageDetails) => (
+                  (packagedetails: PackageDetails) => {
+                    const selectedIdStr = String(selectedPackageId || '')
+                    const cardIdStr = String(packagedetails.package_id || '')
+                    const couponPackageIdStr = String(couponState.couponPackageId || '')
+                    const isSelected = selectedIdStr === cardIdStr
+                    const isCouponForThisCard = isCouponValid && couponPackageIdStr === cardIdStr
+                    
+                    // Check if user has an active subscription
+                    const hasActivePackage = primeaccessinfo.active_package_details && 
+                      primeaccessinfo.active_package_details.length > 0
+                    
+                    // When user has active package: don't disable based on coupon (allow upgrades)
+                    // When coupon is valid and no active package: disable entire card if it's NOT the coupon card
+                    // When no coupon/invalid: cards can be clicked, but only selected card's buy now is enabled
+                    const disableEntireCard = !hasActivePackage && isCouponValid && !isCouponForThisCard
+                    const disableBuyNow = hasActivePackage
+                      ? !isSelected  // If user has active package, only selected card's buy now is enabled
+                      : isCouponValid 
+                        ? !isCouponForThisCard  // If coupon valid, disable buy now for non-coupon card
+                        : !isSelected  // If no coupon/invalid, disable buy now for non-selected card
+                    
+                    // Only show "Pay ₹ 0" if coupon is valid AND user doesn't have active package
+                    // If user has active package, ignore coupon state (upgrade scenario)
+                    const showZeroPay = !hasActivePackage && isCouponValid && isCouponForThisCard
+                    const ctaLabel = showZeroPay ? 'Pay ₹ 0' : packagedetails.cta_text
+
+                    return (
                     <Box
                       key={packagedetails.package_id}
-                      onClick={() => handlePlanClick(packagedetails)}
+                      onClick={() => {
+                        // Don't allow clicking if coupon is valid and this is not the coupon card
+                        if (disableEntireCard) {
+                          return
+                        }
+                        handlePlanClick(packagedetails)
+                      }}
                       sx={{
                         background:
-                          selectedPackageId == packagedetails.package_id
+                          isSelected
                             ? '#fff'
                             : '',
                         color:
-                          selectedPackageId == packagedetails.package_id
+                          isSelected
                             ? '#2E2E54'
                             : '#fff',
                         position: 'relative',
                         maxWidth: { md: '278px' },
                         minHeight: { md: '350px' },
                         border:
-                          selectedPackageId == packagedetails.package_id
+                          isSelected
                             ? '1.545px solid  var(--Brand-1-Variation-600, #F15F22)'
                             : '1.545px solid  var(--Brand-1-Variation-600, #FEEFE9)',
+                        opacity: disableEntireCard ? 0.5 : 1,
+                        cursor: disableEntireCard ? 'not-allowed' : 'pointer',
+                        pointerEvents: disableEntireCard ? 'none' : 'auto',
                       }}
                         className={`flex flex-col ${styles.subsPlanOne}`}
                     >
@@ -260,14 +299,14 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
                       </Box>
                       <Box
                         className={
-                          selectedPackageId == packagedetails.package_id
+                          isSelected
                             ? styles.tickMark
                             : styles.nonTickMark
                         }
                       >
                         <img
                           src={
-                            selectedPackageId == packagedetails.package_id
+                            isSelected
                               ? '/icons/radio.svg'
                               : '/icons/Tick mark.svg'
                           }
@@ -355,6 +394,10 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
                         <Button
                           className={`flex px-4 py-0 ${styles.subPlanOneBuy}`}
                           onClick={() => {
+                            // Don't allow clicking if buy now is disabled
+                            if (disableBuyNow) {
+                              return
+                            }
                             setBuyNow(true) // Open the modal
                             dispatch(
                               setSelectedPackageId(
@@ -362,13 +405,21 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
                               ),
                             ) // Set the selected package ID
                           }}
+                          disabled={disableBuyNow}
+                          sx={{
+                            opacity: disableBuyNow ? 0.5 : 1,
+                            '&.Mui-disabled': {
+                              color: '#9e9e9e',
+                              backgroundColor: '#1d1d1e',
+                            },
+                          }}
                         >
-                          {packagedetails.cta_text}
+                          {ctaLabel}
                         </Button>
                       </Box>
                     </Box>
 
-                    {selectedPackageId == packagedetails.package_id ? (
+                    {isSelected ? (
                       <Box
                         className="block lg:hidden"
                         sx={{
@@ -388,8 +439,18 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
                             color: '#fff',
                             width: '100%',
                             textTransform: 'none',
+                            opacity: disableBuyNow ? 0.5 : 1,
+                            pointerEvents: disableBuyNow ? 'none' : 'auto',
+                            '&.Mui-disabled': {
+                              color: '#9e9e9e',
+                              backgroundColor: '#1d1d1e',
+                            },
                           }}
                           onClick={() => {
+                            // Don't allow clicking if buy now is disabled
+                            if (disableBuyNow) {
+                              return
+                            }
                             setBuyNow(true) // Open the modal
                             dispatch(
                               setSelectedPackageId(
@@ -397,15 +458,16 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
                               ),
                             )
                           }}
+                          disabled={disableBuyNow}
                         >
-                          {packagedetails.cta_text}
+                          {ctaLabel}
                         </Button>
                       </Box>
                     ) : (
                       ''
                     )}
                   </Box>
-                ))}
+                )})}
             </Box>
           )}
 
@@ -414,12 +476,25 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
           </Typography>
 
           {/* Coupon Section */}
-            {/* {primeaccessinfo.active_package_details.length > 0 &&
-            primeaccessinfo.active_package_details[0].subscription_type === 'yearly' ? (
-              ''
-            ) : (
-              <ApplyCoupon data={primeaccessinfo.coupon_details} />
-            )} */}
+            {(() => {
+              // Check if user has an active monthly or yearly package
+              const hasActivePackage = primeaccessinfo.active_package_details?.length > 0
+              const hasMonthlyPackage = hasActivePackage && 
+                primeaccessinfo.active_package_details.some(
+                  (pkg: any) => pkg.subscription_type === 'monthly'
+                )
+              const hasYearlyPackage = hasActivePackage && 
+                primeaccessinfo.active_package_details.some(
+                  (pkg: any) => pkg.subscription_type === 'yearly'
+                )
+              
+              // Hide coupon if user has monthly package OR yearly package
+              if (hasMonthlyPackage || hasYearlyPackage) {
+                return null
+              }
+              
+              return <ApplyCoupon data={primeaccessinfo.coupon_details} />
+            })()}
 
           {/* FAQ Section */}
           <FrequentQuestions faqs={faqs} />
@@ -429,6 +504,7 @@ const SubscriptionNewPlans: React.FC<SubscriptionPackages> = ({ packages, faqs }
             <CheckOutModal
               isOpen={buyNow}
               handleCheckoutModal={handleCheckoutModal}
+              hasActivePackage={primeaccessinfo.active_package_details && primeaccessinfo.active_package_details.length > 0}
             />
           )}
         </Box>

@@ -7,6 +7,16 @@ interface BenefitDetail {
   title: string
 }
 
+// Define coupon state
+interface CouponState {
+  couponCode: string
+  couponApplied: boolean
+  couponValid: boolean
+  congratsMessage: string
+  congratsSubMessage: string
+  couponPackageId: string
+}
+
 // Define the state shape
 interface SelectedPackageState {
   selectedCourse: string
@@ -16,6 +26,7 @@ interface SelectedPackageState {
   benifit_details: BenefitDetail[]
   subscriptionType: string
   subscriptionTitle: string
+  coupon: CouponState
 }
 
 // Initial state
@@ -27,6 +38,14 @@ const initialState: SelectedPackageState = {
   benifit_details: [],
   subscriptionType: '',
   subscriptionTitle: '',
+  coupon: {
+    couponCode: '',
+    couponApplied: false,
+    couponValid: false,
+    congratsMessage: '',
+    congratsSubMessage: '',
+    couponPackageId: '',
+  },
 }
 
 // Create the slice
@@ -62,6 +81,14 @@ const packageSlice = createSlice({
     setSubscriptionTitle: (state, action: PayloadAction<string>) => {
       state.subscriptionTitle = action.payload
     },
+    // Reducer to set coupon state
+    setCouponState: (state, action: PayloadAction<CouponState>) => {
+      state.coupon = action.payload
+    },
+    // Reducer to reset coupon state
+    resetCouponState: (state) => {
+      state.coupon = initialState.coupon
+    },
     // Reducer to reset the state to initial state
     resetPackageState: () => initialState,
   },
@@ -76,8 +103,13 @@ export const {
   setBenefitDetails,
   setSubscriptionType,
   setSubscriptionTitle,
+  setCouponState,
+  resetCouponState,
   resetPackageState,
 } = packageSlice.actions
+
+// Export types
+export type { CouponState }
 
 // Export the reducer
 export default packageSlice.reducer
