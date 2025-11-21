@@ -41,6 +41,9 @@ const Footer = () => {
   }, {
     name: "Refund & Cancellation",
     href: "/refund-cancellation-policy"
+  }, {
+    name: "Contact Us",
+    href: "/contact-us"
   }];
   return <footer className="bg-gradient-dark text-primary-foreground">
       

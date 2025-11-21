@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import StoreProvider from "./redux/StoreProvider";
 import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-use" element={<TermsOfUse />} />
               <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
+              <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/account-preferences" element={<AccountPreferences />} />
               <Route path="/login" element={<Login />} />
               <Route path="/subscription" element={<Subscription />} />
